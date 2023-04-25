@@ -18,14 +18,14 @@
     "href": "index.html",
     "title": "Julius Welzel",
     "section": "",
-    "text": "I am a Cognitive Neuroscientist with strong intrest in movement.\nMy research in systematic neuroscience focuses on developing novel methods to better understand and treat movement disorders. In particular, I am interested in the approachs to data analysis, which provides a powerful way to handle uncertainty in all observations, model parameters, and model structure using probability theory.\nIf you are a scientist who wants to collaborate with me, a PhD student or PostDoc candidate interested in my research, or a student looking for a thesis topic, please reach out to me!"
+    "text": "I am a Cognitive Neuroscientist with strong interest in movement and it disorders.\nMy research in systematic neuroscience focuses on developing novel methods to better understand and treat movement disorders. In particular, I am interested in the combining useful clinical approaches and implement modern software tools to facilitate the understanding of neurological disorders.\nIf you are a scientist who wants to collaborate with me, or a student looking for a thesis topic, please reach out to me!"
   },
   {
     "objectID": "index.html#what-i-do",
     "href": "index.html#what-i-do",
     "title": "Julius Welzel",
     "section": "",
-    "text": "I am a Cognitive Neuroscientist with strong intrest in movement."
+    "text": "I am a Cognitive Neuroscientist with strong interest in movement and it disorders."
   },
   {
     "objectID": "projects/index.html",
@@ -40,6 +40,27 @@
     "title": "Projects",
     "section": "",
     "text": "EEG while walking in parkinsons disease.\nOverarching Topics: EEG,\nFunders: JPND\nFunding Period: 2023 – 2026"
+  },
+  {
+    "objectID": "projects/index.html#epoc",
+    "href": "projects/index.html#epoc",
+    "title": "Projects",
+    "section": "EPOC",
+    "text": "EPOC\nFatigue and cognition in long-covid.\nOverarching Topics: EEG,\nFunders: UKSH\nFunding Period: 2022 – 2024"
+  },
+  {
+    "objectID": "projects/index.html#tremotdetect",
+    "href": "projects/index.html#tremotdetect",
+    "title": "Projects",
+    "section": "TremorDetect",
+    "text": "TremorDetect\nA MP framework to detect tremolous activity from video data\nOverarching Topics: Algorithms"
+  },
+  {
+    "objectID": "projects/index.html#ngmt",
+    "href": "projects/index.html#ngmt",
+    "title": "Projects",
+    "section": "NGMT",
+    "text": "NGMT\nA toolbox for gait and balance parameters in neurological cohorts.\nOverarching Topics: Algorithms\nFunders: UKSH\nFunding Period: Ongoing"
   },
   {
     "objectID": "publications/index.html",
@@ -70,6 +91,13 @@
     "text": "EEG\nI record EEG data and try to understand it.\nCurrent projects: - StepUp - EPOC - NGMT"
   },
   {
+    "objectID": "research/index.html#algorithms",
+    "href": "research/index.html#algorithms",
+    "title": "Research",
+    "section": "Algorithms development",
+    "text": "Algorithms development\nUse my limited CS skill and psychological background to improve algorithms in practice.\nCurrent projects: - NGMT"
+  },
+  {
     "objectID": "software/index.html",
     "href": "software/index.html",
     "title": "Open Source Software",
@@ -81,6 +109,27 @@
     "href": "software/index.html#BIDS",
     "title": "Open Source Software",
     "section": "BIDS",
-    "text": "BIDS\n::: {.grid} ::: {.g-col-12 .g-col-md-2}  ::: ::: {.g-col-12 .g-col-md-10}\nBIDS: Brain Imaging Data Structure\nMy role: (Co-)Lead Author of MOTION-BIDS\nLinks: Website"
+    "text": "BIDS\n\n\n\nBIDS: Brain Imaging Data Structure\nMy role: (Co-)Lead Author of MOTION-BIDS\nLinks: Website"
+  },
+  {
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching acitivities",
+    "section": "",
+    "text": "I really like to teach, online and offline."
+  },
+  {
+    "objectID": "teaching/index.html#data-in-practice",
+    "href": "teaching/index.html#data-in-practice",
+    "title": "Teaching acitivities",
+    "section": "Datascience in practice",
+    "text": "Datascience in practice\nA Master Course in psychology about Python based Data Science.\nTime: Winter 22/23\nLinks: Website"
+  },
+  {
+    "objectID": "teaching/index.html#func-neuro",
+    "href": "teaching/index.html#func-neuro",
+    "title": "Teaching acitivities",
+    "section": "Functional Neuroanatomy",
+    "text": "Functional Neuroanatomy\nA Bachelor Course in psychology about Functional Neuroanatomy.\nTime: Summer 22\nLinks: Website"
   }
 ]

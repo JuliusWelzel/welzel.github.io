@@ -16,5 +16,12 @@ Current projects:
 - [EPOC](../projects#epoc)
 - [NGMT](../projects#ngmt)
 
+## Algorithms development {#algorithms}
+
+Use my limited CS skill and psychological background to improve algorithms in practice.
+
+Current projects:
+- [NGMT](../projects#ngmt)
+
 
 

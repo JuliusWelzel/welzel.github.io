@@ -24,8 +24,8 @@ website:
         href: publications/index.qmd
       - text: Software
         href: software/index.qmd
-      - text: Positions
-        href: positions/index.qmd
+      - text: Teaching
+        href: teaching/index.qmd
       - text: CV
         href: cv/index.qmd
     right:
@@ -33,11 +33,11 @@ website:
       aria-label: email
       href: "mailto:julius.welzel@gmail.com"
     - icon: github
-      href: https://github.com/JuliusWelze
+      href: https://github.com/JuliusWelzel
     - icon: google
       href: https://scholar.google.com/citations?user=CWxKXBcAAAAJ&hl
     - icon: mastodon
-      href: https://fosstodon.org/@JuliusWelzel
+      href: https://mastodon.online/@JuliusWelzel
   page-footer: 
     left: "Copyright 2023, Julius Welzel" 
     right: 

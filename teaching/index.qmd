@@ -1,0 +1,27 @@
+---
+title: Teaching acitivities
+excerpt: "Teaching acitivities"
+toc-location: right
+page-layout: full
+---
+
+I really like to teach, online and offline.
+
+## Datascience in practice {#data-in-practice}
+
+A Master Course in psychology about Python based Data Science.
+
+Time: Winter 22/23 
+
+Links:
+[Website](https://biopsychkiel.github.io/datascience_in_practice/intro.html)
+
+## Functional Neuroanatomy {#func-neuro}
+
+A Bachelor Course in psychology about Functional Neuroanatomy.
+
+Time: Summer 22 
+
+Links:
+[Website](https://www.biopsych.uni-kiel.de/de/lehrveranstaltungen/sommersemester-2022)
+

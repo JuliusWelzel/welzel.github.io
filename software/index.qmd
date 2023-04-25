@@ -10,10 +10,9 @@ I do some software
 ## BIDS {#BIDS}
 
 ::: {.grid}
-::: {.g-col-12 .g-col-md-2}
 ![](../images/BIDS_Logo.png){width=100% fig-alt="The BIDS logo."}
 :::
-::: {.g-col-12 .g-col-md-10}
+
 
 BIDS: Brain Imaging Data Structure
 

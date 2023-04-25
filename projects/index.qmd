@@ -16,3 +16,33 @@ Overarching Topics:
 Funders: [JPND](https://neurodegenerationresearch.eu/)
 
 Funding Period: 2023 -- 2026
+
+## EPOC {#epoc}
+
+Fatigue and cognition in long-covid.
+
+Overarching Topics: 
+[EEG](../research#eeg), 
+
+Funders: [UKSH](https://www.uksh.de/)
+
+Funding Period: 2022 -- 2024
+
+## TremorDetect {#tremotdetect}
+
+A MP framework to detect tremolous activity from video data
+
+Overarching Topics: 
+[Algorithms](../research#algorithms)
+
+
+## NGMT {#ngmt}
+
+A toolbox for gait and balance parameters in neurological cohorts.
+
+Overarching Topics: 
+[Algorithms](../research#algorithms)
+
+Funders: [UKSH](https://www.uksh.de/neurologie-kiel/Behandlungsschwerpunkte/Neurogeriatrie.html)
+
+Funding Period: Ongoing
