@@ -1,0 +1,31 @@
+---
+comments: false
+page-layout: full
+format:
+  html: 
+    margin-top: 0em
+    margin-bottom: 0em
+aliases:
+  - /about
+---
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-3}
+![](images/eeg.jpg){width=100%}
+:::
+
+::: {.g-col-12 .g-col-md-9}
+## What I Do
+
+I am a Cognitive Neuroscientist with strong intrest in movement.
+:::
+:::
+
+My research in systematic neuroscience focuses on developing novel methods to better understand and treat movement disorders.
+In particular, I am interested in the approachs to data analysis, which provides a powerful way to handle uncertainty in all observations, 
+model parameters, and model structure using probability theory.
+
+If you are a scientist who wants to collaborate with me, a PhD student or PostDoc
+candidate interested in my research, or a student looking for a thesis topic,
+please [reach out to me](mailto:julius.welzel@gmail.com)!

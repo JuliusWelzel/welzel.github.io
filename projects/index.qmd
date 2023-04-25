@@ -1,0 +1,18 @@
+---
+title: Projects
+excerpt: "An overview of my projects"
+toc-location: right
+page-layout: full
+---
+
+
+## StepUp {#stepup}
+
+EEG while walking in parkinsons disease.
+
+Overarching Topics: 
+[EEG](../research#eeg), 
+
+Funders: [JPND](https://neurodegenerationresearch.eu/)
+
+Funding Period: 2023 -- 2026

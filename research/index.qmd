@@ -1,0 +1,20 @@
+---
+title: Research
+excerpt: "An overview of my research"
+toc-location: right
+page-layout: full
+---
+
+I work with brains.
+
+## EEG {#eeg}
+
+I record EEG data and try to understand it.
+
+Current projects:
+- [StepUp](../projects#stepup)
+- [EPOC](../projects#epoc)
+- [NGMT](../projects#ngmt)
+
+
+

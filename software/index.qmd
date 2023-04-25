@@ -1,0 +1,24 @@
+---
+title: Open Source Software
+excerpt: "Open source software contributions"
+toc-location: right
+page-layout: full
+---
+
+I do some software
+
+## BIDS {#BIDS}
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-2}
+![](../images/BIDS_Logo.png){width=100% fig-alt="The BIDS logo."}
+:::
+::: {.g-col-12 .g-col-md-10}
+
+BIDS: Brain Imaging Data Structure
+
+My role: (Co-)Lead Author of MOTION-BIDS
+
+Links:
+[Website](https://bids-specification.readthedocs.io/en/stable/)
+

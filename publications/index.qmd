@@ -1,0 +1,9 @@
+---
+title: Scientific Publications
+excerpt: "A list of my scientific publications"
+toc-location: right
+---
+
+## 2020
+
+-   Romijnders, R., Warmerdam, E., Hansen, C., **Welzel, J.**, Schmidt, G., & Maetzler, W. (2021). [Validation of IMU-based gait event detection during curved walking and turning in older adults and Parkinson’s Disease patients.](https://link.springer.com/article/10.1186/s12984-021-00828-0) 
