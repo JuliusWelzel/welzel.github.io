@@ -17,7 +17,7 @@ toc-location: right
 
 -   Bindel, L., Muehlberg, C., Pfeiffer, V., Nitschke, M., Mueller, A., Wegscheider, M., Rumpf, J. J., Zeuner, K. E., Becktepe, J. S., **Welzel, J.**, & others. (2022). [Visuomotor Adaptation Deficits in Patients with Essential Tremor. The Cerebellum, 1-13.](https://link.springer.com/article/10.1007/s12311-022-01474-5)
 
-Warmerdam, E., Hansen, C., Romijnders, R., Hobert, M. A., **Welzel, J.**, & Maetzler, W. (2022). [Full-Body Mobility Data to Validate Inertial Measurement Unit Algorithms in Healthy and Neurological Cohorts. Data, 7(10), 136.](https://www.mdpi.com/2306-5729/7/10/136)
+-   Warmerdam, E., Hansen, C., Romijnders, R., Hobert, M. A., **Welzel, J.**, & Maetzler, W. (2022). [Full-Body Mobility Data to Validate Inertial Measurement Unit Algorithms in Healthy and Neurological Cohorts. Data, 7(10), 136.](https://www.mdpi.com/2306-5729/7/10/136)
 
 -   Paschen, S., Hansen, C., **Welzel, J.**, Albrecht, J., Atrsaei, A., Aminian, K., Zeuner, K. E., Romijnders, R., Warmerdam, E., Urban, P. P., & others. (2022). [Effect of Lower Limb vs. Abdominal Compression on Mobility in Orthostatic Hypotension: A Single-Blinded, Randomized, Controlled, Cross-Over Pilot Study in Parkinson’s Disease. Journal of Parkinson's Disease, Preprint, 1-11.](https://content.iospress.com/articles/journal-of-parkinsons-disease/jpd223406)
 
