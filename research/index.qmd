@@ -22,6 +22,16 @@ Use my limited CS skill and psychological background to improve algorithms in pr
 
 Current projects:
 - [NGMT](../projects#ngmt)
+- [TremorDetect](../projects#tremordetect)
+- [ComOn](../projects#comon)
+
+## Clinical Data-Science {#datascience}
+
+As a trained psychologist, I am keen on understanding the pathology of various disorders by the means of quatitive data.
+
+Current projects:
+- [ComOn](../projects#comon)
+- [StepUp](../projects#stepup)
 
 
 

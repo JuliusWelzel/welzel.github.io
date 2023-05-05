@@ -28,9 +28,9 @@ Funders: [UKSH](https://www.uksh.de/)
 
 Funding Period: 2022 -- 2024
 
-## TremorDetect {#tremotdetect}
+## TremorDetect {#tremortdetect}
 
-A MP framework to detect tremolous activity from video data
+A MP framework to detect tremolous activity from video data.
 
 Overarching Topics: 
 [Algorithms](../research#algorithms)
@@ -46,3 +46,14 @@ Overarching Topics:
 Funders: [UKSH](https://www.uksh.de/neurologie-kiel/Behandlungsschwerpunkte/Neurogeriatrie.html)
 
 Funding Period: Ongoing
+
+## ComOn {#comon}
+
+A exploratory, multicenter study on motor, cognitive and mobility deficits in geriatric patients.
+
+Overarching Topics: 
+[Clinical Data-Science](../research#datascience)
+
+Funders: [UKSH](https://www.uksh.de/neurologie-kiel/Behandlungsschwerpunkte/Neurogeriatrie.html)
+
+Funding Period: 2017-2023

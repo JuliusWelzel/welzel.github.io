@@ -7,3 +7,19 @@ toc-location: right
 ## 2020
 
 -   Romijnders, R., Warmerdam, E., Hansen, C., **Welzel, J.**, Schmidt, G., & Maetzler, W. (2021). [Validation of IMU-based gait event detection during curved walking and turning in older adults and Parkinson’s Disease patients.](https://link.springer.com/article/10.1186/s12984-021-00828-0) 
+
+-   Geritz, J., Maetzold, S., Steffen, M., Pilotto, A., Corrà, M. F., Moscovich, M., Rizzetti, M. C., Borroni, B., Padovani, A., Alpes, A., & others. (2020). Motor, cognitive and mobility deficits in 1000 geriatric patients: protocol of a quantitative observational study before and after routine clinical geriatric treatment—the ComOn-study. BMC geriatrics, 20(1), 1-13.
+
+-   Daeglau, M., Zich, C., Emkes, R., **Welzel, J.**, Debener, S., & Kranczioch, C. (2020). Investigating priming effects of physical practice on motor imagery-induced event-related desynchronization. Frontiers in psychology, 11, 57.
+
+-   Thomson, A., Whiteley, R., Hansen, C., **Welzel, J.**, Racinais, S., & Wilson, M. G. (2021). Effect of speed and gradient on plantar force when running on an AlterG® treadmill. BMC Sports Science, Medicine and Rehabilitation, 13(1), 1-8.
+
+-   Warmerdam, E., Romijnders, R., **Welzel, J.**, Hansen, C., Schmidt, G., & Maetzler, W. (2020). Quantification of arm swing during walking in healthy adults and Parkinson’s Disease patients: Wearable sensor-based algorithm development and validation. Sensors, 20(20), 5963.
+
+-   Daeglau, M., Zich, C., **Welzel, J.**, Saak, S. K., Scheffels, J. F., & Kranczioch, C. (2020). Motor Imagery EEG neurofeedback skill acquisition in the context of declarative interference and sleep. bioRxiv, 2020-12.
+
+-   **Welzel, J.**, Wendtland, D., Warmerdam, E., Romijnders, R., Elshehabi, M., Geritz, J., Berg, D., Hansen, C., & Maetzler, W. (2021). Step length is a promising progression marker in Parkinson’s Disease. Sensors, 21(7), 2292.
+
+-   Hansen, C., Beckbauer, M., Romijnders, R., Warmerdam, E., **Welzel, J.**, Geritz, J., Emmert, K., & Maetzler, W. (2021). Reliability of IMU-derived static balance parameters in neurological diseases. International Journal of Environmental Research and Public Health, 18(7), 3644.
+
+-   Daeglau, M., Zich, C., **Welzel, J.**, Saak, S. K., Scheffels, J. F., & Kranczioch, C. (2021). Event-related desynchronization in motor imagery with EEG neurofeedback in the context of declarative interference and sleep. Neuroimage: Reports, 1(4), 100058.
