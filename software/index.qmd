@@ -9,9 +9,7 @@ I do some software
 
 ## BIDS {#BIDS}
 
-::: {.grid}
-![](../images/BIDS_Logo.png){width=100% fig-alt="The BIDS logo."}
-:::
+![](../images/BIDS_Logo.png){width=50% fig-alt="The BIDS logo."}
 
 
 BIDS: Brain Imaging Data Structure
