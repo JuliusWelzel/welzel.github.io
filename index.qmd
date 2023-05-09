@@ -9,13 +9,7 @@ aliases:
   - /about
 ---
 
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-3}
-![](images/eeg.jpg){width=100%}
-:::
-
-::: {.g-col-12 .g-col-md-9}
+![](images/eeg.jpg){width=80%}
 
 ## What I Do
 
