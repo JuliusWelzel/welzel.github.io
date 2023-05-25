@@ -18,7 +18,7 @@
     "href": "index.html#what-i-do",
     "title": "Julius Welzel",
     "section": "What I Do",
-    "text": "What I Do\nI am a Cognitive Neuroscientist with strong interest in movement and it disorders. ::: :::\nMy research in systematic neuroscience focuses on developing novel methods to better understand and treat movement disorders. In particular, I am interested in the combining useful clinical approaches and implement modern software tools to facilitate the understanding of neurological disorders.\nI am a researcher who specializes in the field of movement disorders. Currently pursuing my PhD, on the topic of “Oscillation in movement disorders”. In the past I have been working on the influence of online multimodal feedback on tremor, and at the Neuropsychology Lab at the University of Oldenburg, where he assisted with the optimization of the context of motor imagery neurofeedback training. Additionally, I am an experienced lecturer and tutor, having taught courses on biological psychology, Data Science and Computational Neuroscience at Kiel University and the University of Oldenburg.\nIf you are a scientist who wants to collaborate with me, or a student looking for a thesis topic, please reach out to me!"
+    "text": "What I Do\nI am a Cognitive Neuroscientist with strong interest in movement and its disorder.\nMy research in systematic neuroscience focuses on developing novel methods to better understand and treat movement disorders. In particular, I am interested in the combining useful clinical approaches and implement modern software tools to facilitate the understanding of neurological disorders.\nI am a researcher who specializes in the field of movement disorders. Currently pursuing my PhD, on the topic of “Oscillation in movement disorders”. In the past I have been working on the influence of online multimodal feedback on tremor, and at the Neuropsychology Lab at the University of Oldenburg, where he assisted with the optimization of the context of motor imagery neurofeedback training. Additionally, I am an experienced lecturer and tutor, having taught courses on biological psychology, Data Science and Computational Neuroscience at Kiel University and the University of Oldenburg.\nIf you are a scientist who wants to collaborate with me, or a student looking for a thesis topic, please reach out to me!"
   },
   {
     "objectID": "projects/index.html",
@@ -46,7 +46,7 @@
     "href": "projects/index.html#tremortdetect",
     "title": "Projects",
     "section": "TremorDetect",
-    "text": "TremorDetect\nA MP framework to detect tremolous activity from video data.\n \nOverarching Topics: Algorithms"
+    "text": "TremorDetect\nA MediaPipe framework to detect tremolous activity from video data.\n \nOverarching Topics: Algorithms"
   },
   {
     "objectID": "projects/index.html#ngmt",

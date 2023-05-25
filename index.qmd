@@ -13,9 +13,7 @@ aliases:
 
 ## What I Do
 
-I am a Cognitive Neuroscientist with strong interest in movement and it disorders.
-:::
-:::
+I am a Cognitive Neuroscientist with strong interest in movement and its disorders.
 
 My research in systematic neuroscience focuses on developing novel methods to better understand and treat movement disorders.
 In particular, I am interested in the combining useful clinical approaches and implement modern software tools to facilitate the understanding of neurological disorders.

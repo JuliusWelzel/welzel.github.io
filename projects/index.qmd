@@ -30,7 +30,7 @@ Funding Period: 2022 -- 2024
 
 ## TremorDetect {#tremortdetect}
 
-A MP framework to detect tremolous activity from video data.
+A [MediaPipe](https://developers.google.com/mediapipe/solutions/vision/hand_landmarker) framework to detect tremolous activity from video data.
 
 ![](../images/mp_tremor.gif){width="40%"}
 ![](../images/mp_tremor_results.png){width="40%"}
