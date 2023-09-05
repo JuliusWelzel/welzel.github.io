@@ -133,6 +133,27 @@
     "text": "BIDS\n\nBIDS: Brain Imaging Data Structure\nMy role: (Co-)Lead Author of MOTION-BIDS\nLinks: Website"
   },
   {
+    "objectID": "software/index.html#ngmt",
+    "href": "software/index.html#ngmt",
+    "title": "Open Source Software",
+    "section": "NGMT",
+    "text": "NGMT\n\nNGMT: NeuroGeriatricsMotionToolbox - Python based toolbox for processing motion data\nMy role: (Co-)Lead Dev\nLinks: Website"
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Here you can find a list of talks generated using a Markdown-based workflow."
+  },
+  {
+    "objectID": "talks/index.html#Motion-BIDS",
+    "href": "talks/index.html#Motion-BIDS",
+    "title": "Talks",
+    "section": "Motion-BIDS",
+    "text": "Motion-BIDS\nEvent: mbt conference Date: 2023-09-15 Description: Extending the Brain Imaging Data Structure specification to organize motion data for reproducible research Slides"
+  },
+  {
     "objectID": "teaching/index.html",
     "href": "teaching/index.html",
     "title": "Teaching acitivities",
@@ -152,19 +173,5 @@
     "title": "Teaching acitivities",
     "section": "Functional Neuroanatomy",
     "text": "Functional Neuroanatomy\nA Bachelor Course in psychology about Functional Neuroanatomy.\nTime: Summer 22\nLinks: Website"
-  },
-  {
-    "objectID": "software/index.html#NGMT",
-    "href": "software/index.html#NGMT",
-    "title": "Open Source Software",
-    "section": "NGMT",
-    "text": "NGMT\n\nNGMT: NeuroGeriatricsMotionToolbox - Python based toolbox for processing motion data\nMy role: (Co-)Lead Dev\nLinks: Website"
-  },
-  {
-    "objectID": "software/index.html#ngmt",
-    "href": "software/index.html#ngmt",
-    "title": "Open Source Software",
-    "section": "NGMT",
-    "text": "NGMT\n\nNGMT: NeuroGeriatricsMotionToolbox - Python based toolbox for processing motion data\nMy role: (Co-)Lead Dev\nLinks: Website"
   }
 ]
