@@ -26,6 +26,8 @@ website:
         href: software/index.qmd
       - text: Teaching
         href: teaching/index.qmd
+      - text: Talks
+        href: talks/index.qmd
       # - text: CV
       #  href: cv/index.qmd
     right:
@@ -47,6 +49,7 @@ website:
 format:
   html:
     fontsize: 1.2em
+    mainfont: "Open Sans"
     theme:
       light: flatly
       dark: darkly

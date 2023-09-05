@@ -7,3 +7,5 @@ public/
 jsconfig.json
 
 /.quarto/
+
+/docs/*

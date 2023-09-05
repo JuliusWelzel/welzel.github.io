@@ -10,6 +10,8 @@ page-layout: full
 
 EEG while walking in parkinsons disease.
 
+![](../images/stepup_logo.png){width="40%"}
+
 Overarching Topics: 
 [EEG](../research#eeg), 
 
@@ -45,6 +47,7 @@ A toolbox for gait and balance parameters in neurological cohorts.
 
 Overarching Topics: 
 [Algorithms](../research#algorithms)
+[Software](../software#ngmt)
 
 Funders: [UKSH](https://www.uksh.de/neurologie-kiel/Behandlungsschwerpunkte/Neurogeriatrie.html)
 

@@ -18,21 +18,21 @@
     "href": "index.html#what-i-do",
     "title": "Julius Welzel",
     "section": "What I Do",
-    "text": "What I Do\nI am a Cognitive Neuroscientist with strong interest in movement and its disorder.\nMy research in systematic neuroscience focuses on developing novel methods to better understand and treat movement disorders. In particular, I am interested in the combining useful clinical approaches and implement modern software tools to facilitate the understanding of neurological disorders.\nI am a researcher who specializes in the field of movement disorders. Currently pursuing my PhD, on the topic of “Oscillation in movement disorders”. In the past I have been working on the influence of online multimodal feedback on tremor, and at the Neuropsychology Lab at the University of Oldenburg, where he assisted with the optimization of the context of motor imagery neurofeedback training. Additionally, I am an experienced lecturer and tutor, having taught courses on biological psychology, Data Science and Computational Neuroscience at Kiel University and the University of Oldenburg.\nIf you are a scientist who wants to collaborate with me, or a student looking for a thesis topic, please reach out to me!"
+    "text": "What I Do\nI am a Cognitive Neuroscientist with strong interest in movement and its disorders.\nMy research in systematic neuroscience focuses on developing novel methods to better understand and treat movement disorders. In particular, I am interested in the combining useful clinical approaches and implement modern software tools to facilitate the understanding of neurological disorders.\nI am a researcher who specializes in the field of movement disorders. Currently pursuing my PhD, on the topic of “Oscillation in movement disorders”. In the past I have been working on the influence of online multimodal feedback on tremor, and at the Neuropsychology Lab at the University of Oldenburg, where he assisted with the optimization of the context of motor imagery neurofeedback training. Additionally, I am an experienced lecturer and tutor, having taught courses on biological psychology, Data Science and Computational Neuroscience at Kiel University and the University of Oldenburg.\nIf you are a scientist who wants to collaborate with me, or a student looking for a thesis topic, please reach out to me!"
   },
   {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "EEG while walking in parkinsons disease.\nOverarching Topics: EEG,\nFunders: JPND\nFunding Period: 2023 – 2026"
+    "text": "EEG while walking in parkinsons disease.\n\nOverarching Topics: EEG,\nFunders: JPND\nFunding Period: 2023 – 2026"
   },
   {
     "objectID": "projects/index.html#stepup",
     "href": "projects/index.html#stepup",
     "title": "Projects",
     "section": "",
-    "text": "EEG while walking in parkinsons disease.\nOverarching Topics: EEG,\nFunders: JPND\nFunding Period: 2023 – 2026"
+    "text": "EEG while walking in parkinsons disease.\n\nOverarching Topics: EEG,\nFunders: JPND\nFunding Period: 2023 – 2026"
   },
   {
     "objectID": "projects/index.html#epoc",
@@ -53,7 +53,7 @@
     "href": "projects/index.html#ngmt",
     "title": "Projects",
     "section": "NGMT",
-    "text": "NGMT\nA toolbox for gait and balance parameters in neurological cohorts.\nOverarching Topics: Algorithms\nFunders: UKSH\nFunding Period: Ongoing"
+    "text": "NGMT\nA toolbox for gait and balance parameters in neurological cohorts.\nOverarching Topics: Algorithms Software\nFunders: UKSH\nFunding Period: Ongoing"
   },
   {
     "objectID": "projects/index.html#comon",
@@ -152,5 +152,19 @@
     "title": "Teaching acitivities",
     "section": "Functional Neuroanatomy",
     "text": "Functional Neuroanatomy\nA Bachelor Course in psychology about Functional Neuroanatomy.\nTime: Summer 22\nLinks: Website"
+  },
+  {
+    "objectID": "software/index.html#NGMT",
+    "href": "software/index.html#NGMT",
+    "title": "Open Source Software",
+    "section": "NGMT",
+    "text": "NGMT\n\nNGMT: NeuroGeriatricsMotionToolbox - Python based toolbox for processing motion data\nMy role: (Co-)Lead Dev\nLinks: Website"
+  },
+  {
+    "objectID": "software/index.html#ngmt",
+    "href": "software/index.html#ngmt",
+    "title": "Open Source Software",
+    "section": "NGMT",
+    "text": "NGMT\n\nNGMT: NeuroGeriatricsMotionToolbox - Python based toolbox for processing motion data\nMy role: (Co-)Lead Dev\nLinks: Website"
   }
 ]
