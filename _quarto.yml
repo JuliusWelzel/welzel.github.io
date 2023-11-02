@@ -48,8 +48,6 @@ website:
 
 format:
   html:
+    theme: [lux, rwds.scss]
+    css: rwds.css
     fontsize: 1.2em
-    mainfont: "Open Sans"
-    theme:
-      light: flatly
-      dark: darkly

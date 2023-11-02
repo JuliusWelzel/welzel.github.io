@@ -10,6 +10,9 @@ Here you can find a list of talks generated using a Markdown-based workflow.
 ## Motion-BIDS {#Motion-BIDS}
 
 **Event**: [mbt conference](https://old.mbraintrain.com/conference/)
+
 **Date**: 2023-09-15
+
 **Description**: Extending the Brain Imaging Data Structure specification to organize motion data for reproducible research 
+
 [**Slides**](https://juliuswelzel.github.io/bids_belgrade_2023/#/title-slide)
