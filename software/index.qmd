@@ -24,7 +24,7 @@ Links:
 
 ![](../images/neurogeriatrics_logo.png){width=50% fig-alt="The NeuroGeriatrics logo."}
 
-NGMT: NeuroGeriatricsMotionToolbox - Python based toolbox for processing motion data
+[NGMT: NeuroGeriatricsMotionToolbox - Python based toolbox for processing motion data](https://neurogeriatricskiel.github.io/NGMT/)
 
 My role: (Co-)Lead Dev 
 

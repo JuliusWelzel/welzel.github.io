@@ -44,6 +44,7 @@ Overarching Topics:
 ## NGMT {#ngmt}
 
 A toolbox for gait and balance parameters in neurological cohorts.
+Documentation can be found [here](https://neurogeriatricskiel.github.io/NGMT/).
 
 Overarching Topics: 
 [Algorithms](../research#algorithms)
@@ -63,3 +64,10 @@ Overarching Topics:
 Funders: [UKSH](https://www.uksh.de/neurologie-kiel/Behandlungsschwerpunkte/Neurogeriatrie.html)
 
 Funding Period: 2017-2023
+
+## Sense-Age {#senseage}
+
+This project investigates the dynamics of attention in cognitive processing, focusing on how selective and focused information processing is controlled, and explores the decline of sustained attention, particularly in the context of aging and cognitive impairments, using methodologies like EEG and attention tests.
+
+Overarching Topics: 
+[EEG](../research#eeg)
