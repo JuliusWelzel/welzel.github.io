@@ -53,7 +53,7 @@
     "href": "projects/index.html#ngmt",
     "title": "Projects",
     "section": "NGMT",
-    "text": "NGMT\nA toolbox for gait and balance parameters in neurological cohorts.\nOverarching Topics: Algorithms Software\nFunders: UKSH\nFunding Period: Ongoing"
+    "text": "NGMT\nA toolbox for gait and balance parameters in neurological cohorts. Documentation can be found here.\nOverarching Topics: Algorithms Software\nFunders: UKSH\nFunding Period: Ongoing"
   },
   {
     "objectID": "projects/index.html#comon",
@@ -61,6 +61,13 @@
     "title": "Projects",
     "section": "ComOn",
     "text": "ComOn\nA exploratory, multicenter study on motor, cognitive and mobility deficits in geriatric patients.\nOverarching Topics: Clinical Data-Science\nFunders: UKSH\nFunding Period: 2017-2023"
+  },
+  {
+    "objectID": "projects/index.html#senseage",
+    "href": "projects/index.html#senseage",
+    "title": "Projects",
+    "section": "Sense-Age",
+    "text": "Sense-Age\nThis project investigates the dynamics of attention in cognitive processing, focusing on how selective and focused information processing is controlled, and explores the decline of sustained attention, particularly in the context of aging and cognitive impairments, using methodologies like EEG and attention tests.\nOverarching Topics: EEG"
   },
   {
     "objectID": "publications/index.html",
