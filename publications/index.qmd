@@ -4,6 +4,17 @@ excerpt: "A list of my scientific publications"
 toc-location: right
 ---
 
+## 2024
+
+- **Welzel, J.**, Güthe, M., Keil, J., Hermann, G., Wolke, R., Maetzler, W., & Becktepe, J. S. (2024). [The interplay of sensory feedback, arousal, and action tremor amplitude in essential tremor. Scientific Reports, 14(1), 4301.](https://www.nature.com/articles/s41598-024-54528-5)
+
+- Kluge, A., Kintrup, C., Kulcsarova, K., Schroeder, K., **Welzel, J.**, Heinzel, S., ... & Cossais, F. (2024). Alpha-synuclein distribution and seeding activity in rectal biopsies in Parkinson's disease. medRxiv, 2024-03. [Preprint](https://www.medrxiv.org/content/10.1101/2024.03.29.24304902.full.pdf)
+
+## 2023
+
+- Jeung, S., Cockx, H., Appelhoff, S., Berg, T., Gramann, K., Grothkopp, S., ... & **Welzel, J.** (2023). [Motion-BIDS: extending the Brain Imaging Data Structure specification to organize motion data for reproducible research.](https://osf.io/preprints/psyarxiv/w6z79)
+
+
 ## 2022
 
 
