@@ -6,17 +6,27 @@ toc-location: right
 
 ## 2024
 
-- **Welzel, J.**, Güthe, M., Keil, J., Hermann, G., Wolke, R., Maetzler, W., & Becktepe, J. S. (2024). [The interplay of sensory feedback, arousal, and action tremor amplitude in essential tremor. Scientific Reports, 14(1), 4301.](https://www.nature.com/articles/s41598-024-54528-5)
+- Lang, C., van Dieen, J. H., Brodie, M. A., **Welzel, J.**, Maetzler, W., Singh, N. B., & Ravi, D. K. (2024). [Complexities and challenges of translating intervention success to real-world gait in people with Parkinson’s disease. *Frontiers in Neurology, 15.*](https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2024.1455692/full)
 
-- Kluge, A., Kintrup, C., Kulcsarova, K., Schroeder, K., **Welzel, J.**, Heinzel, S., ... & Cossais, F. (2024). Alpha-synuclein distribution and seeding activity in rectal biopsies in Parkinson's disease. medRxiv, 2024-03. [Preprint](https://www.medrxiv.org/content/10.1101/2024.03.29.24304902.full.pdf)
+- Abedinifar, M., **Welzel, J.**, Hansen, C., Maetzler, W., & Romijnders, R. (2024). [KielMAT: Kiel Motion Analysis Toolbox – An open-source Python toolbox for analyzing neurological motion data from various recording modalities. *Journal of Open Source Software, 9*(102), 6842.](https://joss.theoj.org/papers/10.21105/joss.06842)
+
+- Oppermann, J., Tschentscher, V., **Welzel, J.**, Geritz, J., Hansen, C., Gold, R., Maetzler, W., Scherbaum, R., & Tönges, L. (2024). [Clinical and device-based predictors of improved experience of activities of daily living after a multidisciplinary inpatient treatment for people with Parkinson’s disease: A cohort study. *Therapeutic Advances in Neurological Disorders, 17,* 17562864241277157.](https://doi.org/10.1177/17562864241277157)
+
+- Schaeffer, E., Kluge, A., Schulte, C., Deuschle, C., Bunk, J., **Welzel, J.**, Maetzler, W., & Berg, D. (2024). [Association of misfolded α-synuclein derived from neuronal exosomes in blood with Parkinson’s disease diagnosis and duration. *Journal of Parkinson's Disease, 14*(4), 667-679.](https://content.iospress.com/articles/journal-of-parkinsons-disease/jpd230390)
+
+- Kluge, A., Schaeffer, E., Bunk, J., Sommerauer, M., Röttgen, S., Schulte, C., Roeben, B., von Thaler, A.-K., **Welzel, J.**, Lucius, R., Heinzel, S., Xiang, W., Eschweiler, G. W., Maetzler, W., Suenkel, U., & Berg, D. (2024). [Detecting misfolded α-synuclein in blood years before the diagnosis of Parkinson’s disease. *Movement Disorders, 39*(8), 1289-1299.](https://onlinelibrary.wiley.com/doi/abs/10.1002/mds.29766)
+
+- Poldrack, R. A., Markiewicz, C. J., Appelhoff, S., Ashar, Y. K., Auer, T., Baillet, S., Bansal, S., Beltrachini, L., Benar, C. G., Bertazzoli, G., Bhogawar, S., Blair, R. W., Bortoletto, M., Boudreau, M., Brooks, T. L., Calhoun, V. D., Castelli, F. M., Clement, P., Cohen, A. L., … **Welzel, J.** (2024). [The past, present, and future of the brain imaging data structure (BIDS). *Imaging Neuroscience, 2,* 1-19.](https://doi.org/10.1162/imag_a_00103)
+
+- Jeung, S., Cockx, H., Appelhoff, S., Berg, T., Gramann, K., Grothkopp, S., Warmerdam, E., Hansen, C., & Oostenveld, R., **& BIDS Maintainers** (2024). [Motion-BIDS: An extension to the brain imaging data structure to organize motion data for reproducible research. *Scientific Data, 11*(1), 716.](https://www.nature.com/articles/s41597-024-03559-8) 
+
+- **Welzel, J.**, Güthe, M., Keil, J., Hermann, G., Wolke, R., Maetzler, W., & Becktepe, J. S. (2024). [The interplay of sensory feedback, arousal, and action tremor amplitude in essential tremor. Scientific Reports, 14(1), 4301.](https://www.nature.com/articles/s41598-024-54528-5)
 
 ## 2023
 
-- Jeung, S., Cockx, H., Appelhoff, S., Berg, T., Gramann, K., Grothkopp, S., ... & **Welzel, J.** (2023). [Motion-BIDS: extending the Brain Imaging Data Structure specification to organize motion data for reproducible research.](https://osf.io/preprints/psyarxiv/w6z79)
-
+- Bindel, L., Mühlberg, C., Pfeiffer, V., Nitschke, M., Müller, A., Wegscheider, M., Rumpf, J.-J., Zeuner, K. E., Becktepe, J. S., **Welzel, J.**, Güthe, M., Classen, J., & Tzvi, E. (2023). [Visuomotor adaptation deficits in patients with essential tremor. *The Cerebellum, 22*(5), 925–937.](https://doi.org/10.1007/s12311-022-01474-5)
 
 ## 2022
-
 
 -   Hansen, C., Ortlieb, C., Romijnders, R., Warmerdam, E., **Welzel, J.**, Geritz, J., & Maetzler, W. (2022). [Reliability of IMU-Derived Temporal Gait Parameters in Neurological Diseases. Sensors, 22(6), 2304.](https://www.mdpi.com/1424-8220/22/6/2304)
 
