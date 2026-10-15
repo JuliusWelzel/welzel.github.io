@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Data standards and open-source tools for mobile EEG, motion and clinical data.">
+<meta name="description" content="Published open-source Python packages for motion analysis and research data management.">
 
-<title>Open Source Software – Julius Welzel</title>
+<title>Software – Julius Welzel</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f6bb410983829dfe1d4ed4064aa3c6d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9e8047293f77ae2a4159138e5c33d531.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -138,10 +138,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../teaching/index.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../talks/index.html"> 
-<span class="menu-text">Talks</span></a>
-  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -182,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Open Source Software</h1></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Software</h1></header>
 
 <header id="title-block-header">
 
@@ -191,51 +187,30 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="hero">
-<p><span class="kicker">Software &amp; standards</span></p>
-<section id="tools-that-make-data-travel" class="level1 unlisted">
-<h1 class="unlisted">Tools that make data travel</h1>
-<p><span class="dek">Data standards and open-source software for mobile EEG, motion and clinical data, so that recordings from different labs can be compared, shared and reused.</span></p>
+<p><span class="kicker">Software</span></p>
+<section id="software" class="level1 unlisted">
+<h1 class="unlisted">Software</h1>
+<p><span class="dek">Published open-source Python packages for the analysis and management of motion and clinical research data.</span></p>
 </section>
 </div>
-<section id="bids" class="level2">
-<h2 class="anchored" data-anchor-id="bids">BIDS &amp; Motion-BIDS</h2>
-<p><img src="../images/BIDS_Logo.png" class="img-fluid" style="width:40.0%" alt="The BIDS logo."></p>
-<p>The <a href="https://bids.neuroimaging.io">Brain Imaging Data Structure (BIDS)</a> is the community standard for organising neuroscience data. I co-led the extension for motion data, <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html">Motion-BIDS</a> (BEP029), which covers optical motion capture, inertial sensors and other tracking systems. Today I contribute to the specification and teach BIDS in workshops and in the <a href="../projects/igor.html">IGOR BIDS Consultation Hour</a>.</p>
-<p><a href="https://github.com/JuliusWelzel/motionbids"><em>motionbids</em></a> is a lightweight Python package I develop for curating motion datasets in the Motion-BIDS format (<a href="https://juliuswelzel.github.io/motionbids/">documentation</a>, <a href="https://pypi.org/project/motionbids/">PyPI</a>).</p>
-<p>My role: co-lead author of Motion-BIDS; developer of <em>motionbids</em></p>
-<p>Links: <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html">Specification</a> · <a href="https://doi.org/10.1038/s41597-024-03559-8">Paper</a> · <a href="https://github.com/JuliusWelzel/motion_bids_materials_jw">Teaching materials</a></p>
-</section>
 <section id="kielmat" class="level2">
 <h2 class="anchored" data-anchor-id="kielmat">KielMAT</h2>
 <p><img src="../images/neurogeriatrics_logo.png" class="img-fluid" style="width:25.0%" alt="The Neurogeriatrics Kiel logo."></p>
-<p>The <a href="https://neurogeriatricskiel.github.io/KielMAT/">Kiel Motion Analysis Toolbox (KielMAT)</a>, formerly NGMT, is an open-source Python toolbox for gait and balance analysis in neurological cohorts. It runs validated algorithms on wearable and motion-capture data, and its data model is built around Motion-BIDS.</p>
-<p>My role: co-developer and co-maintainer</p>
-<p>Links: <a href="https://neurogeriatricskiel.github.io/KielMAT/">Documentation</a> · <a href="https://github.com/neurogeriatricskiel/KielMAT">GitHub</a> · <a href="https://pypi.org/project/kielmat/">PyPI</a> · <a href="https://doi.org/10.21105/joss.06842">JOSS paper</a></p>
+<p>The Kiel Motion Analysis Toolbox (KielMAT, formerly NGMT) is a Python toolbox for gait and balance analysis in neurological cohorts. It implements validated algorithms for wearable and motion-capture data and uses a data model based on Motion-BIDS.</p>
+<p>Role: co-developer and co-maintainer</p>
+<p><a href="https://neurogeriatricskiel.github.io/KielMAT/">Documentation</a> · <a href="https://pypi.org/project/kielmat/">PyPI</a> · <a href="https://github.com/neurogeriatricskiel/KielMAT">GitHub</a> · <a href="https://doi.org/10.21105/joss.06842">JOSS paper</a></p>
 </section>
-<section id="unisep" class="level2">
-<h2 class="anchored" data-anchor-id="unisep">UNISEP</h2>
-<p>UNISEP is a unified, modality-agnostic framework for describing where sensors are placed on the human body in motion capture and wearable research. Its vocabulary is used, for example, in the data curation of <a href="../projects/eegmanysteps.html">EEGManySteps</a>.</p>
-<p>My role: co-first author</p>
-<p>Links: <a href="https://arxiv.org/abs/2412.21159">Preprint</a> · <a href="https://github.com/unisep-framework/unisep-framework.github.io">GitHub</a></p>
+<section id="motionbids" class="level2">
+<h2 class="anchored" data-anchor-id="motionbids">motionbids</h2>
+<p>A lightweight Python package for converting motion data (optical motion capture, inertial sensors) to the <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html">Motion-BIDS</a> format.</p>
+<p>Role: developer</p>
+<p><a href="https://juliuswelzel.github.io/motionbids/">Documentation</a> · <a href="https://pypi.org/project/motionbids/">PyPI</a> · <a href="https://github.com/JuliusWelzel/motionbids">GitHub</a></p>
 </section>
-<section id="redcap" class="level2">
-<h2 class="anchored" data-anchor-id="redcap">REDCap workflows</h2>
-<p>Two Python packages that bring clinical and questionnaire data into reproducible pipelines:</p>
-<ul>
-<li><a href="https://github.com/JuliusWelzel/rcol"><em>rcol</em></a> installs standardised questionnaire and test instruments into REDCap projects (<a href="https://juliuswelzel.github.io/rcol/">documentation</a>, <a href="https://pypi.org/project/rcol/">PyPI</a>).</li>
-<li><a href="https://github.com/JuliusWelzel/redcap2bids"><em>redcap2bids</em></a> turns REDCap exports into BIDS participant files.</li>
-</ul>
-<p>My role: developer</p>
-</section>
-<section id="lsl" class="level2">
-<h2 class="anchored" data-anchor-id="lsl">Multimodal recording</h2>
-<p>Tools for synchronised recordings with the <a href="https://labstreaminglayer.org">Lab Streaming Layer (LSL)</a> and for multi-site data harmonisation, developed for <a href="../projects/stepup.html">StepuP</a>:</p>
-<ul>
-<li><a href="https://github.com/JuliusWelzel/StepuP_setup">StepuP setup</a>: LSL synchronisation of EEG, EMG and motion-capture systems</li>
-<li><a href="https://github.com/StepuP-consortium/stepup_bids_converter">StepuP BIDS converter</a>: one BIDS dataset from every site’s EEG, EMG, motion and REDCap data</li>
-<li><a href="https://github.com/StepuP-consortium/check_eeg_data">EEG data checks</a>: quality checks for incoming EEG recordings</li>
-</ul>
-<p>My role: developer</p>
+<section id="rcol" class="level2">
+<h2 class="anchored" data-anchor-id="rcol">rcol</h2>
+<p>A Python package with templates for standardised questionnaires and clinical tests in REDCap, including stacking and upload of instrument data.</p>
+<p>Role: developer</p>
+<p><a href="https://juliuswelzel.github.io/rcol/">Documentation</a> · <a href="https://pypi.org/project/rcol/">PyPI</a> · <a href="https://github.com/JuliusWelzel/rcol">GitHub</a></p>
 
 
 </section>
