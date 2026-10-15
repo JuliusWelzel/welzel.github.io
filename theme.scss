@@ -576,9 +576,22 @@ header.quarto-title-block {
 a.pub-badge:hover { border-color: $accent; color: $accent; }
 .pub-preprint { border-color: $accent; color: $accent; }
 
-#quarto-content main h2[id^="year-"] {
+#quarto-content main section.pub-year > h3 {
   font-family: $font-display;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
+  margin-top: 2.2rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid $hairline;
+}
+
+.pub-jump {
+  font-family: $font-sans;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 // ---------------------------------------------------------------------------

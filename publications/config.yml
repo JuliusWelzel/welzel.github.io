@@ -73,6 +73,8 @@ exclude:
   - doi: 10.22541/au.176906185.59261482/v1
   - doi: 10.31234/osf.io/w6z79
   - doi: 10.1101/2020.12.11.420919
+  - doi: 10.22541/au.172464977.75584057/v1   # Post-COVID HrQoL preprint (removed on request)
+  - doi: 10.1101/2024.03.29.24304902         # rectal biopsy preprint (removed on request)
 
 # Corrections applied to an entry, keyed by DOI. Any field of an entry
 # (title, authors, year, venue, volume, issue, pages, url, type) can be set.
