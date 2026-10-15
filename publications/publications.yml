@@ -56,8 +56,10 @@ publications:
   date: '2026-09-04'
   venue: Research Square
   type: preprint
+  url: https://doi.org/10.21203/rs.3.rs-10753262/v1
   sources:
   - manual
+  - openalex
 - doi: 10.64898/2026.08.26.26361464
   title: Stability-related foot placement control relies more on mediolateral center-of-mass velocity feedback in people with early Multiple Sclerosis
   authors:
