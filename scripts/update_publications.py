@@ -185,7 +185,7 @@ def initials(given: str) -> str:
     if not given:
         return ""
     out = []
-    for token in given.replace(".", ". ").split():
+    for token in re.sub(r"\.(?!-)", ". ", given).split():
         if "-" in token.strip("-"):
             out.append("-".join(p[0].upper() + "." for p in token.split("-") if p))
         elif token.isupper() and len(token.rstrip(".")) <= 3 and len(token) > 1 and "." not in token:
@@ -216,7 +216,7 @@ def is_preprint_doi(doi: str) -> bool:
 
 
 def normalise_type(raw: str, doi: str = "", venue: str = "") -> str:
-    raw = (raw or "").lower()
+    raw = (raw or "").lower().replace("_", "-")  # ORCID: JOURNAL_ARTICLE
     if raw in DROP_TYPES:
         return "drop"
     if is_preprint_doi(doi) or raw in {"preprint", "posted-content", "working-paper"} or (
@@ -383,14 +383,23 @@ class ScholarParser:
             if grays:
                 for name in grays[0].split(","):
                     name = name.strip()
-                    if not name or name in {"...", "…"}:
+                    if not name:
+                        continue
+                    if name in {"...", "…"}:
+                        authors.append("…")  # Scholar truncated the author list
                         continue
                     family, given = split_name(name)
                     authors.append(format_author(family, given))
             venue = re.sub(r",?\s*(19|20)\d{2}$", "", grays[1]).strip() if len(grays) > 1 else ""
+            volume = issue = pages = ""
+            # "Gait & Posture 57, 1-2" / "Scientific Reports 14 (1), 4301"
+            parts = re.match(r"^(.*?[A-Za-z)])\s+(\d+)(?:\s*\(([^)]*)\))?(?:,\s*(\S+))?$", venue)
+            if parts:
+                venue, volume, issue, pages = parts.group(1), parts.group(2), parts.group(3) or "", parts.group(4) or ""
+                pages = pages.replace("-", "–")
             out.append(record(
                 title=title, authors=authors, year=int(year_match.group(1)) if year_match else None,
-                venue=venue, type=normalise_type("", "", venue) if venue else "other",
+                venue=venue, volume=volume, issue=issue, pages=pages, type=normalise_type("", "", venue) if venue else "other",
                 url=f"https://scholar.google.com{href}" if href.startswith("/") else href,
                 sources=["google_scholar"],
             ))
@@ -485,8 +494,14 @@ def merge_into(target: dict, other: dict) -> dict:
         if key == "sources":
             target["sources"] = sorted(set(target.get("sources", [])) | set(value))
         elif key == "authors":
-            # Prefer complete author lists over truncated (Scholar) ones.
-            if len(value or []) > len(target.get("authors") or []):
+            # Prefer complete author lists over truncated (Scholar) ones; the
+            # truncation marker itself does not count as an author.
+            def named(names: list[str]) -> int:
+                return len([n for n in names or [] if n not in {"…", "..."}])
+            if named(value) > named(target.get("authors")):
+                target["authors"] = value
+            elif (named(value) == named(target.get("authors")) and target.get("authors")
+                  and "…" in target["authors"] and "…" not in (value or [])):
                 target["authors"] = value
         elif not target.get(key) and value:
             target[key] = value
@@ -498,6 +513,7 @@ def rank(rec: dict) -> tuple:
     order = ["article", "conference", "chapter", "thesis", "other", "dataset", "software", "preprint"]
     rtype = rec.get("type", "other")
     return (
+        rtype != "preprint",
         bool(rec.get("doi")),
         -order.index(rtype) if rtype in order else -len(order),
         bool(rec.get("venue")),
@@ -540,10 +556,16 @@ def merge_by_title(records: list[dict]) -> list[dict]:
                 continue
             # Same title but clearly different DOIs of the same type and
             # several years apart (e.g. a replication) stay separate.
-            if (rec.get("doi") and other.get("doi") and rec["type"] == other["type"]
-                    and rec["type"] not in {"software", "dataset"}
-                    and rec.get("year") and other.get("year") and abs(rec["year"] - other["year"]) > 1):
-                continue
+            if (rec.get("doi") and other.get("doi") and rec["doi"] != other["doi"]
+                    and rec["type"] == other["type"]
+                    and rec["type"] not in {"software", "dataset", "preprint"}):
+                # Different DOIs: companion papers ("Protocol of..." vs
+                # "Results of...", "Part 1" vs "Part 2") are near-identical in
+                # text, so only an identical title counts as the same work.
+                if norm_title(rec["title"]) != norm_title(other["title"]):
+                    continue
+                if (rec.get("year") and other.get("year") and abs(rec["year"] - other["year"]) > 1):
+                    continue
             match = other
             break
         if match is None:
@@ -635,6 +657,7 @@ def _keep_word(word: str, keep: set[str]) -> bool:
     return (
         not core
         or any(ch.isdigit() for ch in core)
+        or (len(core) == 1 and core.isupper())    # Vitamin D, Phase I
         or any(ch.isupper() for ch in core[1:])   # EEG, KielMAT, MoBI
         or not core[0].isupper()                  # already lower case / iPad
         or core.lower() in keep or base.lower() in keep
@@ -648,6 +671,8 @@ def sentence_case(title: str, keep: set[str]) -> str:
     words after a colon, acronyms, words with digits and the proper nouns in
     `keep` keep their capitalisation.
     """
+    if re.search(r"[äöüßÄÖÜ]|\b(und|bei|der|die|das|von|mit|für|zur|zum|eine?)\b", title):
+        return title  # German titles already capitalise nouns
     words = re.findall(r"[A-Za-z][A-Za-z'’]*", title)
     long_words = [w for w in words[1:] if len(w) > 3]
     if not long_words or sum(w[0].isupper() for w in long_words) / len(long_words) < 0.6:
@@ -695,7 +720,8 @@ def format_entry(rec: dict, config: dict) -> str:
     if rtype in {"preprint", "dataset", "software", "thesis"}:
         described = {"dataset": " \\[Data set\\]", "software": " \\[Computer software\\]",
                      "thesis": " \\[Thesis\\]"}.get(rtype, "")
-        parts.append(f"*{title}*{described}." if described else end_sentence(f"*{title}*"))
+        parts.append(f"*{title}*{described}." if described
+                     else f"*{title}*" + ("" if title.endswith(("?", "!", ".")) else "."))
         if venue:
             parts.append(end_sentence(venue))
     elif rtype == "chapter":
@@ -885,8 +911,10 @@ def collect(config: dict, previous: list[dict]) -> tuple[list[dict], set[str]]:
         for old in previous:
             if not set(old.get("sources", [])) & retain or "manual" in old.get("sources", []):
                 continue
-            match = next((r for r in merged if (old.get("doi") and r.get("doi") == old["doi"])
-                          or titles_match(old["title"], r["title"])), None)
+            match = next((r for r in merged if old.get("doi") and r.get("doi") == old["doi"]), None)
+            if match is None:
+                match = next((r for r in merged if titles_match(old["title"], r["title"])
+                              and not (old.get("doi") and r.get("doi"))), None)
             if match is None:
                 merged.append(record(**old))
             else:

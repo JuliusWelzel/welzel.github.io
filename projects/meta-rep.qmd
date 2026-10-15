@@ -48,23 +48,20 @@ The field does not need one mandatory pipeline. It needs every pipeline to be re
 
 ## A reporting standard for mobile EEG
 
-The cornerstone of my META-REP work is a reporting standard for mobile EEG studies: a community-backed minimum of what every paper has to state so that readers can evaluate, compare and repeat it. Building on the review, it covers the decisions that make mobile EEG special:
+The cornerstone of my META-REP work is a reporting standard for mobile EEG studies, now in preparation: a shared minimum of what a paper reports, so that readers can evaluate, compare and repeat it. Its starting point is what the review found missing most often:
 
 ::: {.checklist}
-- **Recording context** Setting and task: indoor or outdoor, treadmill or overground, walking speed, footwear, secondary tasks.
-- **Hardware & montage** Amplifier, electrode type, channel layout, cable management and sampling rates.
-- **Synchronisation** How EEG, motion and other streams are time-locked (e.g. Lab Streaming Layer), and how latencies were checked.
-- **Gait events** Sensors and algorithms used to detect heel strikes and toe-offs, and how events were validated.
-- **Preprocessing & artefacts** Every step, in order, with parameters: filters, bad-channel handling, ASR, ICA and component classification.
-- **Software & code** Toolboxes, versions and parameters, with analysis code shared openly.
-- **Data sharing** Data organised in community standards such as EEG-BIDS and [Motion-BIDS](../software/index.qmd#bids), ready for reuse and reanalysis.
+- **Recording context** Setting and task, such as indoor or outdoor, treadmill or overground walking, and the equipment used.
+- **Preprocessing steps** Every step with its order and tools, in particular how movement artefacts are rejected.
+- **Software parameters** The settings of each tool, so that a pipeline can be re-run.
+- **Open code and workflows** Analysis code and workflows shared openly, ideally with data in community standards such as EEG-BIDS and [Motion-BIDS](../software/index.qmd#bids).
 :::
 
 ## Related work
 
 - [**EEGManySteps**](eegmanysteps.qmd): a many-labs effort that measures how much setups and pipelines change gait-related EEG results.
 - [**IGOR umbrella review**](igor.qmd): a review of how EEG/ERP preprocessing is reported and justified across the literature.
-- **Multiverse analyses**: [mapping preprocessing choices in mobile EEG](https://github.com/NeuropsyOL/mobileEEG_multiverse) and a [multiverse of beta activity during gait](https://github.com/vaishvd/betaGaitMultiverse), led by Vaishali Vinod.
+- **Multiverse analyses**: [mapping preprocessing choices in mobile EEG](https://github.com/NeuropsyOL/mobileEEG_multiverse) and a [multiverse of beta activity during gait](https://github.com/vaishvd/betaGaitMultiverse) by Vaishali Vinod. The first maps the choices made in the literature (Oldenburg METEOR team); the second varies preprocessing choices on two walking datasets.
 
 ## Publications
 

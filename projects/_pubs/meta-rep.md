@@ -3,5 +3,5 @@
 
 ::: {.pub-list}
 - **Welzel, J.**, … (2026). *Have we solved the replicability crisis? From open practices to systemic reform in cognitive neurosciences*. MetaArXiv. [https://osf.io/preprints/metaarxiv/m6rng_v1](https://osf.io/preprints/metaarxiv/m6rng_v1){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
-- Vinod, V., Papin, L. J., Romijnders, R., Maetzler, W., & **Welzel, J.** (2026). Preprocessing on the go: Practices in gait-related mobile EEG. *Psychophysiology*, *63*(6), Article e70352. [https://doi.org/10.1111/psyp.70352](https://doi.org/10.1111/psyp.70352){.pub-doi} [Preprint](https://doi.org/10.22541/au.176906185.59261482/v1){.pub-badge .pub-preprint-link}
+- Vinod, V., Papin, L. J., Romijnders, R., Maetzler, W., & **Welzel, J.** (2026). Preprocessing on the go: Practices in gait-related mobile EEG. *Psychophysiology*, *63*(6), Article e70352. [https://doi.org/10.1111/psyp.70352](https://doi.org/10.1111/psyp.70352){.pub-doi}
 :::

@@ -12,10 +12,12 @@
 
   var root = document.documentElement;
   var M = window.Motion;
-  if (!M) { root.classList.remove("motion-ready"); return; }
+  // Without the Motion library the page runs in the "reduced motion" mode:
+  // nothing is animated and nothing stays hidden, but the topic filter works.
+  if (!M) root.classList.remove("motion-ready");
   window.__siteMotionStarted = true;
 
-  var animate = M.animate, inView = M.inView, stagger = M.stagger;
+  var animate = M && M.animate, inView = M && M.inView, stagger = M && M.stagger;
   var reduce = !root.classList.contains("motion-ready");
   var ease = [0.22, 1, 0.36, 1];
 
@@ -100,6 +102,15 @@
     var buttons = $(".chip[data-filter]");
     if (!buttons.length) return;
     var cards = $(".project-card[data-topics]");
+    $(".chip-row").forEach(function (row) { row.hidden = false; });
+
+    // Hide a section such as "Earlier projects" when the filter leaves it empty.
+    function updateSections() {
+      $(".card-grid").forEach(function (grid) {
+        var section = grid.closest("section.level2");
+        if (section) section.hidden = !grid.querySelector(".project-card:not([hidden])");
+      });
+    }
     buttons.forEach(function (btn) {
       btn.addEventListener("click", function () {
         var topic = btn.getAttribute("data-filter");
@@ -112,6 +123,7 @@
         if (reduce) {
           drop.forEach(function (c) { c.hidden = true; });
           keep.forEach(function (c) { c.hidden = false; c.style.opacity = 1; });
+          updateSections();
           return;
         }
         var leaving = drop.filter(function (c) { return !c.hidden; });
@@ -121,6 +133,7 @@
         out.then(function () {
           drop.forEach(function (c) { c.hidden = true; });
           keep.forEach(function (c) { c.hidden = false; });
+          updateSections();
           animate(keep, { opacity: [0, 1], scale: [0.97, 1], y: [12, 0] },
                   { duration: 0.45, delay: stagger(0.05), ease: ease });
         });

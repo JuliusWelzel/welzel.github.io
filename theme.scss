@@ -369,7 +369,7 @@ header.quarto-title-block {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(17.5rem, 100%), 1fr));
   gap: 2rem 1.75rem;
   margin: 2rem 0 1rem;
 }
@@ -742,5 +742,65 @@ svg[data-anim] .node {
     padding: 0.45rem 0 0.45rem 1.4rem;
     text-indent: -1.4rem;
     color: $ink-soft;
+  }
+}
+
+// Long URLs (Impressum, DOIs) must wrap instead of widening the page.
+#quarto-content main {
+  overflow-wrap: break-word;
+}
+
+#quarto-content main a {
+  overflow-wrap: anywhere;
+}
+
+.chip-row[hidden] {
+  display: none;
+}
+
+// Quarto's anchor icons add a second tab stop inside every card heading.
+.project-card .anchorjs-link {
+  display: none;
+}
+
+// Figures keep a readable size on phones and scroll sideways instead of shrinking.
+.figure-anim {
+  overflow-x: auto;
+}
+
+@media (max-width: 640px) {
+  .figure-anim svg {
+    min-width: 600px;
+  }
+}
+
+// Printing or saving as PDF: show everything, whatever the scroll state.
+@media print {
+  .motion-ready .hero > *,
+  .motion-ready .card-grid > *,
+  .motion-ready .home-grid > *,
+  .motion-ready .facts-group > *,
+  .motion-ready .logo-strip > *,
+  .motion-ready .checklist li,
+  .motion-ready .reveal,
+  .motion-ready svg[data-anim],
+  .pub-list li,
+  .project-card,
+  svg[data-anim] * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  svg[data-anim] path {
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+
+  .project-card[hidden] {
+    display: flex !important;
+  }
+
+  .chip-row {
+    display: none !important;
   }
 }
