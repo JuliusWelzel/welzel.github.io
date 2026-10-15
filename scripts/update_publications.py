@@ -801,13 +801,23 @@ def render_markdown(records: list[dict], config: dict, updated: str) -> str:
         ":::",
         "",
     ]
-    by_year: dict[Any, list[dict]] = {}
-    for rec in sorted_records(records):
-        by_year.setdefault(rec.get("year") or "Undated", []).append(rec)
-    for year, items in by_year.items():
-        lines += [f"## {year} {{#year-{year}}}", "", "::: {.pub-list}"]
-        lines += [format_entry(rec, config) for rec in items]
-        lines += [":::", ""]
+    articles = [r for r in sorted_records(records) if r.get("type") != "preprint"]
+    preprints = [r for r in sorted_records(records) if r.get("type") == "preprint"]
+    sections = [("articles", "Journal articles", articles), ("preprints", "Preprints", preprints)]
+    lines += ["::: {.pub-jump}",
+              " · ".join(f"[{title} ({len(items)})](#{key})" for key, title, items in sections if items),
+              ":::", ""]
+    for key, title, items in sections:
+        if not items:
+            continue
+        lines += [f"## {title} {{#{key}}}", ""]
+        by_year: dict[Any, list[dict]] = {}
+        for rec in items:
+            by_year.setdefault(rec.get("year") or "Undated", []).append(rec)
+        for year, group in by_year.items():
+            lines += [f"### {year} {{#{key}-{year} .pub-year}}", "", "::: {.pub-list}"]
+            lines += [format_entry(rec, config) for rec in group]
+            lines += [":::", ""]
     return "\n".join(lines)
 
 

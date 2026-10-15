@@ -2,16 +2,19 @@
      use publications/config.yml to add, hide or correct entries. -->
 
 ::: {.pub-meta}
-50 publications · updated automatically every week from [ORCID](https://orcid.org/0000-0001-8958-0934), [Google Scholar](https://scholar.google.com/citations?user=CWxKXBcAAAAJ), [OpenAlex](https://openalex.org) and [Crossref](https://www.crossref.org) · last change 2026-10-15
+48 publications · updated automatically every week from [ORCID](https://orcid.org/0000-0001-8958-0934), [Google Scholar](https://scholar.google.com/citations?user=CWxKXBcAAAAJ), [OpenAlex](https://openalex.org) and [Crossref](https://www.crossref.org) · last change 2026-10-15
 :::
 
-## 2026 {#year-2026}
+::: {.pub-jump}
+[Journal articles (43)](#articles) · [Preprints (5)](#preprints)
+:::
+
+## Journal articles {#articles}
+
+### 2026 {#articles-2026 .pub-year}
 
 ::: {.pub-list}
-- Neumann, C., Godbersen, L., Schmeer, L., Hauffe, J. M., Helzel, K., Geritz, J., Hermann, G., Stagneth, L., Egerer, L., Fuglsang, L., Buschung, M., Reinke, L., Poick, S., Lieb, W., Franzpötter, K., Ruß, A.-K., Pütz, S., Raquib, S., Schmidbauer, L., … **Welzel, J.** (2026). *Fatigue is associated with stimulus-related theta and alpha power and distinguishes subjective from objective cognition in a post-viral cohort: A cross-sectional study*. Research Square. [https://doi.org/10.21203/rs.3.rs-10753262/v1](https://doi.org/10.21203/rs.3.rs-10753262/v1){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
-- van Leeuwen, A. M., Romijnders, R., **Welzel, J.**, D’Ascanio, I., Stürner, K., Hansen, C., & Maetzler, W. (2026). *Stability-related foot placement control relies more on mediolateral center-of-mass velocity feedback in people with early Multiple Sclerosis*. medRxiv. [https://doi.org/10.64898/2026.08.26.26361464](https://doi.org/10.64898/2026.08.26.26361464){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
 - Contreras-Altamirano, M., Klapprott, M., Jacobsen, N., Maanen, P., **Welzel, J.**, & Debener, S. (2026). A portable solution for simultaneous human movement and mobile EEG acquisition: readiness potential for basketball free-throw shooting. *Experimental Brain Research*, *244*(8), Article 153. [https://doi.org/10.1007/s00221-026-07342-6](https://doi.org/10.1007/s00221-026-07342-6){.pub-doi} [Preprint](https://doi.org/10.48550/arXiv.2501.05378){.pub-badge .pub-preprint-link}
-- Shirazi, S. Y., McCloy, D., Oostenveld, R., Boonstra, T., Larson, E., **Welzel, J.**, Gau, R., Markiewicz, C. J., Posella, S., Horschig, J. M., Klotz, T., Gramfort, A., & Delorme, A. (2026). *EMG-BIDS: an extension to the brain imaging data structure for electromyography*. bioRxiv. [https://doi.org/10.64898/2026.07.21.739911](https://doi.org/10.64898/2026.07.21.739911){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
 - Stagneth, L., Geritz, J., Hermann, G., Dahl, L., Zuber, L., Neumann, C., Lassen, J., Maetzler, C., Kranczioch, C., **Welzel, J.**, & Maetzler, W. (2026). EEG-based assessment of sustained attention in geriatric inpatients: a feasibility study. *GeroScience*. [https://doi.org/10.1007/s11357-026-02406-5](https://doi.org/10.1007/s11357-026-02406-5){.pub-doi}
 - Haupt, T., Maanen, P., Daeglau, M., Contreras Altamirano, M., Stritzke, A. S., Kiene, F., **Welzel, J.**, Blum, S., Roheger, M., & Debener, S. (2026). Enhancing mobile brain and body imaging: Open-source solutions for real-world research applications. *iScience*, *29*(7), Article 116647. [https://doi.org/10.1016/j.isci.2026.116647](https://doi.org/10.1016/j.isci.2026.116647){.pub-doi} [Preprint](https://doi.org/10.2139/ssrn.5433769){.pub-badge .pub-preprint-link}
 - Saegner, K., Conceição, P., Romijnders, R., **Welzel, J.**, Vuillerme, N., Hansen, C., Warmerdam, E., & Maetzler, W. (2026). Whole body analysis of functional communities and topological features of gait with different speeds in Parkinson’s disease. *Journal of Neurology*, *273*(7), Article 381. [https://doi.org/10.1007/s00415-026-13920-z](https://doi.org/10.1007/s00415-026-13920-z){.pub-doi}
@@ -19,11 +22,10 @@
 - Maetzler, C., Abedinifar, M., Vinod, V., **Welzel, J.**, Schaeffer, E., Yilmaz, R., Hobert, M. A., Hansen, C., Durif, F., Corvol, J.-C., Rascol, O., Behnke, S., Poewe, W., Zeuner, K. E., Ruzicka, E., Ferreira, J. J., Romijnders, R., Berg, D., Devos, D., … Maetzler, W. (2026). Body placement of inertial measurement units differentially affects physical activity assessment accuracy in drug-naïve Parkinson’s disease. *Scientific Reports*, *16*(1), Article 17511. [https://doi.org/10.1038/s41598-026-55099-3](https://doi.org/10.1038/s41598-026-55099-3){.pub-doi}
 - Vinod, V., Papin, L. J., Romijnders, R., Maetzler, W., & **Welzel, J.** (2026). Preprocessing on the go: Practices in Gait‐Related mobile EEG. *Psychophysiology*, *63*(6), Article e70352. [https://doi.org/10.1111/psyp.70352](https://doi.org/10.1111/psyp.70352){.pub-doi} [Preprint](https://doi.org/10.22541/au.176906185.59261482/v1){.pub-badge .pub-preprint-link}
 - Stagneth, L., **Welzel, J.**, Hermann, G., Maetzler, C., Neumann, C., Dahl, L., Schmeer, L., Knacke, H., Kranczioch, C., Graf, S., Müller, A., Geritz, J., & Maetzler, W. (2026). Studying neurocognitive systems for sustained attention in neurogeriatric patients: protocol of the SENSE-AGE study. *Frontiers in Aging Neuroscience*, *18*, Article 1749814. [https://doi.org/10.3389/fnagi.2026.1749814](https://doi.org/10.3389/fnagi.2026.1749814){.pub-doi} [Preprint](https://doi.org/10.31219/osf.io/5ke7s_v1){.pub-badge .pub-preprint-link}
-- **Welzel, J.** (2026). *Have we solved the replicability crisis? From open practices to systemic reform in cognitive neurosciences*. Center for Open Science. [https://doi.org/10.31222/osf.io/m6rng_v1](https://doi.org/10.31222/osf.io/m6rng_v1){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
 - Dargvainiene, J., Helmers, A., Naumann, J., Gless, C. A., Möller, B., **Welzel, J.**, Leypoldt, F., Hensler, J., Tesseur, I., Wandinger, K., Deuschl, G., Berg, D., & Paschen, S. (2026). Longitudinal Blood‐Biomarker‐Based assessment of brain injury in patients undergoing deep brain stimulation and magnetic resonance– guided focused ultrasound. *Movement Disorders*, *41*(1), 241–246. [https://doi.org/10.1002/mds.70071](https://doi.org/10.1002/mds.70071){.pub-doi}
 :::
 
-## 2025 {#year-2025}
+### 2025 {#articles-2025 .pub-year}
 
 ::: {.pub-list}
 - Saegner, K., Romijnders, R., Ruff, I., **Welzel, J.**, Hansen, C., Warmerdam, E., Conceição, P., & Maetzler, W. (2025). Inter-segmental coordination patterns in Parkinson’s disease are particularly disturbed during preferred walking speed: a data-driven network approach. *Journal of NeuroEngineering and Rehabilitation*, *23*(1), Article 39. [https://doi.org/10.1186/s12984-025-01835-1](https://doi.org/10.1186/s12984-025-01835-1){.pub-doi}
@@ -35,25 +37,22 @@
 - Hoffmann, J., Wolframm, H., Engelhardt, E., Boueke, M., Schmidt, T., **Welzel, J.**, Höft, M., Maetzler, W., & Schmidt, G. (2025). A magnetoelectric distance estimation system for relative human motion tracking. *Sensors*, *25*(2), 495. [https://doi.org/10.3390/s25020495](https://doi.org/10.3390/s25020495){.pub-doi}
 :::
 
-## 2024 {#year-2024}
+### 2024 {#articles-2024 .pub-year}
 
 ::: {.pub-list}
-- **Welzel, J.**, Jeung, S., Godbersen, L., & Shirazi, S. Y. (2024). *UNISEP: A unified sensor placement framework for human motion capture and wearables*. arXiv (Cornell University). [https://doi.org/10.48550/arxiv.2412.21159](https://doi.org/10.48550/arxiv.2412.21159){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
 - Piet, A., Geritz, J., Garcia, P., Irsfeld, M., Li, F., Huang, X., Irshad, M. T., **Welzel, J.**, Hansen, C., Maetzler, W., Grzegorzek, M., & Bunzeck, N. (2024). Predicting executive functioning from walking features in Parkinson’s disease using machine learning. *Scientific Reports*, *14*(1), Article 29522. [https://doi.org/10.1038/s41598-024-80144-4](https://doi.org/10.1038/s41598-024-80144-4){.pub-doi}
 - Hermann, G., Baumgarte, F., **Welzel, J.**, Nydahl, P., Kuhlenbäumer, G., & Margraf, N. G. (2024). Electroencephalography based delirium screening in acute supratentorial stroke. *BMC Neurology*, *24*(1), Article 442. [https://doi.org/10.1186/s12883-024-03942-3](https://doi.org/10.1186/s12883-024-03942-3){.pub-doi}
 - Lang, C., van Dieen, J. H., Brodie, M. A., **Welzel, J.**, Maetzler, W., Singh, N. B., & Ravi, D. K. (2024). Complexities and challenges of translating intervention success to real world gait in people with Parkinson’s disease. *Frontiers in Neurology*, *15*, Article 1455692. [https://doi.org/10.3389/fneur.2024.1455692](https://doi.org/10.3389/fneur.2024.1455692){.pub-doi} [Preprint](https://doi.org/10.2139/ssrn.4785729){.pub-badge .pub-preprint-link}
 - Abedinifar, M., **Welzel, J.**, Hansen, C., Maetzler, W., & Romijnders, R. (2024). KielMAT: Kiel motion analysis toolbox - an open-source Python toolbox for analyzing neurological motion data from various recording modalities. *Journal of Open Source Software*, *9*(102), 6842. [https://doi.org/10.21105/joss.06842](https://doi.org/10.21105/joss.06842){.pub-doi}
-- Neumann, C., Hartung, T. J., Boje, K., Bahmer, T., Keil, J., Lieb, W., Franzpoetter, K., **Welzel, J.**, Chaplinskaya-Sobol, I., Endres, M., Geritz, J., Haeusler, K. G., Heuschmann, P., Hinz, A., Hopff, S., Horn, A., Nuernberger, C., Schmidbauer, L., Krawczak, M., … Maetzler, W. (2024). *Post-COVID Syndrome and health-related quality of life (HrQoL): A prospective, population-based study*. Wiley. [https://doi.org/10.22541/au.172464977.75584057/v1](https://doi.org/10.22541/au.172464977.75584057/v1){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
 - Kluge, A., Schaeffer, E., Bunk, J., Sommerauer, M., Röttgen, S., Schulte, C., Roeben, B., von Thaler, A., **Welzel, J.**, Lucius, R., Heinzel, S., Xiang, W., Eschweiler, G. W., Maetzler, W., Suenkel, U., & Berg, D. (2024). Detecting misfolded α‐Synuclein in blood years before the diagnosis of Parkinson's disease. *Movement Disorders*, *39*(8), 1289–1299. [https://doi.org/10.1002/mds.29766](https://doi.org/10.1002/mds.29766){.pub-doi}
 - Jeung, S., Cockx, H., Appelhoff, S., Berg, T., Gramann, K., Grothkopp, S., Warmerdam, E., Hansen, C., Oostenveld, R., BIDS Maintainers, Appelhoff, S., Markiewicz, C. J., Salo, T., Gau, R., Blair, R., Galassi, A., Earl, E., Rogers, C., Hardcastle, N., … **Welzel, J.** (2024). Motion-BIDS: an extension to the brain imaging data structure to organize motion data for reproducible research. *Scientific Data*, *11*(1), Article 716. [https://doi.org/10.1038/s41597-024-03559-8](https://doi.org/10.1038/s41597-024-03559-8){.pub-doi} [Preprint](https://doi.org/10.31234/osf.io/w6z79){.pub-badge .pub-preprint-link}
 - Schaeffer, E., Kluge, A., Schulte, C., Deuschle, C., Bunk, J., **Welzel, J.**, Maetzler, W., & Berg, D. (2024). Association of misfolded α-synuclein derived from neuronal exosomes in blood with Parkinson’s disease diagnosis and duration. *Journal of Parkinson’s Disease*, *14*(4), 667–679. [https://doi.org/10.3233/jpd-230390](https://doi.org/10.3233/jpd-230390){.pub-doi}
-- Kluge, A., Kluge, A., Kintrup, C., Kulcsárová, K., Schröder, K., **Welzel, J.**, Heinzel, S., Wedel, T., Bottner, M. B., Lucius, R., Bonkat, S. K., Pendziwiat, M., Schoch, S., Ellrichmann, M., Berg, D., Schaeffer, E., & Cossais, F. (2024). *Alpha-synuclein distribution and seeding activity in rectal biopsies in Parkinson’s disease*. medRxiv. [https://doi.org/10.1101/2024.03.29.24304902](https://doi.org/10.1101/2024.03.29.24304902){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
 - Poldrack, R. A., Markiewicz, C. J., Appelhoff, S., Ashar, Y. K., Auer, T., Baillet, S., Bansal, S., Beltrachini, L., Benar, C. G., Bertazzoli, G., Bhogawar, S., Blair, R. W., Bortoletto, M., Boudreau, M., Brooks, T. L., Calhoun, V. D., Castelli, F. M., Clement, P., Cohen, A. L., … **Welzel, J.**, … Gorgolewski, K. J. (2024). The past, present, and future of the brain imaging data structure (BIDS). *Imaging Neuroscience*, *2*, Article imag-2-00103. [https://doi.org/10.1162/imag_a_00103](https://doi.org/10.1162/imag_a_00103){.pub-doi} [Preprint](https://pubmed.ncbi.nlm.nih.gov/37744469){.pub-badge .pub-preprint-link}
 - **Welzel, J.**, Güthe, M., Keil, J., Hermann, G., Wolke, R., Maetzler, W., & Becktepe, J. S. (2024). The interplay of sensory feedback, arousal, and action tremor amplitude in essential tremor. *Scientific Reports*, *14*(1), Article 4301. [https://doi.org/10.1038/s41598-024-54528-5](https://doi.org/10.1038/s41598-024-54528-5){.pub-doi}
 - Oppermann, J., Tschentscher, V., **Welzel, J.**, Geritz, J., Hansen, C., Gold, R., Maetzler, W., Scherbaum, R., & Tönges, L. (2024). Clinical and device-based predictors of improved experience of activities of daily living after a multidisciplinary inpatient treatment for people with Parkinson’s disease: a cohort study. *Therapeutic Advances in Neurological Disorders*, *17*, Article 17562864241277157. [https://doi.org/10.1177/17562864241277157](https://doi.org/10.1177/17562864241277157){.pub-doi}
 :::
 
-## 2022 {#year-2022}
+### 2022 {#articles-2022 .pub-year}
 
 ::: {.pub-list}
 - Geritz, J., **Welzel, J.**, Hansen, C., Maetzler, C., Hobert, M. A., Elshehabi, M., Knacke, H., Aleknonytė-Resch, M., Kudelka, J., Bunzeck, N., & Maetzler, W. (2022). Cognitive parameters can predict change of walking performance in advanced Parkinson’s disease – Chances and limits of early rehabilitation. *Frontiers in Aging Neuroscience*, *14*, Article 1070093. [https://doi.org/10.3389/fnagi.2022.1070093](https://doi.org/10.3389/fnagi.2022.1070093){.pub-doi}
@@ -67,7 +66,7 @@
 - Braun, T., Wiegard, A., Geritz, J., Hansen, C., Tan, K. E., Hildesheim, H., Kudelka, J., Maetzler, C., **Welzel, J.**, Romijnders, R., Maetzler, W., & Bergmann, P. (2022). Association between heart failure severity and mobility in geriatric patients: an in-clinic study with wearable sensors. *Journal of Geriatric Cardiology*, *19*(9), 660–674. [https://doi.org/10.11909/j.issn.1671-5411.2022.09.010](https://doi.org/10.11909/j.issn.1671-5411.2022.09.010){.pub-doi}
 :::
 
-## 2021 {#year-2021}
+### 2021 {#articles-2021 .pub-year}
 
 ::: {.pub-list}
 - Thomson, A., Whiteley, R., Hansen, C., **Welzel, J.**, Racinais, S., & Wilson, M. G. (2021). Effect of speed and gradient on plantar force when running on an AlterG® treadmill. *BMC Sports Science, Medicine and Rehabilitation*, *13*(1), Article 34. [https://doi.org/10.1186/s13102-021-00258-4](https://doi.org/10.1186/s13102-021-00258-4){.pub-doi}
@@ -77,10 +76,27 @@
 - **Welzel, J.**, Wendtland, D., Warmerdam, E., Romijnders, R., Elshehabi, M., Geritz, J., Berg, D., Hansen, C., & Maetzler, W. (2021). Step length is a promising progression marker in Parkinson’s disease. *Sensors*, *21*(7), Article 2292. [https://doi.org/10.3390/s21072292](https://doi.org/10.3390/s21072292){.pub-doi}
 :::
 
-## 2020 {#year-2020}
+### 2020 {#articles-2020 .pub-year}
 
 ::: {.pub-list}
 - Geritz, J., Maetzold, S., Steffen, M., Pilotto, A., Corrà, M. F., Moscovich, M., Rizzetti, M. C., Borroni, B., Padovani, A., Alpes, A., Bang, C., Barcellos, I., Baron, R., Bartsch, T., Becktepe, J. S., Berg, D., Bergeest, L. M., Bergmann, P., Bouça-Machado, R., … **Welzel, J.**, … Maetzler, W. (2020). Motor, cognitive and mobility deficits in 1000 geriatric patients: protocol of a quantitative observational study before and after routine clinical geriatric treatment – the ComOn-study. *BMC Geriatrics*, *20*(1), Article 45. [https://doi.org/10.1186/s12877-020-1445-z](https://doi.org/10.1186/s12877-020-1445-z){.pub-doi}
 - Warmerdam, E., Romijnders, R., **Welzel, J.**, Hansen, C., Schmidt, G., & Maetzler, W. (2020). Quantification of arm swing during walking in healthy adults and Parkinson’s disease patients: Wearable sensor-based algorithm development and validation. *Sensors*, *20*(20), Article 5963. [https://doi.org/10.3390/s20205963](https://doi.org/10.3390/s20205963){.pub-doi}
 - Daeglau, M., Zich, C., Emkes, R., **Welzel, J.**, Debener, S., & Kranczioch, C. (2020). Investigating priming effects of physical practice on motor imagery-induced event-related desynchronization. *Frontiers in Psychology*, *11*, Article 57. [https://doi.org/10.3389/fpsyg.2020.00057](https://doi.org/10.3389/fpsyg.2020.00057){.pub-doi}
+:::
+
+## Preprints {#preprints}
+
+### 2026 {#preprints-2026 .pub-year}
+
+::: {.pub-list}
+- Neumann, C., Godbersen, L., Schmeer, L., Hauffe, J. M., Helzel, K., Geritz, J., Hermann, G., Stagneth, L., Egerer, L., Fuglsang, L., Buschung, M., Reinke, L., Poick, S., Lieb, W., Franzpötter, K., Ruß, A.-K., Pütz, S., Raquib, S., Schmidbauer, L., … **Welzel, J.** (2026). *Fatigue is associated with stimulus-related theta and alpha power and distinguishes subjective from objective cognition in a post-viral cohort: A cross-sectional study*. Research Square. [https://doi.org/10.21203/rs.3.rs-10753262/v1](https://doi.org/10.21203/rs.3.rs-10753262/v1){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
+- van Leeuwen, A. M., Romijnders, R., **Welzel, J.**, D’Ascanio, I., Stürner, K., Hansen, C., & Maetzler, W. (2026). *Stability-related foot placement control relies more on mediolateral center-of-mass velocity feedback in people with early Multiple Sclerosis*. medRxiv. [https://doi.org/10.64898/2026.08.26.26361464](https://doi.org/10.64898/2026.08.26.26361464){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
+- Shirazi, S. Y., McCloy, D., Oostenveld, R., Boonstra, T., Larson, E., **Welzel, J.**, Gau, R., Markiewicz, C. J., Posella, S., Horschig, J. M., Klotz, T., Gramfort, A., & Delorme, A. (2026). *EMG-BIDS: an extension to the brain imaging data structure for electromyography*. bioRxiv. [https://doi.org/10.64898/2026.07.21.739911](https://doi.org/10.64898/2026.07.21.739911){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
+- **Welzel, J.** (2026). *Have we solved the replicability crisis? From open practices to systemic reform in cognitive neurosciences*. Center for Open Science. [https://doi.org/10.31222/osf.io/m6rng_v1](https://doi.org/10.31222/osf.io/m6rng_v1){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
+:::
+
+### 2024 {#preprints-2024 .pub-year}
+
+::: {.pub-list}
+- **Welzel, J.**, Jeung, S., Godbersen, L., & Shirazi, S. Y. (2024). *UNISEP: A unified sensor placement framework for human motion capture and wearables*. arXiv (Cornell University). [https://doi.org/10.48550/arxiv.2412.21159](https://doi.org/10.48550/arxiv.2412.21159){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
 :::
