@@ -2,11 +2,11 @@
      use publications/config.yml to add, hide or correct entries. -->
 
 ::: {.pub-meta}
-51 publications · updated automatically every week from [ORCID](https://orcid.org/0000-0001-8958-0934), [Google Scholar](https://scholar.google.com/citations?user=CWxKXBcAAAAJ), [OpenAlex](https://openalex.org) and [Crossref](https://www.crossref.org) · last change 2026-10-15
+49 publications · updated automatically every week from [ORCID](https://orcid.org/0000-0001-8958-0934), [Google Scholar](https://scholar.google.com/citations?user=CWxKXBcAAAAJ), [OpenAlex](https://openalex.org) and [Crossref](https://www.crossref.org) · last change 2026-10-15
 :::
 
 ::: {.pub-jump}
-[Journal articles (44)](#articles) · [Preprints (7)](#preprints)
+[Journal articles (44)](#articles) · [Preprints (5)](#preprints)
 :::
 
 ## Journal articles {#articles}
@@ -33,7 +33,7 @@
 - **Welzel, J.**, Jacobsen, N., Cockx, H., Jeung, S., Romijnders, R., Hansen, C., Wollesen, B., & Maetzler, W. (2025). Beyond protocol standardization: The importance of data curation and software transparency. *Journal of Parkinson’s Disease*, *15*(8), 1544–1547. [https://doi.org/10.1177/1877718x251377876](https://doi.org/10.1177/1877718x251377876){.pub-doi}
 - Tschentscher, V., Oppermann, J., **Welzel, J.**, Geritz, J., Gold, R., Muhlack, S., Hansen, C., Maetzler, W., Tönges, L., & Scherbaum, R. (2025). User groups of inpatient multidisciplinary therapies for Parkinson’s disease in Germany: a bicenter prospective observational study. *Neurological Research and Practice*, *7*(1), Article 53. [https://doi.org/10.1186/s42466-025-00409-9](https://doi.org/10.1186/s42466-025-00409-9){.pub-doi}
 - Hoffmann, J., Engelhardt, E., Boueke, M., **Welzel, J.**, Hansen, C., Maetzler, W., & Schmidt, G. (2025). Pilot study: Step width estimation with body-worn magnetoelectric sensors. *Sensors*, *25*(11), 3390. [https://doi.org/10.3390/s25113390](https://doi.org/10.3390/s25113390){.pub-doi}
-- Wolke, R., **Welzel, J.**, Maetzler, W., Deuschl, G., & Becktepe, J. (2025). Validity of tremor analysis using smartphone compatible computer vision frameworks. *Scientific Reports*, *15*(1), Article 13391. [https://doi.org/10.1038/s41598-025-97252-4](https://doi.org/10.1038/s41598-025-97252-4){.pub-doi}
+- Wolke, R., **Welzel, J.**, Maetzler, W., Deuschl, G., & Becktepe, J. (2025). Validity of tremor analysis using smartphone compatible computer vision frameworks. *Scientific Reports*, *15*(1), Article 13391. [https://doi.org/10.1038/s41598-025-97252-4](https://doi.org/10.1038/s41598-025-97252-4){.pub-doi} [Preprint](https://doi.org/10.21203/rs.3.rs-4201254/v1){.pub-badge .pub-preprint-link}
 - Neumann, C., Hartung, T. J., Boje, K., Bahmer, T., Keil, J., Lieb, W., Franzpoetter, K., **Welzel, J.**, Chaplinskaya-Sobol, I., Endres, M., Geritz, J., Haeusler, K. G., Heuschmann, P., Hinz, A., Pütz, S. M., Schäfer, A., Nuernberger, C., Schmidbauer, L., Krawczak, M., … Maetzler, W. (2025). Factors associated with reduction in quality of life after SARS-CoV-2 infection. *Scientific Reports*, *15*(1), Article 6833. [https://doi.org/10.1038/s41598-025-91388-z](https://doi.org/10.1038/s41598-025-91388-z){.pub-doi}
 - Hoffmann, J., Wolframm, H., Engelhardt, E., Boueke, M., Schmidt, T., **Welzel, J.**, Höft, M., Maetzler, W., & Schmidt, G. (2025). A magnetoelectric distance estimation system for relative human motion tracking. *Sensors*, *25*(2), 495. [https://doi.org/10.3390/s25020495](https://doi.org/10.3390/s25020495){.pub-doi}
 :::
@@ -42,7 +42,7 @@
 
 ::: {.pub-list}
 - Piet, A., Geritz, J., Garcia, P., Irsfeld, M., Li, F., Huang, X., Irshad, M. T., **Welzel, J.**, Hansen, C., Maetzler, W., Grzegorzek, M., & Bunzeck, N. (2024). Predicting executive functioning from walking features in Parkinson’s disease using machine learning. *Scientific Reports*, *14*(1), Article 29522. [https://doi.org/10.1038/s41598-024-80144-4](https://doi.org/10.1038/s41598-024-80144-4){.pub-doi}
-- Hermann, G., Baumgarte, F., **Welzel, J.**, Nydahl, P., Kuhlenbäumer, G., & Margraf, N. G. (2024). Electroencephalography based delirium screening in acute supratentorial stroke. *BMC Neurology*, *24*(1), Article 442. [https://doi.org/10.1186/s12883-024-03942-3](https://doi.org/10.1186/s12883-024-03942-3){.pub-doi}
+- Hermann, G., Baumgarte, F., **Welzel, J.**, Nydahl, P., Kuhlenbäumer, G., & Margraf, N. G. (2024). Electroencephalography based delirium screening in acute supratentorial stroke. *BMC Neurology*, *24*(1), Article 442. [https://doi.org/10.1186/s12883-024-03942-3](https://doi.org/10.1186/s12883-024-03942-3){.pub-doi} [Preprint](https://doi.org/10.21203/rs.3.rs-4501757/v1){.pub-badge .pub-preprint-link}
 - Lang, C., van Dieen, J. H., Brodie, M. A., **Welzel, J.**, Maetzler, W., Singh, N. B., & Ravi, D. K. (2024). Complexities and challenges of translating intervention success to real world gait in people with Parkinson’s disease. *Frontiers in Neurology*, *15*, Article 1455692. [https://doi.org/10.3389/fneur.2024.1455692](https://doi.org/10.3389/fneur.2024.1455692){.pub-doi} [Preprint](https://doi.org/10.2139/ssrn.4785729){.pub-badge .pub-preprint-link}
 - Abedinifar, M., **Welzel, J.**, Hansen, C., Maetzler, W., & Romijnders, R. (2024). KielMAT: Kiel motion analysis toolbox - an open-source Python toolbox for analyzing neurological motion data from various recording modalities. *Journal of Open Source Software*, *9*(102), 6842. [https://doi.org/10.21105/joss.06842](https://doi.org/10.21105/joss.06842){.pub-doi}
 - Kluge, A., Schaeffer, E., Bunk, J., Sommerauer, M., Röttgen, S., Schulte, C., Roeben, B., von Thaler, A., **Welzel, J.**, Lucius, R., Heinzel, S., Xiang, W., Eschweiler, G. W., Maetzler, W., Suenkel, U., & Berg, D. (2024). Detecting misfolded α‐Synuclein in blood years before the diagnosis of Parkinson's disease. *Movement Disorders*, *39*(8), 1289–1299. [https://doi.org/10.1002/mds.29766](https://doi.org/10.1002/mds.29766){.pub-doi}
@@ -90,6 +90,7 @@
 ### 2026 {#preprints-2026 .pub-year}
 
 ::: {.pub-list}
+- Neumann, C., Godbersen, L., Schmeer, L., Hauffe, J. M., Helzel, K., Geritz, J., Hermann, G., Stagneth, L., Egerer, L., Fuglsang, L., Buschung, M., Reinke, L., Poick, S., Lieb, W., Franzpötter, K., Ruß, A.-K., Pütz, S., Raquib, S., Schmidbauer, L., … **Welzel, J.** (2026). *Fatigue is associated with stimulus-related theta and alpha power and distinguishes subjective from objective cognition in a post-viral cohort: A cross-sectional study*. Research Square. [https://doi.org/10.21203/rs.3.rs-10753262/v1](https://doi.org/10.21203/rs.3.rs-10753262/v1){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
 - van Leeuwen, A. M., Romijnders, R., **Welzel, J.**, D’Ascanio, I., Stürner, K., Hansen, C., & Maetzler, W. (2026). *Stability-related foot placement control relies more on mediolateral center-of-mass velocity feedback in people with early Multiple Sclerosis*. medRxiv. [https://doi.org/10.64898/2026.08.26.26361464](https://doi.org/10.64898/2026.08.26.26361464){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
 - Shirazi, S. Y., McCloy, D., Oostenveld, R., Boonstra, T., Larson, E., **Welzel, J.**, Gau, R., Markiewicz, C. J., Posella, S., Horschig, J. M., Klotz, T., Gramfort, A., & Delorme, A. (2026). *EMG-BIDS: an extension to the brain imaging data structure for electromyography*. bioRxiv. [https://doi.org/10.64898/2026.07.21.739911](https://doi.org/10.64898/2026.07.21.739911){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
 - **Welzel, J.** (2026). *Have we solved the replicability crisis? From open practices to systemic reform in cognitive neurosciences*. Center for Open Science. [https://doi.org/10.31222/osf.io/m6rng_v1](https://doi.org/10.31222/osf.io/m6rng_v1){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
@@ -99,7 +100,4 @@
 
 ::: {.pub-list}
 - **Welzel, J.**, Jeung, S., Godbersen, L., & Shirazi, S. Y. (2024). *UNISEP: A unified sensor placement framework for human motion capture and wearables*. arXiv (Cornell University). [https://doi.org/10.48550/arxiv.2412.21159](https://doi.org/10.48550/arxiv.2412.21159){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
-- Hermann, G., Baumgarte, F., **Welzel, J.**, Nydahl, P., Kuhlenbäumer, G., & Margraf, N. G. (2024). *Electroencephalography based delirium detection in acute stroke*. Research Square. [https://doi.org/10.21203/rs.3.rs-4501757/v1](https://doi.org/10.21203/rs.3.rs-4501757/v1){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
-- Wolke, R., **Welzel, J.**, Maetzler, W., Deuschl, G., & Becktepe, J. (2024). *Validity of tremor analysis using smartphone-compatible computer vision frameworks – a comparative study*. Research Square. [https://doi.org/10.21203/rs.3.rs-4201254/v1](https://doi.org/10.21203/rs.3.rs-4201254/v1){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
-- Shirazi, S. Y., **Welzel, J.**, Jeung, S., & Godbersen, L. (2024). *A standardized framework for sensor placement in human motion capture and wearable applications*. arXiv e-prints, arXiv: 2412.21159. [https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CWxKXBcAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CWxKXBcAAAAJ:e5wmG9Sq2KIC](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CWxKXBcAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CWxKXBcAAAAJ:e5wmG9Sq2KIC){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
 :::
