@@ -1,7 +1,7 @@
 ---
 title: "Julius Welzel"
 pagetitle: "Julius Welzel · Cognitive neuroscientist"
-description: "Cognitive neuroscientist working on movement, mobile EEG and open, reproducible research."
+description: "Cognitive neuroscientist working on gait, movement disorders, mobile EEG and research data standards."
 aliases:
   - /about
 ---
@@ -9,9 +9,9 @@ aliases:
 ::: {.hero}
 [Julius Welzel · Cognitive neuroscientist]{.kicker}
 
-# How the brain keeps us moving {.unlisted}
+# Movement, mobile EEG and open science {.unlisted}
 
-[I study movement and its disorders with mobile EEG, wearable sensors and open, reproducible methods, in the lab and out in the world.]{.dek}
+[Research on the cortical control of gait and on movement disorders, using mobile EEG, motion capture and wearable sensors.]{.dek}
 :::
 
 ::: {.hero-figure .reveal}
@@ -20,26 +20,26 @@ aliases:
 
 ::: {.home-grid}
 ::: {.dropcap}
-I am a cognitive neuroscientist in the [Neuropsychology Lab](https://uol.de/en/neuropsychologie) of Stefan Debener at the University of Oldenburg, and I remain closely connected to Walter Maetzler's Neurogeriatrics group at Kiel University. My research asks how the brain controls movement, and what changes in movement disorders such as Parkinson's disease and essential tremor.
+I am a postdoctoral researcher with two equal part-time positions: in the [Neuropsychology Lab](https://uol.de/en/neuropsychologie) (Stefan Debener) at the University of Oldenburg and in the [Neurogeriatrics group](https://neurogeriatrics-kiel.com/de/team-de/) (Walter Maetzler) at Kiel University. My research addresses the cortical contribution to gait and how it changes in movement disorders such as Parkinson's disease and essential tremor.
 
-Much of this work happens outside the classic laboratory. I record EEG while people walk, combine it with motion capture and wearable sensors, and build the tools and data standards, such as [Motion-BIDS](software/index.qmd#bids) and [KielMAT](software/index.qmd#kielmat), that make these recordings comparable across labs. More and more, I also study the research process itself: how analysis choices and reporting shape what we find with mobile EEG, and how a research community can make its work more open.
+Methodologically, I combine mobile EEG with motion capture, EMG and wearable sensors during walking. I also work on the infrastructure for such recordings: the [Motion-BIDS](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html) data standard, open-source software such as [KielMAT](software/index.qmd#kielmat), and the reporting and preprocessing of mobile EEG studies.
 
-If you are a scientist who would like to collaborate, or a student looking for a thesis project, please [get in touch](mailto:julius.welzel@gmail.com).
+For collaborations or thesis projects, please [contact me by email](mailto:julius.welzel@gmail.com).
 :::
 
 ::: {.aside-card}
-[Currently]{.label}
+[Affiliations (each part-time)]{.label}
 
 Neuropsychology Lab, University of Oldenburg · Neurogeriatrics, Kiel University
 
-[Working on]{.label}
+[Current projects]{.label}
 
 - [StepuP](projects/stepup.qmd): treadmill training in Parkinson's disease
-- [META-REP](projects/meta-rep.qmd): a reporting standard for mobile EEG
-- [Foot placement](projects/foot-placement.qmd): Bayesian control of walking
+- [META-REP](projects/meta-rep.qmd): replicability of mobile EEG
+- [EEGManySteps](projects/eegmanysteps.qmd): multi-lab gait EEG
 - [IGOR](projects/igor.qmd): open science in biological psychology
 
-[Elsewhere]{.label}
+[Profiles]{.label}
 
 [GitHub](https://github.com/JuliusWelzel) · [Google Scholar](https://scholar.google.com/citations?user=CWxKXBcAAAAJ) · [ORCID](https://orcid.org/0000-0001-8958-0934) · [Mastodon](https://mastodon.online/@JuliusWelzel)
 :::
@@ -53,7 +53,7 @@ Neuropsychology Lab, University of Oldenburg · Neurogeriatrics, Kiel University
 
 ### [StepuP](projects/stepup.qmd){.stretched}
 
-A six-country trial asking why treadmill training improves walking in Parkinson's disease, from the cortex down to the foot.
+Multicentre randomised controlled trial on the biomechanical and neurophysiological mechanisms of treadmill training in Parkinson's disease.
 
 [JPND · 2023–2026]{.card-meta}
 :::
@@ -63,27 +63,27 @@ A six-country trial asking why treadmill training improves walking in Parkinson'
 
 ### [META-REP](projects/meta-rep.qmd){.stretched}
 
-Making mobile EEG replicable, with a reporting standard as the cornerstone.
+Preprocessing and reporting practices in mobile EEG, and a reporting standard for mobile EEG studies.
 
 [DFG · SPP 2317]{.card-meta}
 :::
 
 ::: {.project-card}
-[Gait · Modelling]{.kicker}
+[Mobile EEG · Gait]{.kicker}
 
-### [Where to put the next foot](projects/foot-placement.qmd){.stretched}
+### [EEGManySteps](projects/eegmanysteps.qmd){.stretched}
 
-Bayesian integration in foot placement control, with Moira van Leeuwen and the Amsterdam group.
+Multi-lab collection of gait EEG data to quantify the influence of recording setups and analysis pipelines.
 
-[VU Amsterdam · ongoing]{.card-meta}
+[Community · since 2024]{.card-meta}
 :::
 
 ::: {.project-card}
-[Open science · Community]{.kicker}
+[Open science]{.kicker}
 
 ### [IGOR](projects/igor.qmd){.stretched}
 
-The open-science interest group of the DGPs section Biological Psychology and Neuropsychology.
+Interest group on open and reproducible research of the DGPs section Biological Psychology and Neuropsychology.
 
 [DGPs · since 2020]{.card-meta}
 :::

@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "!projects/foot-placement.qmd"   # hidden for now
+    - "!talks/"                         # hidden for now
   resources:
     - assets/js/
     - .nojekyll
@@ -26,8 +30,6 @@ website:
         href: software/index.qmd
       - text: Teaching
         href: teaching/index.qmd
-      - text: Talks
-        href: talks/index.qmd
     right:
       - icon: envelope
         aria-label: Email

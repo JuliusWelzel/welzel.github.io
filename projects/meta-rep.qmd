@@ -1,6 +1,6 @@
 ---
 title: "META-REP: Replicability of mobile EEG"
-description: "Meta-science of mobile EEG within the DFG Priority Programme META-REP (SPP 2317), with a reporting standard for mobile EEG as its cornerstone."
+description: "Preprocessing and reporting practices in mobile EEG within the DFG Priority Programme META-REP (SPP 2317)."
 ---
 
 ::: {.hero}
@@ -8,7 +8,7 @@ description: "Meta-science of mobile EEG within the DFG Priority Programme META-
 
 # META-REP {.unlisted}
 
-[Taking EEG out of the lab multiplies the choices a researcher has to make. If we want results that replicate, we first have to report those choices.]{.dek}
+[Preprocessing and reporting practices in mobile EEG, and the development of a reporting standard for mobile EEG studies.]{.dek}
 :::
 
 ::: {.facts .facts-group}
@@ -25,43 +25,40 @@ description: "Meta-science of mobile EEG within the DFG Priority Programme META-
 [Neuropsychology Lab](https://uol.de/en/neuropsychologie) (Stefan Debener), University of Oldenburg
 :::
 ::: {}
-[Cornerstone]{.label}
-A reporting standard for mobile EEG studies
+[Focus]{.label}
+Reporting standard for mobile EEG studies
 :::
 :::
 
 ## The programme
 
-[META-REP](https://www.meta-rep.uni-muenchen.de/), short for *A Meta-scientific Programme to Analyse and Optimise Replicability in the Behavioural, Social, and Cognitive Sciences*, is a DFG Priority Programme (SPP 2317). It brings together projects that study why findings do or do not replicate, and that develop ways to make them more robust. In Oldenburg, META-REP's METEOR project looks at the "forking paths" of noisy, complex neural data: the many defensible analysis decisions between a raw recording and a published result. My work within META-REP is about these forking paths in mobile EEG.
+[META-REP](https://www.meta-rep.uni-muenchen.de/) (*A Meta-scientific Programme to Analyse and Optimise Replicability in the Behavioural, Social, and Cognitive Sciences*) is a DFG Priority Programme (SPP 2317) on the replicability of findings and on methods to improve it. In Oldenburg, the METEOR project addresses the many defensible analysis decisions between a raw neural recording and a published result. My work within META-REP concerns these decisions in mobile EEG.
 
-{{< include _figures/forest.md >}}
+{{< include _figures/forking.md >}}
 
-## Why mobile EEG needs a reporting standard
+## Background
 
-Mobile EEG lets us study the brain while people walk, turn and navigate the real world. The price is a large space of decisions that stationary EEG rarely faces: which amplifier and cap, how cables are secured, how EEG is synchronised with motion sensors, how gait events are detected, and how movement artefacts are removed, in which order and with which parameters.
+Mobile EEG allows recordings during walking and other everyday movements. Compared with stationary EEG, it involves additional methodological decisions: hardware and cable management, synchronisation with motion sensors, detection of gait events, and the removal of movement artefacts, including the order and parameters of preprocessing steps.
 
-In *Preprocessing on the Go* we reviewed studies that combined mobile EEG with gait measurements ([Vinod et al., 2026](https://doi.org/10.1111/psyp.70352)). The preprocessing steps differed widely, as did their order and combination, and especially the tools and reporting of artefact rejection. Many studies described their pipeline too vaguely to reproduce it. Our conclusion is that the field does not need one mandatory pipeline. It does need **standardised reporting**, so that different pipelines become comparable and studies can be repeated. An earlier META-REP review of P3 studies during walking came to a similar verdict ([Jacobsen et al., 2025](https://doi.org/10.1111/psyp.14743)).
+In a review of studies combining mobile EEG with gait measurements ([Vinod et al., 2026](https://doi.org/10.1111/psyp.70352)), we found large differences in the selection, order and combination of preprocessing steps, in particular in the tools and reporting of artefact rejection. Many pipelines were not described in enough detail to be reproduced. We concluded that standardised reporting, rather than a single mandatory pipeline, is needed to make studies comparable and reproducible. An earlier review of P3 studies during walking reached a similar conclusion ([Jacobsen et al., 2025](https://doi.org/10.1111/psyp.14743)).
 
-::: {.pullquote}
-The field does not need one mandatory pipeline. It needs every pipeline to be reported well enough to repeat.
-:::
 
 ## A reporting standard for mobile EEG
 
-The cornerstone of my META-REP work is a reporting standard for mobile EEG studies, now in preparation: a shared minimum of what a paper reports, so that readers can evaluate, compare and repeat it. Its starting point is what the review found missing most often:
+A reporting standard for mobile EEG studies is in preparation. It defines a minimum set of information to report, starting from the items most often missing in the review:
 
 ::: {.checklist}
 - **Recording context** Setting and task, such as indoor or outdoor, treadmill or overground walking, and the equipment used.
 - **Preprocessing steps** Every step with its order and tools, in particular how movement artefacts are rejected.
 - **Software parameters** The settings of each tool, so that a pipeline can be re-run.
-- **Open code and workflows** Analysis code and workflows shared openly, ideally with data in community standards such as EEG-BIDS and [Motion-BIDS](../software/index.qmd#bids).
+- **Open code and workflows** Analysis code and workflows shared openly, ideally with data in community standards such as EEG-BIDS and [Motion-BIDS](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html).
 :::
 
 ## Related work
 
-- [**EEGManySteps**](eegmanysteps.qmd): a many-labs effort that measures how much setups and pipelines change gait-related EEG results.
-- [**IGOR umbrella review**](igor.qmd): a review of how EEG/ERP preprocessing is reported and justified across the literature.
-- **Multiverse analyses**: [mapping preprocessing choices in mobile EEG](https://github.com/NeuropsyOL/mobileEEG_multiverse) and a [multiverse of beta activity during gait](https://github.com/vaishvd/betaGaitMultiverse) by Vaishali Vinod. The first maps the choices made in the literature (Oldenburg METEOR team); the second varies preprocessing choices on two walking datasets.
+- [**EEGManySteps**](eegmanysteps.qmd): multi-lab study of the influence of recording setups and pipelines on gait-related EEG.
+- [**IGOR umbrella review**](igor.qmd): umbrella review of how EEG/ERP preprocessing is reported and justified.
+- **Multiverse analyses**: [mapping preprocessing choices in mobile EEG](https://github.com/NeuropsyOL/mobileEEG_multiverse) and a [multiverse of beta activity during gait](https://github.com/vaishvd/betaGaitMultiverse) by Vaishali Vinod. The first maps preprocessing choices in the literature (Oldenburg METEOR team); the second varies preprocessing choices across two walking datasets.
 
 ## Publications
 

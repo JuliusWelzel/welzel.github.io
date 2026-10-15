@@ -1,36 +1,36 @@
 ---
 title: Research
-description: "Research themes: the moving brain, gait and foot placement, movement disorders, and open, reproducible science."
+description: "Research topics: mobile EEG during walking, gait and balance, movement disorders, and open and reproducible methods."
 ---
 
 ::: {.hero}
 [Research]{.kicker}
 
-# Four questions about movement {.unlisted}
+# Research topics {.unlisted}
 
-[How does the brain control walking? What changes in movement disorders? How do we measure it reliably? And how do we make sure others can repeat what we find?]{.dek}
+[Cortical contributions to gait, quantitative assessment of movement disorders, and methods for reproducible mobile EEG research.]{.dek}
 :::
 
-## The moving brain {#eeg}
+## Mobile EEG during walking {#eeg}
 
-For a long time, EEG meant sitting still. With mobile EEG we can record brain activity while people walk, turn and deal with the real world. I combine mobile EEG with motion capture, EMG and wearable sensors to study how the cortex takes part in controlling gait, for example through beta oscillations and corticomuscular coherence, and how this changes in Parkinson's disease.
+I record EEG during walking and combine it with motion capture, EMG and wearable sensors to study cortical contributions to gait, for example gait-related beta oscillations and corticomuscular coherence, and their changes in Parkinson's disease.
 
 Projects: [StepuP](../projects/stepup.qmd) · [EEGManySteps](../projects/eegmanysteps.qmd) · [Pocketable MoBI](../projects/index.qmd#pocketable) · [EPOC](../projects/index.qmd#epoc)
 
-## Gait, balance and foot placement {#algorithms}
+## Gait and balance {#algorithms}
 
-Walking is controlled step by step, largely through where we put our feet. I work on algorithms that turn raw sensor data into meaningful gait and balance parameters, and on models of how the nervous system plans foot placement under uncertainty.
+I develop and validate algorithms that derive gait and balance parameters from wearable and motion-capture data, and apply them in neurological and geriatric cohorts.
 
-Projects: [Bayesian foot placement](../projects/foot-placement.qmd) · [KielMAT](../software/index.qmd#kielmat) · [StepuP](../projects/stepup.qmd)
+Projects: [KielMAT](../software/index.qmd#kielmat) · [StepuP](../projects/stepup.qmd)
 
 ## Movement disorders {#datascience}
 
-Trained as a psychologist and neuroscientist, I want to understand movement disorders through quantitative data: how essential tremor responds to sensory feedback and arousal, which gait measures track the progression of Parkinson's disease, and how mobility, cognition and clinical scores relate in geriatric patients.
+I use quantitative measures to characterise movement disorders, including the modulation of essential tremor by sensory feedback and arousal, gait measures as progression markers in Parkinson's disease, and the relationship between mobility, cognition and clinical scores in geriatric patients.
 
-Projects: [StepuP](../projects/stepup.qmd) · [Tremor](../projects/index.qmd#tremordetect) · [ComOn](../projects/index.qmd#comon)
+Projects: [StepuP](../projects/stepup.qmd) · [Tremor assessment](../projects/index.qmd#tremordetect) · [ComOn](../projects/index.qmd#comon)
 
-## Open and reproducible science {#open-science}
+## Open and reproducible methods {#open-science}
 
-Mobile EEG multiplies the analysis choices a researcher has to make. I study these choices and their consequences, develop reporting standards and data standards such as Motion-BIDS, and help build the communities that make open research the default.
+I study analysis and reporting practices in mobile EEG, contribute to data standards such as Motion-BIDS, and support open-science initiatives in biological psychology.
 
-Projects: [META-REP](../projects/meta-rep.qmd) · [IGOR](../projects/igor.qmd) · [EEGManySteps](../projects/eegmanysteps.qmd) · [Motion-BIDS](../software/index.qmd#bids)
+Projects: [META-REP](../projects/meta-rep.qmd) · [IGOR](../projects/igor.qmd) · [EEGManySteps](../projects/eegmanysteps.qmd) · [Motion-BIDS](../projects/index.qmd#motion-bids)

@@ -8,7 +8,7 @@ description: "Courses and workshops on data science, neuroanatomy, BIDS and open
 
 # Teaching {.unlisted}
 
-[I like to teach, online and offline: data science, neuroanatomy, and the tools and standards of open science.]{.dek}
+[Courses and workshops in data science, neuroanatomy and research data management.]{.dek}
 :::
 
 ## Datascience in practice {#data-in-practice}

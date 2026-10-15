@@ -1,17 +1,17 @@
 ---
 title: Projects
-description: "Research projects, tools and collaborations: mobile EEG, gait, movement disorders and open science."
+description: "Research projects, tools and collaborations on mobile EEG, gait, movement disorders and open science."
 ---
 
 ::: {.hero}
 [Projects]{.kicker}
 
-# Brains, bodies and better science {.unlisted}
+# Projects {.unlisted}
 
-[From treadmill training in Parkinson's disease to reporting standards for mobile EEG: what I work on, and with whom.]{.dek}
+[Current and completed research projects, data standards and collaborations.]{.dek}
 :::
 
-{{< include _figures/walking.md >}}
+{{< include _figures/streams.md >}}
 
 ```{=html}
 <div class="chip-row" hidden role="group" aria-label="Filter projects by topic">
@@ -32,7 +32,7 @@ description: "Research projects, tools and collaborations: mobile EEG, gait, mov
 
 ### [StepuP](stepup.qmd){.stretched} {#h-stepup}
 
-*Steps against the burden of Parkinson's disease.* A JPND-funded trial in six countries that records EEG, EMG and motion capture together to find out why treadmill training improves walking in Parkinson's disease. I lead the Kiel site and run the consortium's multimodal data pipeline.
+Multicentre randomised controlled trial (JPND) on the mechanisms of speed-dependent treadmill training in Parkinson's disease, with synchronised EEG, EMG and motion capture. Kiel site lead; responsible for the consortium's multimodal recording and data pipeline.
 
 [JPND · 2023–2026 · shared first author of the protocol]{.card-meta}
 :::
@@ -42,19 +42,9 @@ description: "Research projects, tools and collaborations: mobile EEG, gait, mov
 
 ### [META-REP](meta-rep.qmd){.stretched} {#h-metarep}
 
-Within the DFG Priority Programme META-REP, I study the "forking paths" of mobile EEG analysis, with a reporting standard for mobile EEG studies as the cornerstone.
+Analysis of preprocessing and reporting practices in mobile EEG studies within the DFG Priority Programme META-REP, and development of a reporting standard for mobile EEG.
 
 [DFG · SPP 2317 · Oldenburg]{.card-meta}
-:::
-
-::: {#footplacement .project-card data-topics="gait"}
-[Gait · Computational motor control]{.kicker}
-
-### [Where to put the next foot](foot-placement.qmd){.stretched} {#h-footplacement}
-
-Bayesian integration in foot placement control: how noisy estimates of body state and prior expectations combine into the next step. With Moira van Leeuwen and the Amsterdam group.
-
-[VU Amsterdam · ongoing]{.card-meta}
 :::
 
 ::: {#igor .project-card data-topics="open meta"}
@@ -62,29 +52,29 @@ Bayesian integration in foot placement control: how noisy estimates of body stat
 
 ### [IGOR](igor.qmd){.stretched} {#h-igor}
 
-The Interest Group on Open and Reproducible Research of the DGPs section Biological Psychology and Neuropsychology. I run its BIDS Consultation Hour and co-lead an umbrella review of EEG/ERP preprocessing.
+Interest Group on Open and Reproducible Research of the DGPs section Biological Psychology and Neuropsychology. BIDS Consultation Hour; co-lead of an umbrella review on EEG/ERP preprocessing.
 
 [DGPs · since 2020]{.card-meta}
 :::
 
 ::: {#eegmanysteps .project-card data-topics="eeg gait open meta"}
-[Mobile EEG · Many labs]{.kicker}
+[Mobile EEG · Multi-lab]{.kicker}
 
 ### [EEGManySteps](eegmanysteps.qmd){.stretched} {#h-eegmanysteps}
 
-A community-driven, many-labs initiative testing how hardware, setups and pipelines shape gait-related EEG. I am on the steering committee.
+Community initiative that collects and harmonises gait EEG recorded with different setups to quantify the influence of hardware, recording protocols and pipelines. Steering committee member.
 
 [Community · since 2024]{.card-meta}
 :::
 
 ::: {#motion-bids .project-card data-topics="tools open gait"}
-[Data standard · Python]{.kicker}
+[Data standard]{.kicker}
 
-### [Motion-BIDS](../software/index.qmd#bids){.stretched} {#h-motion-bids}
+### [Motion-BIDS](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html){.stretched} {#h-motion-bids}
 
-The BIDS extension for motion data, which I co-led, plus *motionbids*, a lightweight Python package for curating motion datasets in the standard.
+Extension of the Brain Imaging Data Structure (BIDS) for motion data from optical motion capture and inertial sensors (BEP029). Co-lead.
 
-[BIDS · 2024 · ongoing]{.card-meta}
+[BIDS · Scientific Data 2024]{.card-meta}
 :::
 
 ::: {#kielmat .project-card data-topics="tools gait movement"}
@@ -92,7 +82,7 @@ The BIDS extension for motion data, which I co-led, plus *motionbids*, a lightwe
 
 ### [KielMAT](../software/index.qmd#kielmat){.stretched} {#h-kielmat}
 
-The Kiel Motion Analysis Toolbox (formerly NGMT): validated gait and balance algorithms for wearable and motion-capture data from neurological cohorts, built around Motion-BIDS.
+Kiel Motion Analysis Toolbox (formerly NGMT): Python toolbox with validated gait and balance algorithms for wearable and motion-capture data from neurological cohorts.
 
 [Neurogeriatrics Kiel · JOSS 2024]{.card-meta}
 :::
@@ -102,7 +92,7 @@ The Kiel Motion Analysis Toolbox (formerly NGMT): validated gait and balance alg
 
 ### [UNISEP](https://arxiv.org/abs/2412.21159){.stretched} {#h-unisep}
 
-A unified, modality-agnostic framework for describing where sensors are placed on the human body in motion capture and wearable research.
+Modality-independent framework for describing sensor placement on the human body in motion capture and wearable research.
 
 [Preprint · 2024 · co-first author]{.card-meta}
 :::
@@ -110,9 +100,9 @@ A unified, modality-agnostic framework for describing where sensors are placed o
 ::: {#redcap .project-card data-topics="tools open"}
 [Software · Clinical data]{.kicker}
 
-### [REDCap workflows](../software/index.qmd#redcap){.stretched} {#h-redcap}
+### [rcol](../software/index.qmd#rcol){.stretched} {#h-redcap}
 
-*rcol* installs standardised questionnaires and tests into REDCap; *redcap2bids* turns REDCap exports into BIDS participant files.
+Python package with templates for standardised questionnaires and clinical tests in REDCap.
 
 [Python · since 2025]{.card-meta}
 :::
@@ -122,7 +112,7 @@ A unified, modality-agnostic framework for describing where sensors are placed o
 
 ### [Pocketable MoBI](https://neuropsyol.github.io/){.stretched} {#h-pocketable}
 
-Low-cost brain and body imaging with smartphones and mobile EEG, developed in the Oldenburg Neuropsychology Lab, applied for example to basketball.
+Smartphone-based recording of mobile EEG and body movement, developed in the Oldenburg Neuropsychology Lab.
 
 [Oldenburg · 2024–2026]{.card-meta}
 :::
@@ -132,7 +122,7 @@ Low-cost brain and body imaging with smartphones and mobile EEG, developed in th
 
 ### [EPOC](https://github.com/christianneumannCAU/EPOC-Kiel){.stretched} {#h-epoc}
 
-EEG correlates of post-COVID fatigue and subjective cognitive complaints, a Kiel project I co-supervise.
+EEG correlates of fatigue and subjective cognitive complaints after COVID-19. Co-supervision.
 
 [Kiel · ongoing]{.card-meta}
 :::
@@ -140,25 +130,25 @@ EEG correlates of post-COVID fatigue and subjective cognitive complaints, a Kiel
 ::: {#electrodes .project-card data-topics="eeg tools"}
 [EEG · Computer vision]{.kicker}
 
-### [Electrodes from video](https://github.com/evrim06/video-eeg-electrode-registration){.stretched} {#h-electrodes}
+### [Electrode localisation from video](https://github.com/evrim06/video-eeg-electrode-registration){.stretched} {#h-electrodes}
 
-An open-source pipeline that locates EEG electrodes in 3D from a short smartphone video instead of dedicated digitisation hardware.
+Open-source pipeline for 3D EEG electrode localisation from smartphone video.
 
 [Oldenburg · 2025–2026]{.card-meta}
 :::
 
 :::
 
-## Earlier projects
+## Completed projects
 
 ::: {.card-grid}
 
 ::: {#tremordetect .project-card data-topics="movement tools"}
 [Essential tremor]{.kicker}
 
-### [Tremor, feedback and video](https://github.com/JuliusWelzel/tremor_feedback_jw){.stretched} {#h-tremordetect}
+### [Tremor assessment](https://github.com/JuliusWelzel/tremor_feedback_jw){.stretched} {#h-tremordetect}
 
-How sensory feedback and arousal modulate action tremor, and whether smartphone-compatible computer vision (MediaPipe) can measure tremor from video.
+Effects of sensory feedback and arousal on action tremor, and validity of tremor analysis with smartphone-compatible computer vision (MediaPipe).
 
 [Kiel · 2021–2025]{.card-meta}
 :::
@@ -168,7 +158,7 @@ How sensory feedback and arousal modulate action tremor, and whether smartphone-
 
 ### ComOn {#h-comon}
 
-An exploratory multicentre study of motor, cognitive and mobility deficits in 1,000 geriatric patients before and after routine clinical treatment.
+Exploratory multicentre study of motor, cognitive and mobility deficits in geriatric patients before and after routine clinical treatment.
 
 [UKSH · 2017–2023]{.card-meta}
 :::
@@ -178,7 +168,7 @@ An exploratory multicentre study of motor, cognitive and mobility deficits in 1,
 
 ### Sense-Age {#h-senseage}
 
-The dynamics of attention: how selective and sustained information processing is controlled, and how it declines with age and cognitive impairment, studied with EEG and attention tests.
+EEG and behavioural measures of selective and sustained attention in ageing and cognitive impairment.
 
 [EEG lab, UKSH]{.card-meta}
 :::

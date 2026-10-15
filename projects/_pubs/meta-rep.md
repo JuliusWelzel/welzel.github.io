@@ -2,6 +2,6 @@
      of publications/config.yml. Do not edit by hand. -->
 
 ::: {.pub-list}
-- Vinod, V., Papin, L. J., Romijnders, R., Maetzler, W., & **Welzel, J.** (2026). Preprocessing on the go: Practices in Gait‐Related mobile EEG. *Psychophysiology*, *63*(6), Article e70352. [https://doi.org/10.1111/psyp.70352](https://doi.org/10.1111/psyp.70352){.pub-doi}
+- Vinod, V., Papin, L. J., Romijnders, R., Maetzler, W., & **Welzel, J.** (2026). Preprocessing on the go: Practices in Gait‐Related mobile EEG. *Psychophysiology*, *63*(6), Article e70352. [https://doi.org/10.1111/psyp.70352](https://doi.org/10.1111/psyp.70352){.pub-doi} [Preprint](https://doi.org/10.22541/au.176906185.59261482/v1){.pub-badge .pub-preprint-link}
 - **Welzel, J.** (2026). *Have we solved the replicability crisis? From open practices to systemic reform in cognitive neurosciences*. Center for Open Science. [https://doi.org/10.31222/osf.io/m6rng_v1](https://doi.org/10.31222/osf.io/m6rng_v1){.pub-doi} [Preprint]{.pub-badge .pub-preprint}
 :::

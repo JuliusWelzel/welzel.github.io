@@ -1,6 +1,6 @@
 ---
 title: "IGOR: Interest Group on Open and Reproducible Research"
-description: "The open-science interest group of the DGPs section Biological Psychology and Neuropsychology, where I run the BIDS Consultation Hour and co-lead an umbrella review of EEG/ERP preprocessing."
+description: "Open-science interest group of the DGPs section Biological Psychology and Neuropsychology: BIDS Consultation Hour and an umbrella review of EEG/ERP preprocessing."
 ---
 
 ::: {.hero}
@@ -8,16 +8,16 @@ description: "The open-science interest group of the DGPs section Biological Psy
 
 # IGOR {.unlisted}
 
-[The Interest Group on Open and Reproducible Research brings open science into biological psychology and neuropsychology, one community project at a time.]{.dek}
+[Interest Group on Open and Reproducible Research of the section Biological Psychology and Neuropsychology of the German Psychological Society (DGPs).]{.dek}
 :::
 
 ::: {.facts .facts-group}
 ::: {}
-[Home]{.label}
-[Section Biological Psychology and Neuropsychology](https://www.dgps.de/fachgruppen/fgbi/aktivitaeten-der-fachgruppe/igor/), German Psychological Society (DGPs)
+[Section]{.label}
+[Biological Psychology and Neuropsychology](https://www.dgps.de/fachgruppen/fgbi/aktivitaeten-der-fachgruppe/igor/), DGPs
 :::
 ::: {}
-[Since]{.label}
+[Founded]{.label}
 2020
 :::
 ::: {}
@@ -25,26 +25,26 @@ description: "The open-science interest group of the DGPs section Biological Psy
 BIDS Consultation Hour; co-lead of the EEG/ERP preprocessing umbrella review
 :::
 ::: {}
-[Follow]{.label}
+[Links]{.label}
 [Website](https://www.dgps.de/fachgruppen/fgbi/aktivitaeten-der-fachgruppe/igor/) · [Bluesky](https://bsky.app/profile/igor-dgps.bsky.social) · [GitHub](https://github.com/IGOR-bioDGPs)
 :::
 :::
 
 {{< include _figures/network.md >}}
 
-## What IGOR does
+## About IGOR
 
-IGOR is a forum where members of the DGPs section Biological Psychology and Neuropsychology exchange ideas on how to make research in the field more open and reproducible. It works through grassroots community projects, training for early-career researchers and the annual IGOR Prize for Open and Reproducible Science. Its founding document (in German) is available [here](https://www.dgps.de/fileadmin/user_upload/Fachgruppen/Biologische_Psychologie_und_Neuropsychologie/PDF/IGOR_Gruendungsversion_21012020.pdf).
+IGOR is a forum for members of the DGPs section Biological Psychology and Neuropsychology to exchange approaches for open and reproducible research. Its activities include community projects, training for early-career researchers and the annual IGOR Prize for Open and Reproducible Science. The founding document (in German) is available [here](https://www.dgps.de/fileadmin/user_upload/Fachgruppen/Biologische_Psychologie_und_Neuropsychologie/PDF/IGOR_Gruendungsversion_21012020.pdf).
 
 ## BIDS Consultation Hour
 
-In 2024 I set up the [IGOR BIDS Consultation Hour](https://igor-biodgps.github.io/igor_bids_consultation/), an open online forum. Researchers bring their own datasets and conversion problems and get individual advice on organising them in the [Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io). I cover EEG and motion data, and a colleague covers MRI. The website also collects BIDS learning materials, such as workshop slides and posters.
+Since 2024 I have organised the [IGOR BIDS Consultation Hour](https://igor-biodgps.github.io/igor_bids_consultation/), an online forum in which researchers receive advice on converting their datasets to the [Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io). I cover EEG and motion data; a colleague covers MRI. The website also collects BIDS training materials.
 
 ## EEG/ERP preprocessing umbrella review
 
-Together with Yu-Fang Yang, Mario Reutter-Dieker and Johannes Rodrigues, I co-lead an [umbrella review of EEG/ERP preprocessing practices](https://github.com/ufangYang/igor-preprocessing-umbrella-review). It brings together the literature on how preprocessing pipelines and parameters are reported and justified. The aim is a shared, transparent set of extraction standards and evidence the field can reuse. The review is [preregistered on OSF](https://osf.io/uqenv/) and complements my work on [reporting standards for mobile EEG](meta-rep.qmd).
+With Yu-Fang Yang, Mario Reutter-Dieker and Johannes Rodrigues, I co-lead an [umbrella review of EEG/ERP preprocessing practices](https://github.com/ufangYang/igor-preprocessing-umbrella-review). It synthesises how preprocessing pipelines and parameters are reported and justified in the literature, with the aim of shared extraction standards. The review is [preregistered on OSF](https://osf.io/uqenv/).
 
-## More from the IGOR community
+## Further IGOR projects
 
-- [**ARIADNE**](https://igor-biodgps.github.io/ARIADNE/intro.html) is a living, interactive navigator that guides researchers through the resources for each step of a transparent research project ([Hartmann et al., 2025](https://doi.org/10.1177/25152459241297674)). I contributed glossary terms during its revision.
-- [**Enhancing precision in human neuroscience**](https://doi.org/10.7554/eLife.85980) is a community review on precision in human neuroscience ([Nebe et al., 2023](https://doi.org/10.7554/eLife.85980)), with an accompanying [workshop](https://github.com/IGOR-bioDGPs/precision_workshop_2024).
+- [**ARIADNE**](https://igor-biodgps.github.io/ARIADNE/intro.html): an interactive navigator of resources for each step of a transparent research project ([Hartmann et al., 2025](https://doi.org/10.1177/25152459241297674)). I contributed glossary terms during its revision.
+- [**Enhancing precision in human neuroscience**](https://doi.org/10.7554/eLife.85980): a community review ([Nebe et al., 2023](https://doi.org/10.7554/eLife.85980)) with an accompanying [workshop](https://github.com/IGOR-bioDGPs/precision_workshop_2024).
