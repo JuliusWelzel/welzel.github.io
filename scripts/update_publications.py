@@ -598,6 +598,12 @@ def merge_by_title(records: list[dict]) -> list[dict]:
 
 
 def apply_curation(records: list[dict], config: dict) -> list[dict]:
+    include_types = set(config.get("include_types") or [])
+    prefixes = tuple(norm_doi(x).rstrip("/") + "/" for x in config.get("exclude_doi_prefixes") or [])
+    if include_types:
+        records = [r for r in records if r.get("type") in include_types]
+    if prefixes:
+        records = [r for r in records if not (r.get("doi") or "").startswith(prefixes)]
     excluded_dois = {norm_doi(e.get("doi")) for e in config.get("exclude") or [] if e.get("doi")}
     excluded_titles = {norm_title(e.get("title")) for e in config.get("exclude") or [] if e.get("title")}
     overrides = {norm_doi(k): v for k, v in (config.get("overrides") or {}).items()}

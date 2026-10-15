@@ -48,17 +48,43 @@ sources:
   crossref: true
   google_scholar: true
 
+# Only these types are listed: journal articles, and preprints whose
+# published version is not (yet) in the list. Conference abstracts, posters,
+# datasets, software and theses are left out.
+include_types:
+  - article
+  - preprint
+
+# Repositories that host supplements, posters or registrations, not papers:
+# ResearchGate, figshare, Zenodo, OSF registrations.
+exclude_doi_prefixes:
+  - "10.13140"
+  - "10.6084"
+  - "10.5281"
+  - "10.17605"
+
 # Publications to hide, e.g. wrong attributions or duplicates.
 # Match by DOI or by exact title (case-insensitive).
-#   - doi: 10.1234/abcd
-#   - title: Some title that is not mine
-exclude: []
+exclude:
+  # Meeting abstracts printed in Clinical Neurophysiology
+  - doi: 10.1016/j.clinph.2022.01.053
+  - doi: 10.1016/j.clinph.2023.12.060
+  # Preprints that were published under a different title (see overrides)
+  - doi: 10.22541/au.176906185.59261482/v1
+  - doi: 10.31234/osf.io/w6z79
+  - doi: 10.1101/2020.12.11.420919
 
 # Corrections applied to an entry, keyed by DOI. Any field of an entry
 # (title, authors, year, venue, volume, issue, pages, url, type) can be set.
 #   10.1234/abcd:
 #     venue: Journal of Corrected Names
-overrides: {}
+overrides:
+  10.1111/psyp.70352:
+    preprint_url: https://doi.org/10.22541/au.176906185.59261482/v1
+  10.1038/s41597-024-03559-8:
+    preprint_url: https://doi.org/10.31234/osf.io/w6z79
+  10.1016/j.ynirp.2021.100058:
+    preprint_url: https://doi.org/10.1101/2020.12.11.420919
 
 # Publications that none of the sources know about. Fields:
 # title, authors (list of "Family, G."), year, venue, volume, issue,

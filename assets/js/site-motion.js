@@ -144,26 +144,6 @@
   // -------------------------------------------------------------------------
   // Figures (inline SVG with data-anim="...")
 
-  // Footsteps along a path with an EEG trace drawn above them.
-  function figWalking(svg) {
-    var eeg = svg.querySelector(".eeg");
-    var steps = $(".step", svg);
-    prepareDraw(eeg);
-    if (reduce) return;
-    hideSvg(steps);
-    once(svg, function () {
-      var run = function () {
-        hideSvg(steps);
-        draw(eeg, { duration: 4.2 });
-        animate(steps, { opacity: [0, 1], scale: [0.6, 1] },
-                { duration: 0.35, delay: stagger(4.2 / steps.length), ease: ease })
-          .then(function () { return animate(steps, { opacity: 0.2 }, { duration: 1.2, delay: 1.4 }); })
-          .then(run);
-      };
-      run();
-    });
-  }
-
   // Synchronised streams (EEG, EMG, motion) with heel-strike markers.
   function figStreams(svg) {
     var traces = $(".trace", svg);
@@ -178,17 +158,111 @@
     });
   }
 
-  // Forest plot: lab estimates appear one by one, then the pooled estimate.
-  function figForest(svg) {
-    var rows = $(".lab", svg);
-    var pooled = $(".pooled", svg);
-    if (reduce) return;
-    hideSvg(rows.concat(pooled));
+  function wait(ms) { return new Promise(function (resolve) { setTimeout(resolve, ms); }); }
+
+  // A walking person with EEG cap and motion sensors; the signals become time
+  // series, which are then stored in a BIDS folder structure.
+  function figPipeline(svg) {
+    var limbs = $(".limb", svg);
+    var flows = $(".flow", svg);
+    var traces = $(".trace", svg);
+    var arrow = $(".bids-arrow", svg);
+    var rows = $(".bids-row", svg);
+    var swing = { "arm-front": 22, "arm-back": -22, "leg-front": -26, "leg-back": 26 };
+    function pose(phase) {
+      limbs.forEach(function (limb) {
+        var angle = swing[limb.classList[1]] * Math.sin(phase);
+        limb.setAttribute("transform", "rotate(" + angle.toFixed(1) + " " +
+                          limb.getAttribute("data-px") + " " + limb.getAttribute("data-py") + ")");
+      });
+    }
+    function dashed() { flows.forEach(function (f) { f.setAttribute("stroke-dasharray", "3 4"); f.setAttribute("stroke-dashoffset", 0); }); }
+    pose(0.7);
+    traces.forEach(prepareDraw);
+    if (reduce) { dashed(); return; }
+    flows.forEach(prepareDraw);
+    hideSvg(arrow.concat(rows));
+    animate(0, 2 * Math.PI, { duration: 1.3, repeat: Infinity, ease: "linear", onUpdate: pose });
     once(svg, function () {
-      animate(rows, { opacity: [0, 1], x: [-14, 0] }, { duration: 0.4, delay: stagger(0.16), ease: ease })
+      var run = function () {
+        hideSvg(arrow.concat(rows));
+        flows.concat(traces).forEach(prepareDraw);
+        Promise.all(flows.map(function (f) { return draw(f, { duration: 0.9, ease: "easeOut" }); }))
+          .then(function () {
+            dashed();
+            return Promise.all(traces.map(function (t) { return draw(t, { duration: 2.2 }); }));
+          })
+          .then(function () { return animate(arrow, { opacity: [0, 1] }, { duration: 0.4 }); })
+          .then(function () { return animate(rows, { opacity: [0, 1] }, { duration: 0.35, delay: stagger(0.16) }); })
+          .then(function () { return wait(4500); })
+          .then(run);
+      };
+      run();
+    });
+  }
+
+  // Forking paths: every combination of preprocessing choices leads from the
+  // same raw EEG to a different result; the reported path is highlighted.
+  function figForking(svg) {
+    var forks = $(".fork", svg);
+    var reported = svg.querySelector(".fork-reported");
+    var nodes = $(".node", svg);
+    var outcomes = $(".outcome", svg);
+    var tag = $(".reported-label", svg);
+    var others = forks.filter(function (f) { return f !== reported; });
+    function highlight() {
+      reported.setAttribute("stroke", "#b3261e");
+      reported.setAttribute("stroke-width", "2.4");
+      reported.setAttribute("stroke-opacity", "1");
+    }
+    forks.forEach(prepareDraw);
+    if (reduce) { highlight(); others.forEach(function (f) { f.setAttribute("stroke-opacity", "0.25"); }); return; }
+    hideSvg(nodes.concat(outcomes, tag));
+    once(svg, function () {
+      animate(nodes, { opacity: [0, 1] }, { duration: 0.4, delay: stagger(0.08) });
+      Promise.all(forks.map(function (f, i) { return draw(f, { duration: 1.3, delay: 0.4 + i * 0.12, ease: "easeInOut" }); }))
+        .then(function () { return animate(outcomes, { opacity: [0, 1] }, { duration: 0.3, delay: stagger(0.06) }); })
         .then(function () {
-          return animate(pooled, { opacity: [0, 1] }, { duration: 0.7, ease: ease });
+          highlight();
+          animate(others, { strokeOpacity: 0.25 }, { duration: 0.8 });
+          return animate(tag, { opacity: [0, 1] }, { duration: 0.6 });
         });
+    });
+  }
+
+  // EEGManySteps: new recordings with a shared protocol and existing datasets
+  // flow into one harmonised format, which serves shared research questions.
+  function figManysteps(svg) {
+    var sources = $(".source", svg);
+    var flows = $(".flow-path", svg);
+    var hub = $(".hub", svg);
+    var questions = $(".question", svg);
+    flows.forEach(prepareDraw);
+    if (reduce) return;
+    hideSvg(sources.concat(hub, questions));
+    function packets() {
+      flows.forEach(function (f, i) {
+        var len = f.getTotalLength();
+        var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        dot.setAttribute("r", 3);
+        dot.setAttribute("fill", f.getAttribute("stroke"));
+        svg.insertBefore(dot, hub[0]);
+        animate(0, 1, {
+          duration: 1.8, delay: i * 0.3, repeat: Infinity, repeatDelay: 1.2, ease: "easeInOut",
+          onUpdate: function (v) {
+            var pt = f.getPointAtLength(v * len);
+            dot.setAttribute("cx", pt.x.toFixed(1));
+            dot.setAttribute("cy", pt.y.toFixed(1));
+          },
+        });
+      });
+    }
+    once(svg, function () {
+      animate(sources, { opacity: [0, 1], x: [-12, 0] }, { duration: 0.45, delay: stagger(0.14), ease: ease })
+        .then(function () { return Promise.all(flows.map(function (f, i) { return draw(f, { duration: 0.9, delay: i * 0.1, ease: "easeOut" }); })); })
+        .then(function () { return animate(hub, { opacity: [0, 1] }, { duration: 0.5 }); })
+        .then(function () { return animate(questions, { opacity: [0, 1], x: [10, 0] }, { duration: 0.45, delay: stagger(0.22), ease: ease }); })
+        .then(packets);
     });
   }
 
@@ -254,9 +328,10 @@
   }
 
   var FIGURES = {
-    walking: figWalking,
+    pipeline: figPipeline,
     streams: figStreams,
-    forest: figForest,
+    forking: figForking,
+    manysteps: figManysteps,
     bayes: figBayes,
     network: figNetwork,
   };

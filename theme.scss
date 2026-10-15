@@ -804,3 +804,20 @@ svg[data-anim] .node {
     display: none !important;
   }
 }
+
+.svg-mono {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11.5px;
+}
+
+.svg-option {
+  font-family: $font-sans;
+  font-size: 10.5px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.svg-question {
+  font-family: $font-caslon;
+  font-size: 15px;
+}

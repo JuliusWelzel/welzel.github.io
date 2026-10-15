@@ -1,52 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://juliuswelzel.github.io/welzel.github.io/software/index.html</loc>
-    <lastmod>2026-10-15T17:39:08.609Z</lastmod>
-  </url>
-  <url>
-    <loc>https://juliuswelzel.github.io/welzel.github.io/index.html</loc>
-    <lastmod>2026-10-15T17:39:08.604Z</lastmod>
+    <loc>https://juliuswelzel.github.io/welzel.github.io/teaching/index.html</loc>
+    <lastmod>2026-10-15T18:31:31.367Z</lastmod>
   </url>
   <url>
     <loc>https://juliuswelzel.github.io/welzel.github.io/research/index.html</loc>
-    <lastmod>2026-10-15T17:39:08.609Z</lastmod>
-  </url>
-  <url>
-    <loc>https://juliuswelzel.github.io/welzel.github.io/publications/index.html</loc>
-    <lastmod>2026-10-15T17:39:08.609Z</lastmod>
-  </url>
-  <url>
-    <loc>https://juliuswelzel.github.io/welzel.github.io/projects/foot-placement.html</loc>
-    <lastmod>2026-10-15T17:39:08.607Z</lastmod>
-  </url>
-  <url>
-    <loc>https://juliuswelzel.github.io/welzel.github.io/projects/meta-rep.html</loc>
-    <lastmod>2026-10-15T17:39:08.608Z</lastmod>
-  </url>
-  <url>
-    <loc>https://juliuswelzel.github.io/welzel.github.io/projects/eegmanysteps.html</loc>
-    <lastmod>2026-10-15T17:39:08.607Z</lastmod>
-  </url>
-  <url>
-    <loc>https://juliuswelzel.github.io/welzel.github.io/talks/index.html</loc>
-    <lastmod>2026-10-15T17:39:08.609Z</lastmod>
+    <lastmod>2026-10-15T18:31:31.344Z</lastmod>
   </url>
   <url>
     <loc>https://juliuswelzel.github.io/welzel.github.io/projects/stepup.html</loc>
-    <lastmod>2026-10-15T17:39:08.608Z</lastmod>
-  </url>
-  <url>
-    <loc>https://juliuswelzel.github.io/welzel.github.io/projects/igor.html</loc>
-    <lastmod>2026-10-15T17:39:08.608Z</lastmod>
+    <lastmod>2026-10-15T18:32:33.702Z</lastmod>
   </url>
   <url>
     <loc>https://juliuswelzel.github.io/welzel.github.io/projects/index.html</loc>
-    <lastmod>2026-10-15T17:39:08.608Z</lastmod>
+    <lastmod>2026-10-15T18:33:19.632Z</lastmod>
   </url>
   <url>
-    <loc>https://juliuswelzel.github.io/welzel.github.io/teaching/index.html</loc>
-    <lastmod>2026-10-15T17:39:08.612Z</lastmod>
+    <loc>https://juliuswelzel.github.io/welzel.github.io/projects/eegmanysteps.html</loc>
+    <lastmod>2026-10-15T18:32:33.695Z</lastmod>
   </url>
   <url>
     <loc>https://juliuswelzel.github.io/welzel.github.io/impressum/index.html</loc>
@@ -55,5 +27,25 @@
   <url>
     <loc>https://juliuswelzel.github.io/welzel.github.io/cv/index.html</loc>
     <lastmod>2026-10-15T17:39:08.583Z</lastmod>
+  </url>
+  <url>
+    <loc>https://juliuswelzel.github.io/welzel.github.io/index.html</loc>
+    <lastmod>2026-10-15T18:38:05.056Z</lastmod>
+  </url>
+  <url>
+    <loc>https://juliuswelzel.github.io/welzel.github.io/projects/igor.html</loc>
+    <lastmod>2026-10-15T18:30:30.352Z</lastmod>
+  </url>
+  <url>
+    <loc>https://juliuswelzel.github.io/welzel.github.io/projects/meta-rep.html</loc>
+    <lastmod>2026-10-15T18:32:33.698Z</lastmod>
+  </url>
+  <url>
+    <loc>https://juliuswelzel.github.io/welzel.github.io/publications/index.html</loc>
+    <lastmod>2026-10-15T18:31:31.367Z</lastmod>
+  </url>
+  <url>
+    <loc>https://juliuswelzel.github.io/welzel.github.io/software/index.html</loc>
+    <lastmod>2026-10-15T18:30:41.700Z</lastmod>
   </url>
 </urlset>

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Meta-science of mobile EEG within the DFG Priority Programme META-REP (SPP 2317), with a reporting standard for mobile EEG as its cornerstone.">
+<meta name="description" content="Preprocessing and reporting practices in mobile EEG within the DFG Priority Programme META-REP (SPP 2317).">
 
 <title>META-REP: Replicability of mobile EEG – Julius Welzel</title>
 <style>
@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-de09496b9f3dc02ddc0210fe5493c38a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6024c5959898eac4d023c633eecace60.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -138,10 +138,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../teaching/index.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../talks/index.html"> 
-<span class="menu-text">Talks</span></a>
-  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -194,7 +190,7 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="kicker">Project · Meta-science · Mobile EEG</span></p>
 <section id="meta-rep" class="level1 unlisted">
 <h1 class="unlisted">META-REP</h1>
-<p><span class="dek">Taking EEG out of the lab multiplies the choices a researcher has to make. If we want results that replicate, we first have to report those choices.</span></p>
+<p><span class="dek">Preprocessing and reporting practices in mobile EEG, and the development of a reporting standard for mobile EEG studies.</span></p>
 </section>
 </div>
 <div class="facts facts-group">
@@ -208,43 +204,40 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="label">Where</span> <a href="https://uol.de/en/neuropsychologie">Neuropsychology Lab</a> (Stefan Debener), University of Oldenburg</p>
 </div>
 <div>
-<p><span class="label">Cornerstone</span> A reporting standard for mobile EEG studies</p>
+<p><span class="label">Focus</span> Reporting standard for mobile EEG studies</p>
 </div>
 </div>
 <section id="the-programme" class="level2">
 <h2 class="anchored" data-anchor-id="the-programme">The programme</h2>
-<p><a href="https://www.meta-rep.uni-muenchen.de/">META-REP</a>, short for <em>A Meta-scientific Programme to Analyse and Optimise Replicability in the Behavioural, Social, and Cognitive Sciences</em>, is a DFG Priority Programme (SPP 2317). It brings together projects that study why findings do or do not replicate, and that develop ways to make them more robust. In Oldenburg, META-REP’s METEOR project looks at the “forking paths” of noisy, complex neural data: the many defensible analysis decisions between a raw recording and a published result. My work within META-REP is about these forking paths in mobile EEG.</p>
+<p><a href="https://www.meta-rep.uni-muenchen.de/">META-REP</a> (<em>A Meta-scientific Programme to Analyse and Optimise Replicability in the Behavioural, Social, and Cognitive Sciences</em>) is a DFG Priority Programme (SPP 2317) on the replicability of findings and on methods to improve it. In Oldenburg, the METEOR project addresses the many defensible analysis decisions between a raw neural recording and a published result. My work within META-REP concerns these decisions in mobile EEG.</p>
 <figure class="figure-anim figure">
-<svg data-anim="forest" viewbox="0 0 720 330" role="img" aria-label="Schematic forest plot: estimates from ten labs and their pooled estimate"><line x1="360" y1="16" x2="360" y2="300" stroke="#dcd7cc"></line><g class="lab"><text x="150" y="34" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 1</text><line x1="399.0" y1="30" x2="517.7" y2="30" stroke="#141414" stroke-width="1.2"></line><rect x="452.3" y="23.9" width="12.1" height="12.1" fill="#141414"></rect></g><g class="lab"><text x="150" y="58" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 2</text><line x1="379.8" y1="54" x2="576.9" y2="54" stroke="#141414" stroke-width="1.2"></line><rect x="474.2" y="49.9" width="8.2" height="8.2" fill="#141414"></rect></g><g class="lab"><text x="150" y="82" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 3</text><line x1="375.4" y1="78" x2="480.5" y2="78" stroke="#141414" stroke-width="1.2"></line><rect x="421.0" y="71.1" width="13.8" height="13.8" fill="#141414"></rect></g><g class="lab"><text x="150" y="106" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 4</text><line x1="366.4" y1="102" x2="510.5" y2="102" stroke="#141414" stroke-width="1.2"></line><rect x="433.4" y="96.9" width="10.2" height="10.2" fill="#141414"></rect></g><g class="lab"><text x="150" y="130" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 5</text><line x1="331.3" y1="126" x2="435.1" y2="126" stroke="#141414" stroke-width="1.2"></line><rect x="376.2" y="119.0" width="14.0" height="14.0" fill="#141414"></rect></g><g class="lab"><text x="150" y="154" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 6</text><line x1="366.9" y1="150" x2="480.4" y2="150" stroke="#141414" stroke-width="1.2"></line><rect x="417.3" y="143.6" width="12.7" height="12.7" fill="#141414"></rect></g><g class="lab"><text x="150" y="178" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 7</text><line x1="363.3" y1="174" x2="492.6" y2="174" stroke="#141414" stroke-width="1.2"></line><rect x="422.4" y="168.4" width="11.2" height="11.2" fill="#141414"></rect></g><g class="lab"><text x="150" y="202" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 8</text><line x1="334.2" y1="198" x2="466.7" y2="198" stroke="#141414" stroke-width="1.2"></line><rect x="395.0" y="192.5" width="10.9" height="10.9" fill="#141414"></rect></g><g class="lab"><text x="150" y="226" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 9</text><line x1="396.4" y1="222" x2="563.2" y2="222" stroke="#141414" stroke-width="1.2"></line><rect x="475.3" y="217.5" width="9.1" height="9.1" fill="#141414"></rect></g><g class="lab"><text x="150" y="250" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 10</text><line x1="362.6" y1="246" x2="501.6" y2="246" stroke="#141414" stroke-width="1.2"></line><rect x="426.9" y="240.8" width="10.5" height="10.5" fill="#141414"></rect></g><g class="pooled"><text x="150" y="290" text-anchor="end" class="svg-label" fill="#b3261e">Pooled</text><path d="M407.7,286 L427.9,278 L448.2,286 L427.9,294 Z" fill="#b3261e"></path><line x1="427.9" y1="16" x2="427.9" y2="276" stroke="#b3261e" stroke-dasharray="2 4"></line></g><text x="100" y="320" text-anchor="start" class="svg-label" fill="#6e6a62">smaller effect</text><text x="620" y="320" text-anchor="end" class="svg-label" fill="#6e6a62">larger effect</text></svg>
-<figcaption>Schematic: the same mobile EEG question answered by many labs. Replicability lives in the spread, and reporting standards make the rows comparable.</figcaption>
+<svg data-anim="forking" viewbox="0 0 720 300" role="img" aria-label="Schematic of forking analysis paths: combinations of preprocessing choices lead from the same raw EEG to different results; one path is highlighted as reported"><text x="20" y="108" text-anchor="start" class="svg-label" fill="#6e6a62">RAW EEG</text><path class="trace" d="M20.0,156.9 L22.0,158.2 L24.0,159.1 L26.0,160.4 L28.0,155.4 L30.0,151.4 L32.0,145.0 L34.0,143.2 L36.0,145.6 L38.0,146.7 L40.0,152.4 L42.0,152.1 L44.0,155.3 L46.0,150.5 L48.0,147.9 L50.0,141.2 L52.0,138.6 L54.0,140.9 L56.0,141.2 L58.0,146.9 L60.0,149.4 L62.0,153.4 L64.0,153.4 L66.0,153.6 L68.0,151.4 L70.0,146.5 L72.0,143.9 L74.0,146.8 L76.0,149.9 L78.0,153.8 L80.0,156.0 L82.0,161.0 L84.0,160.1 L86.0,159.4 L88.0,152.6 L90.0,149.6 L92.0,147.1 L94.0,146.4 L96.0,149.6 L98.0,154.0 L100.0,158.2 L102.0,157.6 L104.0,155.3 L106.0,153.6 L108.0,144.8 L110.0,143.6 L112.0,141.0 L114.0,141.4 L116.0,144.3 L118.0,149.6 L120.0,153.5 L122.0,153.9 L124.0,152.4 L126.0,145.9 L128.0,143.1 L130.0,139.6" fill="none" stroke="#141414" stroke-width="1.1"></path><path class="fork" d="M140,150 L210,119.0 L360,88.0 L510,119.0 L620,143.0" fill="none" stroke="#6e6a62" stroke-width="1" stroke-opacity="0.55"></path><path class="fork" d="M140,150 L210,119.0 L360,88.0 L510,181.0 L620,173.0" fill="none" stroke="#6e6a62" stroke-width="1" stroke-opacity="0.55"></path><path class="fork" d="M140,150 L210,119.0 L360,150.0 L510,119.0 L620,158.0" fill="none" stroke="#6e6a62" stroke-width="1" stroke-opacity="0.55"></path><path class="fork" d="M140,150 L210,119.0 L360,150.0 L510,181.0 L620,218.0" fill="none" stroke="#6e6a62" stroke-width="1" stroke-opacity="0.55"></path><path class="fork" d="M140,150 L210,119.0 L360,212.0 L510,119.0 L620,233.0" fill="none" stroke="#6e6a62" stroke-width="1" stroke-opacity="0.55"></path><path class="fork" d="M140,150 L210,119.0 L360,212.0 L510,181.0 L620,83.0" fill="none" stroke="#6e6a62" stroke-width="1" stroke-opacity="0.55"></path><path class="fork" d="M140,150 L210,181.0 L360,88.0 L510,119.0 L620,203.0" fill="none" stroke="#6e6a62" stroke-width="1" stroke-opacity="0.55"></path><path class="fork fork-reported" d="M140,150 L210,181.0 L360,88.0 L510,181.0 L620,68.0" fill="none" stroke="#6e6a62" stroke-width="1" stroke-opacity="0.55"></path><path class="fork" d="M140,150 L210,181.0 L360,150.0 L510,119.0 L620,188.0" fill="none" stroke="#6e6a62" stroke-width="1" stroke-opacity="0.55"></path><path class="fork" d="M140,150 L210,181.0 L360,150.0 L510,181.0 L620,113.0" fill="none" stroke="#6e6a62" stroke-width="1" stroke-opacity="0.55"></path><path class="fork" d="M140,150 L210,181.0 L360,212.0 L510,119.0 L620,98.0" fill="none" stroke="#6e6a62" stroke-width="1" stroke-opacity="0.55"></path><path class="fork" d="M140,150 L210,181.0 L360,212.0 L510,181.0 L620,128.0" fill="none" stroke="#6e6a62" stroke-width="1" stroke-opacity="0.55"></path><text x="210" y="40" text-anchor="middle" class="svg-label" fill="#6e6a62">HIGH-PASS</text><g class="node"><circle cx="210" cy="119.0" r="5" fill="#141414"></circle></g><text x="210" y="108.0" text-anchor="middle" class="svg-label svg-option" fill="#6e6a62">0.1 Hz</text><g class="node"><circle cx="210" cy="181.0" r="5" fill="#141414"></circle></g><text x="210" y="201.0" text-anchor="middle" class="svg-label svg-option" fill="#6e6a62">1 Hz</text><text x="360" y="40" text-anchor="middle" class="svg-label" fill="#6e6a62">ARTEFACTS</text><g class="node"><circle cx="360" cy="88.0" r="5" fill="#141414"></circle></g><text x="360" y="77.0" text-anchor="middle" class="svg-label svg-option" fill="#6e6a62">ASR</text><g class="node"><circle cx="360" cy="150.0" r="5" fill="#141414"></circle></g><text x="360" y="139.0" text-anchor="middle" class="svg-label svg-option" fill="#6e6a62">ICA</text><g class="node"><circle cx="360" cy="212.0" r="5" fill="#141414"></circle></g><text x="360" y="232.0" text-anchor="middle" class="svg-label svg-option" fill="#6e6a62">none</text><text x="510" y="40" text-anchor="middle" class="svg-label" fill="#6e6a62">REFERENCE</text><g class="node"><circle cx="510" cy="119.0" r="5" fill="#141414"></circle></g><text x="510" y="108.0" text-anchor="middle" class="svg-label svg-option" fill="#6e6a62">average</text><g class="node"><circle cx="510" cy="181.0" r="5" fill="#141414"></circle></g><text x="510" y="201.0" text-anchor="middle" class="svg-label svg-option" fill="#6e6a62">mastoids</text><line x1="620" y1="56" x2="620" y2="246" stroke="#141414"></line><text x="620" y="40" text-anchor="middle" class="svg-label" fill="#6e6a62">RESULT</text><circle class="outcome" cx="620" cy="143.0" r="3.5" fill="#141414"></circle><circle class="outcome" cx="620" cy="173.0" r="3.5" fill="#141414"></circle><circle class="outcome" cx="620" cy="158.0" r="3.5" fill="#141414"></circle><circle class="outcome" cx="620" cy="218.0" r="3.5" fill="#141414"></circle><circle class="outcome" cx="620" cy="233.0" r="3.5" fill="#141414"></circle><circle class="outcome" cx="620" cy="83.0" r="3.5" fill="#141414"></circle><circle class="outcome" cx="620" cy="203.0" r="3.5" fill="#141414"></circle><circle class="outcome" cx="620" cy="68.0" r="3.5" fill="#141414"></circle><circle class="outcome" cx="620" cy="188.0" r="3.5" fill="#141414"></circle><circle class="outcome" cx="620" cy="113.0" r="3.5" fill="#141414"></circle><circle class="outcome" cx="620" cy="98.0" r="3.5" fill="#141414"></circle><circle class="outcome" cx="620" cy="128.0" r="3.5" fill="#141414"></circle><text class="svg-label reported-label" x="634" y="72.0" text-anchor="start" fill="#b3261e">reported</text></svg>
+<figcaption>Schematic: twelve defensible preprocessing pipelines applied to the same raw EEG lead to different results. A reporting standard makes the chosen path (red) explicit.</figcaption>
 </figure>
 </section>
-<section id="why-mobile-eeg-needs-a-reporting-standard" class="level2">
-<h2 class="anchored" data-anchor-id="why-mobile-eeg-needs-a-reporting-standard">Why mobile EEG needs a reporting standard</h2>
-<p>Mobile EEG lets us study the brain while people walk, turn and navigate the real world. The price is a large space of decisions that stationary EEG rarely faces: which amplifier and cap, how cables are secured, how EEG is synchronised with motion sensors, how gait events are detected, and how movement artefacts are removed, in which order and with which parameters.</p>
-<p>In <em>Preprocessing on the Go</em> we reviewed studies that combined mobile EEG with gait measurements (<a href="https://doi.org/10.1111/psyp.70352">Vinod et al., 2026</a>). The preprocessing steps differed widely, as did their order and combination, and especially the tools and reporting of artefact rejection. Many studies described their pipeline too vaguely to reproduce it. Our conclusion is that the field does not need one mandatory pipeline. It does need <strong>standardised reporting</strong>, so that different pipelines become comparable and studies can be repeated. An earlier META-REP review of P3 studies during walking came to a similar verdict (<a href="https://doi.org/10.1111/psyp.14743">Jacobsen et al., 2025</a>).</p>
-<div class="pullquote">
-<p>The field does not need one mandatory pipeline. It needs every pipeline to be reported well enough to repeat.</p>
-</div>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>Mobile EEG allows recordings during walking and other everyday movements. Compared with stationary EEG, it involves additional methodological decisions: hardware and cable management, synchronisation with motion sensors, detection of gait events, and the removal of movement artefacts, including the order and parameters of preprocessing steps.</p>
+<p>In a review of studies combining mobile EEG with gait measurements (<a href="https://doi.org/10.1111/psyp.70352">Vinod et al., 2026</a>), we found large differences in the selection, order and combination of preprocessing steps, in particular in the tools and reporting of artefact rejection. Many pipelines were not described in enough detail to be reproduced. We concluded that standardised reporting, rather than a single mandatory pipeline, is needed to make studies comparable and reproducible. An earlier review of P3 studies during walking reached a similar conclusion (<a href="https://doi.org/10.1111/psyp.14743">Jacobsen et al., 2025</a>).</p>
 </section>
 <section id="a-reporting-standard-for-mobile-eeg" class="level2">
 <h2 class="anchored" data-anchor-id="a-reporting-standard-for-mobile-eeg">A reporting standard for mobile EEG</h2>
-<p>The cornerstone of my META-REP work is a reporting standard for mobile EEG studies, now in preparation: a shared minimum of what a paper reports, so that readers can evaluate, compare and repeat it. Its starting point is what the review found missing most often:</p>
+<p>A reporting standard for mobile EEG studies is in preparation. It defines a minimum set of information to report, starting from the items most often missing in the review:</p>
 <div class="checklist">
 <ul>
 <li><strong>Recording context</strong> Setting and task, such as indoor or outdoor, treadmill or overground walking, and the equipment used.</li>
 <li><strong>Preprocessing steps</strong> Every step with its order and tools, in particular how movement artefacts are rejected.</li>
 <li><strong>Software parameters</strong> The settings of each tool, so that a pipeline can be re-run.</li>
-<li><strong>Open code and workflows</strong> Analysis code and workflows shared openly, ideally with data in community standards such as EEG-BIDS and <a href="../software/index.html#bids">Motion-BIDS</a>.</li>
+<li><strong>Open code and workflows</strong> Analysis code and workflows shared openly, ideally with data in community standards such as EEG-BIDS and <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html">Motion-BIDS</a>.</li>
 </ul>
 </div>
 </section>
 <section id="related-work" class="level2">
 <h2 class="anchored" data-anchor-id="related-work">Related work</h2>
 <ul>
-<li><a href="../projects/eegmanysteps.html"><strong>EEGManySteps</strong></a>: a many-labs effort that measures how much setups and pipelines change gait-related EEG results.</li>
-<li><a href="../projects/igor.html"><strong>IGOR umbrella review</strong></a>: a review of how EEG/ERP preprocessing is reported and justified across the literature.</li>
-<li><strong>Multiverse analyses</strong>: <a href="https://github.com/NeuropsyOL/mobileEEG_multiverse">mapping preprocessing choices in mobile EEG</a> and a <a href="https://github.com/vaishvd/betaGaitMultiverse">multiverse of beta activity during gait</a> by Vaishali Vinod. The first maps the choices made in the literature (Oldenburg METEOR team); the second varies preprocessing choices on two walking datasets.</li>
+<li><a href="../projects/eegmanysteps.html"><strong>EEGManySteps</strong></a>: multi-lab study of the influence of recording setups and pipelines on gait-related EEG.</li>
+<li><a href="../projects/igor.html"><strong>IGOR umbrella review</strong></a>: umbrella review of how EEG/ERP preprocessing is reported and justified.</li>
+<li><strong>Multiverse analyses</strong>: <a href="https://github.com/NeuropsyOL/mobileEEG_multiverse">mapping preprocessing choices in mobile EEG</a> and a <a href="https://github.com/vaishvd/betaGaitMultiverse">multiverse of beta activity during gait</a> by Vaishali Vinod. The first maps preprocessing choices in the literature (Oldenburg METEOR team); the second varies preprocessing choices across two walking datasets.</li>
 </ul>
 </section>
 <section id="publications" class="level2">
@@ -253,7 +246,7 @@ ul.task-list li input[type="checkbox"] {
      of publications/config.yml. Do not edit by hand. -->
 <div class="pub-list">
 <ul>
-<li>Vinod, V., Papin, L. J., Romijnders, R., Maetzler, W., &amp; <strong>Welzel, J.</strong> (2026). Preprocessing on the go: Practices in Gait‐Related mobile EEG. <em>Psychophysiology</em>, <em>63</em>(6), Article e70352. <a href="https://doi.org/10.1111/psyp.70352" class="pub-doi">https://doi.org/10.1111/psyp.70352</a></li>
+<li>Vinod, V., Papin, L. J., Romijnders, R., Maetzler, W., &amp; <strong>Welzel, J.</strong> (2026). Preprocessing on the go: Practices in Gait‐Related mobile EEG. <em>Psychophysiology</em>, <em>63</em>(6), Article e70352. <a href="https://doi.org/10.1111/psyp.70352" class="pub-doi">https://doi.org/10.1111/psyp.70352</a> <a href="https://doi.org/10.22541/au.176906185.59261482/v1" class="pub-badge pub-preprint-link">Preprint</a></li>
 <li><strong>Welzel, J.</strong> (2026). <em>Have we solved the replicability crisis? From open practices to systemic reform in cognitive neurosciences</em>. Center for Open Science. <a href="https://doi.org/10.31222/osf.io/m6rng_v1" class="pub-doi">https://doi.org/10.31222/osf.io/m6rng_v1</a> <span class="pub-badge pub-preprint">Preprint</span></li>
 </ul>
 </div>

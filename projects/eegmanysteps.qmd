@@ -1,24 +1,24 @@
 ---
 title: "EEGManySteps"
-description: "A community-driven, many-labs initiative testing how hardware, recording setups and processing pipelines shape gait-related mobile EEG."
+description: "Community-driven multi-lab initiative on the influence of hardware, recording setups and processing pipelines on gait-related mobile EEG."
 ---
 
 ::: {.hero}
-[Project · Many labs · Mobile EEG]{.kicker}
+[Project · Multi-lab · Mobile EEG]{.kicker}
 
 # EEGManySteps {.unlisted}
 
-[Many labs, many setups, one question: which choices change what we see in the brain during walking?]{.dek}
+[A multi-lab collection of gait EEG data to quantify how recording setups and analysis pipelines affect the results.]{.dek}
 :::
 
 ::: {.facts .facts-group}
 ::: {}
 [Started]{.label}
-2024, after the MoBI 2024 conference
+2024, following the MoBI 2024 conference
 :::
 ::: {}
-[Inspired by]{.label}
-EEGManyLabs and EEGManyPipelines
+[Related initiatives]{.label}
+EEGManyLabs, EEGManyPipelines
 :::
 ::: {}
 [My role]{.label}
@@ -30,29 +30,29 @@ Steering committee; website and GitHub organisation; data contributor
 :::
 :::
 
-{{< include _figures/manylabs.md >}}
+{{< include _figures/manysteps.md >}}
 
-## The idea
+## Aims
 
-EEGManySteps is a grassroots initiative in mobile brain/body imaging (MoBI). It is not a classic replication study. Instead, it collects and harmonises walking EEG recorded with many different setups around the world, both existing datasets and new recordings, to find out which acquisition and analysis factors most affect how consistent and reliable gait-related EEG results are.
+EEGManySteps is a community initiative in mobile brain/body imaging (MoBI). Instead of replicating a single experiment, it collects and harmonises gait EEG recorded with different setups, including existing datasets and new recordings, to identify which acquisition and analysis factors most affect the consistency of gait-related EEG results.
 
-The community settled on four research goals:
+The initiative addresses four research questions:
 
 1. step-specific time-frequency patterns,
 2. gait-related artefacts across EEG systems,
 3. the influence of preprocessing on EEG results during walking, and
 4. gait-related modulation of secondary-task correlates such as the P3.
 
-## Harmonised data
+## Data harmonisation
 
-Contributed datasets are converted to EEG-BIDS and [Motion-BIDS](../software/index.qmd#bids). They also get EEGManySteps metadata: indoor or outdoor, treadmill or overground, footwear, secondary task, speed scheme and synchronisation method. Sensor locations follow the [UNISEP](https://arxiv.org/abs/2412.21159) sensor-placement vocabulary, and gait events are standardised. For new recordings, the project shares a [harmonised auditory oddball paradigm](https://github.com/EEGManySteps/eegmanysteps_oddball) that can be run while standing and while walking.
+Contributed datasets are converted to EEG-BIDS and [Motion-BIDS](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html) and annotated with additional metadata (indoor or outdoor, treadmill or overground, footwear, secondary task, speed protocol, synchronisation method). Sensor locations follow the [UNISEP](https://arxiv.org/abs/2412.21159) vocabulary, and gait events are standardised. For new recordings, a [harmonised auditory oddball paradigm](https://github.com/EEGManySteps/eegmanysteps_oddball) is provided for standing and walking conditions.
 
 ## My role
 
-I am on the steering committee and co-presented the kick-off meeting in September 2024. I help maintain the website and the [GitHub organisation](https://github.com/EEGManySteps), co-authored the project posters at Methods in Mobile EEG 2025 and Psychologie und Gehirn 2025, and contribute a walking dataset together with Nadine Jacobsen. The project is a natural partner of my work on [reporting standards for mobile EEG](meta-rep.qmd).
+Member of the steering committee; co-presenter of the kick-off meeting (September 2024); maintenance of the website and the [GitHub organisation](https://github.com/EEGManySteps); co-author of the project posters at Methods in Mobile EEG 2025 and Psychologie und Gehirn 2025; contribution of a walking dataset together with Nadine Jacobsen.
 
 ## Links
 
 - [EEGManySteps website](https://eegmanysteps.org)
 - [Data curation guidelines and scripts](https://github.com/EEGManySteps/EEGManySteps-Data-Curation)
-- [Poster at Methods in Mobile EEG 2025 (PDF)](https://github.com/EEGManySteps/eegmanysteps.github.io/blob/main/files/posters/poster_mbt_2025.pdf)
+- [Poster, Methods in Mobile EEG 2025 (PDF)](https://github.com/EEGManySteps/eegmanysteps.github.io/blob/main/files/posters/poster_mbt_2025.pdf)
