@@ -1,5 +1,152 @@
 [
   {
+    "objectID": "projects/stepup.html#the-question",
+    "href": "projects/stepup.html#the-question",
+    "title": "StepuP: Steps against the burden of Parkinson’s disease",
+    "section": "The question",
+    "text": "The question\nSpeed-dependent treadmill training improves gait in Parkinson’s disease, but nobody knows the mechanism. StepuP tests two candidate explanations. The first is that training sharpens stability-related foot placement, the step-by-step adjustment of where the foot lands relative to the body’s centre of mass. The second is that it strengthens cortical sensorimotor integration, visible as lower gait-related EEG beta power and higher EEG–EMG (corticomuscular) coherence. A second question is whether a richer training regime (SDTT+, with virtual reality or mechanical perturbations) works better, and whether the gains carry over into walking in daily life.\n\nSpeed-dependent treadmill training helps. StepuP is designed to find out how, from the cortex down to the foot."
+  },
+  {
+    "objectID": "projects/stepup.html#design",
+    "href": "projects/stepup.html#design",
+    "title": "StepuP: Steps against the burden of Parkinson’s disease",
+    "section": "Design",
+    "text": "Design\nStepuP consists of three harmonised, parallel randomised controlled trials that share one core protocol and run at clinical sites in Kiel, Bologna, Tel Aviv and Sydney. Each trial includes 42 people with Parkinson’s disease, so 126 in total. A reference group of 21 healthy older adults is measured in Amsterdam. Participants are randomised to standard speed-dependent treadmill training (SDTT) or to SDTT+, and complete twelve 30-minute training sessions. Depending on the site, SDTT+ adds virtual-reality obstacles, mechanical belt perturbations, or both.\nAssessments take place at baseline, right after training and at a 12-week follow-up. Each one combines:\n\nSynchronised 64-channel EEG, EMG and 3D motion capture during treadmill walking at comfortable and fixed speeds, plus resting-state EEG\nClinical testing, e.g. MDS-UPDRS III, Mini-BESTest, MoCA, Trail Making Test, Timed Up and Go, falls self-efficacy and quality of life\nA week of daily-life monitoring with a lower-back motion sensor, which yields real-world digital mobility outcomes\n\nThe primary clinical endpoint is comfortable overground walking speed. Mechanistic outcomes include stride length and stride time, the explained variance and error of a foot-placement model, EEG beta power and corticomuscular coherence. They are analysed with linear mixed-effects models."
+  },
+  {
+    "objectID": "projects/stepup.html#data-that-travel-well",
+    "href": "projects/stepup.html#data-that-travel-well",
+    "title": "StepuP: Steps against the burden of Parkinson’s disease",
+    "section": "Data that travel well",
+    "text": "Data that travel well\nA multicentre study with different EEG, EMG and motion-capture systems at every site only works if the data line up. All sites stream and time-lock their devices with the open-source Lab Streaming Layer. The recordings are then converted into one multi-site dataset in the Brain Imaging Data Structure (BIDS), with eeg, emg and motion data for every participant and session. This is where Motion-BIDS proves itself in practice."
+  },
+  {
+    "objectID": "projects/stepup.html#my-role",
+    "href": "projects/stepup.html#my-role",
+    "title": "StepuP: Steps against the burden of Parkinson’s disease",
+    "section": "My role",
+    "text": "My role\nTogether with Walter Maetzler, I lead StepuP at the Kiel site (University Hospital Schleswig-Holstein and Kiel University), where we supervise the team running the EEG, EMG, motion-capture and training sessions. Across the consortium I am responsible for the multimodal recording and data-standardisation pipeline:\n\nthe LSL synchronisation setup for the EEG, EMG and motion-capture systems used at the sites\nthe EEG data-quality checks\nthe StepuP BIDS converter, which turns every site’s recordings and REDCap clinical data into one shared dataset\nEEG and BIDS training sessions at consortium meetings\n\nWith Moira van Leeuwen, I am shared first author of the StepuP protocol paper."
+  },
+  {
+    "objectID": "projects/stepup.html#publications",
+    "href": "projects/stepup.html#publications",
+    "title": "StepuP: Steps against the burden of Parkinson’s disease",
+    "section": "Publications",
+    "text": "Publications\n\n\n\nvan Leeuwen, A. M., Welzel, J., D’Ascanio, I., Lang, C., Vinod, V., Görrisen, P., Geritz, J., Hansen, C., Gazit, E., Tov, S. S., Prusak, R., Casadei, I., Contri, A., Tampellini, F., Pellicciari, L., Lopane, G., Buonaura, G. C., Palmerini, L., Zahid, N., … van Dieën, J. H. (2026). Steps against the burden of Parkinson’s disease (StepuP): Protocol of a randomized controlled trial elucidating the biomechanical and neurophysiological mechanisms of a speed dependent treadmill training intervention. PLOS One, 21(6), Article e0348957. https://doi.org/10.1371/journal.pone.0348957 Preprint\nLang, C., van Dieen, J. H., Brodie, M. A., Welzel, J., Maetzler, W., Singh, N. B., & Ravi, D. K. (2024). Complexities and challenges of translating intervention success to real world gait in people with Parkinson’s disease. Frontiers in Neurology, 15, Article 1455692. https://doi.org/10.3389/fneur.2024.1455692 Preprint"
+  },
+  {
+    "objectID": "projects/stepup.html#links",
+    "href": "projects/stepup.html#links",
+    "title": "StepuP: Steps against the burden of Parkinson’s disease",
+    "section": "Links",
+    "text": "Links\n\nTrial registrations on ClinicalTrials.gov: NCT07057219, NCT07058285 (Kiel) and NCT07105787 (Tel Aviv / Bologna)\nJPND project page\nStepuP consortium on GitHub"
+  },
+  {
+    "objectID": "projects/eegmanysteps.html#the-idea",
+    "href": "projects/eegmanysteps.html#the-idea",
+    "title": "EEGManySteps",
+    "section": "The idea",
+    "text": "The idea\nEEGManySteps is a grassroots initiative in mobile brain/body imaging (MoBI). It is not a classic replication study. Instead, it collects and harmonises walking EEG recorded with many different setups around the world, both existing datasets and new recordings, to find out which acquisition and analysis factors most affect how consistent and reliable gait-related EEG results are.\nThe community settled on four research goals:\n\nstep-specific time-frequency patterns,\ngait-related artefacts across EEG systems,\nthe influence of preprocessing on EEG results during walking, and\ngait-related modulation of secondary-task correlates such as the P3."
+  },
+  {
+    "objectID": "projects/eegmanysteps.html#harmonised-data",
+    "href": "projects/eegmanysteps.html#harmonised-data",
+    "title": "EEGManySteps",
+    "section": "Harmonised data",
+    "text": "Harmonised data\nContributed datasets are converted to EEG-BIDS and Motion-BIDS. They also get EEGManySteps metadata: indoor or outdoor, treadmill or overground, footwear, secondary task, speed scheme and synchronisation method. Sensor locations follow the UNISEP sensor-placement vocabulary, and gait events are standardised. For new recordings, the project shares a harmonised auditory oddball paradigm that can be run while standing and while walking."
+  },
+  {
+    "objectID": "projects/eegmanysteps.html#my-role",
+    "href": "projects/eegmanysteps.html#my-role",
+    "title": "EEGManySteps",
+    "section": "My role",
+    "text": "My role\nI am on the steering committee and co-presented the kick-off meeting in September 2024. I help maintain the website and the GitHub organisation, co-authored the project posters at Methods in Mobile EEG 2025 and Psychologie und Gehirn 2025, and contribute a walking dataset together with Nadine Jacobsen. The project is a natural partner of my work on reporting standards for mobile EEG."
+  },
+  {
+    "objectID": "projects/eegmanysteps.html#links",
+    "href": "projects/eegmanysteps.html#links",
+    "title": "EEGManySteps",
+    "section": "Links",
+    "text": "Links\n\nEEGManySteps website\nData curation guidelines and scripts\nPoster at Methods in Mobile EEG 2025 (PDF)"
+  },
+  {
+    "objectID": "projects/igor.html#what-igor-does",
+    "href": "projects/igor.html#what-igor-does",
+    "title": "IGOR: Interest Group on Open and Reproducible Research",
+    "section": "What IGOR does",
+    "text": "What IGOR does\nIGOR is a forum where members of the DGPs section Biological Psychology and Neuropsychology exchange ideas on how to make research in the field more open and reproducible. It works through grassroots community projects, training for early-career researchers and the annual IGOR Prize for Open and Reproducible Science. Its founding document (in German) is available here."
+  },
+  {
+    "objectID": "projects/igor.html#bids-consultation-hour",
+    "href": "projects/igor.html#bids-consultation-hour",
+    "title": "IGOR: Interest Group on Open and Reproducible Research",
+    "section": "BIDS Consultation Hour",
+    "text": "BIDS Consultation Hour\nIn 2024 I set up the IGOR BIDS Consultation Hour, an open online forum. Researchers bring their own datasets and conversion problems and get individual advice on organising them in the Brain Imaging Data Structure (BIDS). I cover EEG and motion data, and a colleague covers MRI. The website also collects BIDS learning materials, such as workshop slides and posters."
+  },
+  {
+    "objectID": "projects/igor.html#eegerp-preprocessing-umbrella-review",
+    "href": "projects/igor.html#eegerp-preprocessing-umbrella-review",
+    "title": "IGOR: Interest Group on Open and Reproducible Research",
+    "section": "EEG/ERP preprocessing umbrella review",
+    "text": "EEG/ERP preprocessing umbrella review\nTogether with Yu-Fang Yang, Mario Reutter-Dieker and Johannes Rodrigues, I co-lead an umbrella review of EEG/ERP preprocessing practices. It brings together the literature on how preprocessing pipelines and parameters are reported and justified. The aim is a shared, transparent set of extraction standards and evidence the field can reuse. The review is preregistered on OSF and complements my work on reporting standards for mobile EEG."
+  },
+  {
+    "objectID": "projects/igor.html#more-from-the-igor-community",
+    "href": "projects/igor.html#more-from-the-igor-community",
+    "title": "IGOR: Interest Group on Open and Reproducible Research",
+    "section": "More from the IGOR community",
+    "text": "More from the IGOR community\n\nARIADNE is a living, interactive navigator that guides researchers through the resources for each step of a transparent research project (Hartmann et al., 2025). I contributed glossary terms during its revision.\nEnhancing precision in human neuroscience is a community review on precision in human neuroscience (Nebe et al., 2023), with an accompanying workshop."
+  },
+  {
+    "objectID": "research/index.html#eeg",
+    "href": "research/index.html#eeg",
+    "title": "Research",
+    "section": "The moving brain",
+    "text": "The moving brain\nFor a long time, EEG meant sitting still. With mobile EEG we can record brain activity while people walk, turn and deal with the real world. I combine mobile EEG with motion capture, EMG and wearable sensors to study how the cortex takes part in controlling gait, for example through beta oscillations and corticomuscular coherence, and how this changes in Parkinson’s disease.\nProjects: StepuP · EEGManySteps · Pocketable MoBI · EPOC"
+  },
+  {
+    "objectID": "research/index.html#algorithms",
+    "href": "research/index.html#algorithms",
+    "title": "Research",
+    "section": "Gait, balance and foot placement",
+    "text": "Gait, balance and foot placement\nWalking is controlled step by step, largely through where we put our feet. I work on algorithms that turn raw sensor data into meaningful gait and balance parameters, and on models of how the nervous system plans foot placement under uncertainty.\nProjects: Bayesian foot placement · KielMAT · StepuP"
+  },
+  {
+    "objectID": "research/index.html#datascience",
+    "href": "research/index.html#datascience",
+    "title": "Research",
+    "section": "Movement disorders",
+    "text": "Movement disorders\nTrained as a psychologist and neuroscientist, I want to understand movement disorders through quantitative data: how essential tremor responds to sensory feedback and arousal, which gait measures track the progression of Parkinson’s disease, and how mobility, cognition and clinical scores relate in geriatric patients.\nProjects: StepuP · Tremor · ComOn"
+  },
+  {
+    "objectID": "research/index.html#open-science",
+    "href": "research/index.html#open-science",
+    "title": "Research",
+    "section": "Open and reproducible science",
+    "text": "Open and reproducible science\nMobile EEG multiplies the analysis choices a researcher has to make. I study these choices and their consequences, develop reporting standards and data standards such as Motion-BIDS, and help build the communities that make open research the default.\nProjects: META-REP · IGOR · EEGManySteps · Motion-BIDS"
+  },
+  {
+    "objectID": "teaching/index.html#data-in-practice",
+    "href": "teaching/index.html#data-in-practice",
+    "title": "Teaching",
+    "section": "Datascience in practice",
+    "text": "Datascience in practice\nA Master Course in psychology about Python based Data Science.\nTime: Winter 22/23\nLinks: Website"
+  },
+  {
+    "objectID": "teaching/index.html#func-neuro",
+    "href": "teaching/index.html#func-neuro",
+    "title": "Teaching",
+    "section": "Functional Neuroanatomy",
+    "text": "Functional Neuroanatomy\nA Bachelor Course in psychology about Functional Neuroanatomy.\nTime: Summer 22\nLinks: Website"
+  },
+  {
+    "objectID": "cv/index.html",
+    "href": "cv/index.html",
+    "title": "Curriculum vitae",
+    "section": "",
+    "text": "CV\n\nCurriculum vitae\nA PDF version of my CV.\n\n\n\n\n\n  \n    Download current CV"
+  },
+  {
     "objectID": "software/index.html#bids",
     "href": "software/index.html#bids",
     "title": "Open Source Software",
@@ -33,48 +180,6 @@
     "title": "Open Source Software",
     "section": "Multimodal recording",
     "text": "Multimodal recording\nTools for synchronised recordings with the Lab Streaming Layer (LSL) and for multi-site data harmonisation, developed for StepuP:\n\nStepuP setup: LSL synchronisation of EEG, EMG and motion-capture systems\nStepuP BIDS converter: one BIDS dataset from every site’s EEG, EMG, motion and REDCap data\nEEG data checks: quality checks for incoming EEG recordings\n\nMy role: developer"
-  },
-  {
-    "objectID": "index.html#projects",
-    "href": "index.html#projects",
-    "title": "Julius Welzel",
-    "section": "Projects",
-    "text": "Projects\n\n\nParkinson’s disease · Mobile EEG\n\nStepuP\nA six-country trial asking why treadmill training improves walking in Parkinson’s disease, from the cortex down to the foot.\nJPND · 2023–2026\n\n\n\nMeta-science · Mobile EEG\n\nMETA-REP\nMaking mobile EEG replicable, with a reporting standard as the cornerstone.\nDFG · SPP 2317\n\n\n\nGait · Modelling\n\nWhere to put the next foot\nBayesian integration in foot placement control, with Moira van Leeuwen and the Amsterdam group.\nVU Amsterdam · ongoing\n\n\n\nOpen science · Community\n\nIGOR\nThe open-science interest group of the DGPs section Biological Psychology and Neuropsychology.\nDGPs · since 2020\n\n\n\nAll projects →"
-  },
-  {
-    "objectID": "index.html#recent-publications",
-    "href": "index.html#recent-publications",
-    "title": "Julius Welzel",
-    "section": "Recent publications",
-    "text": "Recent publications\n\n\n\nStagneth, L., Geritz, J., Hermann, G., Maetzler, W., & Welzel, J. (2026). Verlangsamung über die Zeit, stabile Variabilität: Verhaltensmarker der Daueraufmkersamkeit im Alter. https://doi.org/10.13140/rg.2.2.25108.87681\nNeumann, C., Godbersen, L., Schmeer, L., Hauffe, J. M., Helzel, K., Geritz, J., Hermann, G., Stagneth, L., Egerer, L., Fuglsang, L., Buschung, M., Reinke, L., Poick, S., Lieb, W., Franzpötter, K., Ruß, A.-K., Pütz, S., Raquib, S., Schmidbauer, L., … Welzel, J. (2026). Fatigue is associated with stimulus-related theta and alpha power and distinguishes subjective from objective cognition in a post-viral cohort: A cross-sectional study. Research Square. https://doi.org/10.21203/rs.3.rs-10753262/v1 Preprint\nvan Leeuwen, A. M., Romijnders, R., Welzel, J., D’Ascanio, I., Stürner, K., Hansen, C., & Maetzler, W. (2026). Stability-related foot placement control relies more on mediolateral center-of-mass velocity feedback in people with early Multiple Sclerosis. medRxiv. https://doi.org/10.64898/2026.08.26.26361464 Preprint\nContreras-Altamirano, M., Klapprott, M., Jacobsen, N., Maanen, P., Welzel, J., & Debener, S. (2026). A portable solution for simultaneous human movement and mobile EEG acquisition: readiness potential for basketball free-throw shooting. Experimental Brain Research, 244(8), Article 153. https://doi.org/10.1007/s00221-026-07342-6 Preprint\nShirazi, S. Y., McCloy, D., Oostenveld, R., Boonstra, T., Larson, E., Welzel, J., Gau, R., Markiewicz, C. J., Posella, S., Horschig, J. M., Klotz, T., Gramfort, A., & Delorme, A. (2026). EMG-BIDS: an extension to the brain imaging data structure for electromyography. bioRxiv. https://doi.org/10.64898/2026.07.21.739911 Preprint\n\n\nAll publications →"
-  },
-  {
-    "objectID": "research/index.html#eeg",
-    "href": "research/index.html#eeg",
-    "title": "Research",
-    "section": "The moving brain",
-    "text": "The moving brain\nFor a long time, EEG meant sitting still. With mobile EEG we can record brain activity while people walk, turn and deal with the real world. I combine mobile EEG with motion capture, EMG and wearable sensors to study how the cortex takes part in controlling gait, for example through beta oscillations and corticomuscular coherence, and how this changes in Parkinson’s disease.\nProjects: StepuP · EEGManySteps · Pocketable MoBI · EPOC"
-  },
-  {
-    "objectID": "research/index.html#algorithms",
-    "href": "research/index.html#algorithms",
-    "title": "Research",
-    "section": "Gait, balance and foot placement",
-    "text": "Gait, balance and foot placement\nWalking is controlled step by step, largely through where we put our feet. I work on algorithms that turn raw sensor data into meaningful gait and balance parameters, and on models of how the nervous system plans foot placement under uncertainty.\nProjects: Bayesian foot placement · KielMAT · StepuP"
-  },
-  {
-    "objectID": "research/index.html#datascience",
-    "href": "research/index.html#datascience",
-    "title": "Research",
-    "section": "Movement disorders",
-    "text": "Movement disorders\nTrained as a psychologist and neuroscientist, I want to understand movement disorders through quantitative data: how essential tremor responds to sensory feedback and arousal, which gait measures track the progression of Parkinson’s disease, and how mobility, cognition and clinical scores relate in geriatric patients.\nProjects: StepuP · Tremor · ComOn"
-  },
-  {
-    "objectID": "research/index.html#open-science",
-    "href": "research/index.html#open-science",
-    "title": "Research",
-    "section": "Open and reproducible science",
-    "text": "Open and reproducible science\nMobile EEG multiplies the analysis choices a researcher has to make. I study these choices and their consequences, develop reporting standards and data standards such as Motion-BIDS, and help build the communities that make open research the default.\nProjects: META-REP · IGOR · EEGManySteps · Motion-BIDS"
   },
   {
     "objectID": "publications/index.html#year-2026",
@@ -124,6 +229,76 @@
     "title": "Publications",
     "section": "2020",
     "text": "2020\n\n\nDaeglau, M., Zich, C., Welzel, J., Saak, S. K., Scheffels, J. F., & Kranczioch, C. (2020). Motor Imagery EEG neurofeedback skill acquisition in the context of declarative interference and sleep. bioRxiv. https://doi.org/10.1101/2020.12.11.420919 Preprint\nGeritz, J., Maetzold, S., Steffen, M., Pilotto, A., Corrà, M. F., Moscovich, M., Rizzetti, M. C., Borroni, B., Padovani, A., Alpes, A., Bang, C., Barcellos, I., Baron, R., Bartsch, T., Becktepe, J. S., Berg, D., Bergeest, L. M., Bergmann, P., Bouça-Machado, R., … Welzel, J., … Maetzler, W. (2020). Motor, cognitive and mobility deficits in 1000 geriatric patients: protocol of a quantitative observational study before and after routine clinical geriatric treatment – the ComOn-study. BMC Geriatrics, 20(1), Article 45. https://doi.org/10.1186/s12877-020-1445-z\nWarmerdam, E., Romijnders, R., Welzel, J., Hansen, C., Schmidt, G., & Maetzler, W. (2020). Quantification of arm swing during walking in healthy adults and Parkinson’s disease patients: Wearable sensor-based algorithm development and validation. Sensors, 20(20), Article 5963. https://doi.org/10.3390/s20205963\nDaeglau, M., Zich, C., Emkes, R., Welzel, J., Debener, S., & Kranczioch, C. (2020). Investigating priming effects of physical practice on motor imagery-induced event-related desynchronization. Frontiers in Psychology, 11, Article 57. https://doi.org/10.3389/fpsyg.2020.00057"
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "Julius Welzel",
+    "section": "Projects",
+    "text": "Projects\n\n\nParkinson’s disease · Mobile EEG\n\nStepuP\nA six-country trial asking why treadmill training improves walking in Parkinson’s disease, from the cortex down to the foot.\nJPND · 2023–2026\n\n\n\nMeta-science · Mobile EEG\n\nMETA-REP\nMaking mobile EEG replicable, with a reporting standard as the cornerstone.\nDFG · SPP 2317\n\n\n\nGait · Modelling\n\nWhere to put the next foot\nBayesian integration in foot placement control, with Moira van Leeuwen and the Amsterdam group.\nVU Amsterdam · ongoing\n\n\n\nOpen science · Community\n\nIGOR\nThe open-science interest group of the DGPs section Biological Psychology and Neuropsychology.\nDGPs · since 2020\n\n\n\nAll projects →"
+  },
+  {
+    "objectID": "index.html#recent-publications",
+    "href": "index.html#recent-publications",
+    "title": "Julius Welzel",
+    "section": "Recent publications",
+    "text": "Recent publications\n\n\n\nStagneth, L., Geritz, J., Hermann, G., Maetzler, W., & Welzel, J. (2026). Verlangsamung über die Zeit, stabile Variabilität: Verhaltensmarker der Daueraufmkersamkeit im Alter. https://doi.org/10.13140/rg.2.2.25108.87681\nNeumann, C., Godbersen, L., Schmeer, L., Hauffe, J. M., Helzel, K., Geritz, J., Hermann, G., Stagneth, L., Egerer, L., Fuglsang, L., Buschung, M., Reinke, L., Poick, S., Lieb, W., Franzpötter, K., Ruß, A.-K., Pütz, S., Raquib, S., Schmidbauer, L., … Welzel, J. (2026). Fatigue is associated with stimulus-related theta and alpha power and distinguishes subjective from objective cognition in a post-viral cohort: A cross-sectional study. Research Square. https://doi.org/10.21203/rs.3.rs-10753262/v1 Preprint\nvan Leeuwen, A. M., Romijnders, R., Welzel, J., D’Ascanio, I., Stürner, K., Hansen, C., & Maetzler, W. (2026). Stability-related foot placement control relies more on mediolateral center-of-mass velocity feedback in people with early Multiple Sclerosis. medRxiv. https://doi.org/10.64898/2026.08.26.26361464 Preprint\nContreras-Altamirano, M., Klapprott, M., Jacobsen, N., Maanen, P., Welzel, J., & Debener, S. (2026). A portable solution for simultaneous human movement and mobile EEG acquisition: readiness potential for basketball free-throw shooting. Experimental Brain Research, 244(8), Article 153. https://doi.org/10.1007/s00221-026-07342-6 Preprint\nShirazi, S. Y., McCloy, D., Oostenveld, R., Boonstra, T., Larson, E., Welzel, J., Gau, R., Markiewicz, C. J., Posella, S., Horschig, J. M., Klotz, T., Gramfort, A., & Delorme, A. (2026). EMG-BIDS: an extension to the brain imaging data structure for electromyography. bioRxiv. https://doi.org/10.64898/2026.07.21.739911 Preprint\n\n\nAll publications →"
+  },
+  {
+    "objectID": "talks/index.html#oosc-2025",
+    "href": "talks/index.html#oosc-2025",
+    "title": "Talks",
+    "section": "BIDS for data sharing",
+    "text": "BIDS for data sharing\nEvent: 1st Oldenburg Open Science Conference\nDate: 2025\nDescription: The Brain Imaging Data Structure (BIDS) for data sharing"
+  },
+  {
+    "objectID": "talks/index.html#stepup-amsterdam-2024",
+    "href": "talks/index.html#stepup-amsterdam-2024",
+    "title": "Talks",
+    "section": "Motion-BIDS at the StepuP meeting",
+    "text": "Motion-BIDS at the StepuP meeting\nEvent: First StepuP consortium meeting, Vrije Universiteit Amsterdam\nDate: 2024-02\nDescription: Organising the StepuP data in the Brain Imaging Data Structure\nSlides"
+  },
+  {
+    "objectID": "talks/index.html#Motion-BIDS",
+    "href": "talks/index.html#Motion-BIDS",
+    "title": "Talks",
+    "section": "Motion-BIDS",
+    "text": "Motion-BIDS\nEvent: mbt conference\nDate: 2023-09-15\nDescription: Extending the Brain Imaging Data Structure specification to organize motion data for reproducible research\nSlides"
+  },
+  {
+    "objectID": "impressum/index.html#angaben-gemäß-5-ddg",
+    "href": "impressum/index.html#angaben-gemäß-5-ddg",
+    "title": "Impressum",
+    "section": "Angaben gemäß § 5 DDG",
+    "text": "Angaben gemäß § 5 DDG\nJulius Welzel Arnold-Heller-Str. 6 24114 Kiel\nKontakt: julius [punkt] welzel [at] gmail [punkt] com"
+  },
+  {
+    "objectID": "impressum/index.html#verantwortlich-für-den-inhalt-nach-18-abs.-2-mstv",
+    "href": "impressum/index.html#verantwortlich-für-den-inhalt-nach-18-abs.-2-mstv",
+    "title": "Impressum",
+    "section": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
+    "text": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV\nJulius Welzel, Anschrift wie oben.\nDies ist eine private, nicht-kommerzielle Website über meine wissenschaftliche Arbeit. Sie enthält keine Werbung."
+  },
+  {
+    "objectID": "impressum/index.html#haftungsausschluss",
+    "href": "impressum/index.html#haftungsausschluss",
+    "title": "Impressum",
+    "section": "Haftungsausschluss",
+    "text": "Haftungsausschluss\nHaftung für Inhalte. Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Die Publikationsliste wird automatisch aus öffentlichen Datenbanken (ORCID, OpenAlex, Crossref, Google Scholar) erstellt und kann daher Fehler enthalten.\nHaftung für Links. Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte übernehme ich keine Gewähr; verantwortlich ist stets der jeweilige Anbieter oder Betreiber der Seiten. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Werden mir Rechtsverletzungen bekannt, entferne ich die betreffenden Links umgehend.\nUrheberrecht. Die von mir erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Inhalte Dritter sind als solche gekennzeichnet. Die verwendeten Schriften (Libre Caslon, Source Serif 4, IBM Plex Sans) stehen unter der SIL Open Font License, die Animationsbibliothek Motion unter der MIT-Lizenz."
+  },
+  {
+    "objectID": "impressum/index.html#datenschutzerklärung",
+    "href": "impressum/index.html#datenschutzerklärung",
+    "title": "Impressum",
+    "section": "Datenschutzerklärung",
+    "text": "Datenschutzerklärung\n\nVerantwortlicher\nVerantwortlich für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist Julius Welzel (Kontakt siehe oben).\n\n\nHosting durch GitHub Pages\nDiese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Seiten verarbeitet GitHub technisch notwendige Daten, insbesondere Ihre IP-Adresse, Datum und Uhrzeit des Zugriffs, die aufgerufene Seite und Angaben zu Browser und Betriebssystem (Server-Logfiles). Dies dient der sicheren und zuverlässigen Bereitstellung der Website. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; mein berechtigtes Interesse liegt im störungsfreien Betrieb dieser Website.\nDabei können Daten in die USA übertragen werden. GitHub ist nach dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub.\n\n\nKeine Cookies, kein Tracking\nDiese Website setzt keine Cookies, verwendet keine Analyse- oder Tracking-Dienste und bindet keine Werbung, Social-Media-Plugins, Videos oder Karten von Drittanbietern ein.\n\n\nSchriften und Skripte lokal eingebunden\nAlle Schriften und Skripte, einschließlich der Animationsbibliothek Motion, werden direkt von dieser Website geladen. Es findet dabei keine Verbindung zu Servern von Google Fonts oder anderen Drittanbietern statt.\n\n\nExterne Links\nWenn Sie einem Link zu einer anderen Website folgen (zum Beispiel GitHub, Google Scholar, ORCID oder Fachzeitschriften), gelten dort die Datenschutzbestimmungen des jeweiligen Anbieters.\n\n\nKontakt per E-Mail\nWenn Sie mir eine E-Mail schreiben, verarbeite ich Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage (Art. 6 Abs. 1 lit. b bzw. f DSGVO) und lösche sie, sobald sie dafür nicht mehr benötigt werden, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.\n\n\nIhre Rechte\nSie haben jederzeit das Recht auf Auskunft über Ihre gespeicherten personenbezogenen Daten (Art. 15 DSGVO), auf Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO). Wenden Sie sich dazu an die oben genannte Kontaktadresse.\nAußerdem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, zum Beispiel beim Unabhängigen Landeszentrum für Datenschutz Schleswig-Holstein (ULD), Kiel."
+  },
+  {
+    "objectID": "projects/index.html#earlier-projects",
+    "href": "projects/index.html#earlier-projects",
+    "title": "Projects",
+    "section": "Earlier projects",
+    "text": "Earlier projects\n\n\nEssential tremor\n\nTremor, feedback and video\nHow sensory feedback and arousal modulate action tremor, and whether smartphone-compatible computer vision (MediaPipe) can measure tremor from video.\nKiel · 2021–2025\n\n\n\nNeurogeriatrics\n\nComOn\nAn exploratory multicentre study of motor, cognitive and mobility deficits in 1,000 geriatric patients before and after routine clinical treatment.\nUKSH · 2017–2023\n\n\n\nEEG · Ageing\n\nSense-Age\nThe dynamics of attention: how selective and sustained information processing is controlled, and how it declines with age and cognitive impairment, studied with EEG and attention tests.\nEEG lab, UKSH"
   },
   {
     "objectID": "projects/foot-placement.html#the-question",
@@ -187,180 +362,5 @@
     "title": "META-REP: Replicability of mobile EEG",
     "section": "Links",
     "text": "Links\n\nMETA-REP programme website\nSPP 2317 in the DFG project database (GEPRIS)\nInteractive overview of mobile EEG preprocessing choices (METEOR app)"
-  },
-  {
-    "objectID": "projects/eegmanysteps.html#the-idea",
-    "href": "projects/eegmanysteps.html#the-idea",
-    "title": "EEGManySteps",
-    "section": "The idea",
-    "text": "The idea\nEEGManySteps is a grassroots initiative in mobile brain/body imaging (MoBI). It is not a classic replication study. Instead, it collects and harmonises walking EEG recorded with many different setups around the world, both existing datasets and new recordings, to find out which acquisition and analysis factors most affect how consistent and reliable gait-related EEG results are.\nThe community settled on four research goals:\n\nstep-specific time-frequency patterns,\ngait-related artefacts across EEG systems,\nthe influence of preprocessing on EEG results during walking, and\ngait-related modulation of secondary-task correlates such as the P3."
-  },
-  {
-    "objectID": "projects/eegmanysteps.html#harmonised-data",
-    "href": "projects/eegmanysteps.html#harmonised-data",
-    "title": "EEGManySteps",
-    "section": "Harmonised data",
-    "text": "Harmonised data\nContributed datasets are converted to EEG-BIDS and Motion-BIDS. They also get EEGManySteps metadata: indoor or outdoor, treadmill or overground, footwear, secondary task, speed scheme and synchronisation method. Sensor locations follow the UNISEP sensor-placement vocabulary, and gait events are standardised. For new recordings, the project shares a harmonised auditory oddball paradigm that can be run while standing and while walking."
-  },
-  {
-    "objectID": "projects/eegmanysteps.html#my-role",
-    "href": "projects/eegmanysteps.html#my-role",
-    "title": "EEGManySteps",
-    "section": "My role",
-    "text": "My role\nI am on the steering committee and co-presented the kick-off meeting in September 2024. I help maintain the website and the GitHub organisation, co-authored the project posters at Methods in Mobile EEG 2025 and Psychologie und Gehirn 2025, and contribute a walking dataset together with Nadine Jacobsen. The project is a natural partner of my work on reporting standards for mobile EEG."
-  },
-  {
-    "objectID": "projects/eegmanysteps.html#links",
-    "href": "projects/eegmanysteps.html#links",
-    "title": "EEGManySteps",
-    "section": "Links",
-    "text": "Links\n\nEEGManySteps website\nData curation guidelines and scripts\nPoster at Methods in Mobile EEG 2025 (PDF)"
-  },
-  {
-    "objectID": "talks/index.html#oosc-2025",
-    "href": "talks/index.html#oosc-2025",
-    "title": "Talks",
-    "section": "BIDS for data sharing",
-    "text": "BIDS for data sharing\nEvent: 1st Oldenburg Open Science Conference\nDate: 2025\nDescription: The Brain Imaging Data Structure (BIDS) for data sharing"
-  },
-  {
-    "objectID": "talks/index.html#stepup-amsterdam-2024",
-    "href": "talks/index.html#stepup-amsterdam-2024",
-    "title": "Talks",
-    "section": "Motion-BIDS at the StepuP meeting",
-    "text": "Motion-BIDS at the StepuP meeting\nEvent: First StepuP consortium meeting, Vrije Universiteit Amsterdam\nDate: 2024-02\nDescription: Organising the StepuP data in the Brain Imaging Data Structure\nSlides"
-  },
-  {
-    "objectID": "talks/index.html#Motion-BIDS",
-    "href": "talks/index.html#Motion-BIDS",
-    "title": "Talks",
-    "section": "Motion-BIDS",
-    "text": "Motion-BIDS\nEvent: mbt conference\nDate: 2023-09-15\nDescription: Extending the Brain Imaging Data Structure specification to organize motion data for reproducible research\nSlides"
-  },
-  {
-    "objectID": "projects/stepup.html#the-question",
-    "href": "projects/stepup.html#the-question",
-    "title": "StepuP: Steps against the burden of Parkinson’s disease",
-    "section": "The question",
-    "text": "The question\nSpeed-dependent treadmill training improves gait in Parkinson’s disease, but nobody knows the mechanism. StepuP tests two candidate explanations. The first is that training sharpens stability-related foot placement, the step-by-step adjustment of where the foot lands relative to the body’s centre of mass. The second is that it strengthens cortical sensorimotor integration, visible as lower gait-related EEG beta power and higher EEG–EMG (corticomuscular) coherence. A second question is whether a richer training regime (SDTT+, with virtual reality or mechanical perturbations) works better, and whether the gains carry over into walking in daily life.\n\nSpeed-dependent treadmill training helps. StepuP is designed to find out how, from the cortex down to the foot."
-  },
-  {
-    "objectID": "projects/stepup.html#design",
-    "href": "projects/stepup.html#design",
-    "title": "StepuP: Steps against the burden of Parkinson’s disease",
-    "section": "Design",
-    "text": "Design\nStepuP consists of three harmonised, parallel randomised controlled trials that share one core protocol and run at clinical sites in Kiel, Bologna, Tel Aviv and Sydney. Each trial includes 42 people with Parkinson’s disease, so 126 in total. A reference group of 21 healthy older adults is measured in Amsterdam. Participants are randomised to standard speed-dependent treadmill training (SDTT) or to SDTT+, and complete twelve 30-minute training sessions. Depending on the site, SDTT+ adds virtual-reality obstacles, mechanical belt perturbations, or both.\nAssessments take place at baseline, right after training and at a 12-week follow-up. Each one combines:\n\nSynchronised 64-channel EEG, EMG and 3D motion capture during treadmill walking at comfortable and fixed speeds, plus resting-state EEG\nClinical testing, e.g. MDS-UPDRS III, Mini-BESTest, MoCA, Trail Making Test, Timed Up and Go, falls self-efficacy and quality of life\nA week of daily-life monitoring with a lower-back motion sensor, which yields real-world digital mobility outcomes\n\nThe primary clinical endpoint is comfortable overground walking speed. Mechanistic outcomes include stride length and stride time, the explained variance and error of a foot-placement model, EEG beta power and corticomuscular coherence. They are analysed with linear mixed-effects models."
-  },
-  {
-    "objectID": "projects/stepup.html#data-that-travel-well",
-    "href": "projects/stepup.html#data-that-travel-well",
-    "title": "StepuP: Steps against the burden of Parkinson’s disease",
-    "section": "Data that travel well",
-    "text": "Data that travel well\nA multicentre study with different EEG, EMG and motion-capture systems at every site only works if the data line up. All sites stream and time-lock their devices with the open-source Lab Streaming Layer. The recordings are then converted into one multi-site dataset in the Brain Imaging Data Structure (BIDS), with eeg, emg and motion data for every participant and session. This is where Motion-BIDS proves itself in practice."
-  },
-  {
-    "objectID": "projects/stepup.html#my-role",
-    "href": "projects/stepup.html#my-role",
-    "title": "StepuP: Steps against the burden of Parkinson’s disease",
-    "section": "My role",
-    "text": "My role\nTogether with Walter Maetzler, I lead StepuP at the Kiel site (University Hospital Schleswig-Holstein and Kiel University), where we supervise the team running the EEG, EMG, motion-capture and training sessions. Across the consortium I am responsible for the multimodal recording and data-standardisation pipeline:\n\nthe LSL synchronisation setup for the EEG, EMG and motion-capture systems used at the sites\nthe EEG data-quality checks\nthe StepuP BIDS converter, which turns every site’s recordings and REDCap clinical data into one shared dataset\nEEG and BIDS training sessions at consortium meetings\n\nWith Moira van Leeuwen, I am shared first author of the StepuP protocol paper."
-  },
-  {
-    "objectID": "projects/stepup.html#publications",
-    "href": "projects/stepup.html#publications",
-    "title": "StepuP: Steps against the burden of Parkinson’s disease",
-    "section": "Publications",
-    "text": "Publications\n\n\n\nvan Leeuwen, A. M., Welzel, J., D’Ascanio, I., Lang, C., Vinod, V., Görrisen, P., Geritz, J., Hansen, C., Gazit, E., Tov, S. S., Prusak, R., Casadei, I., Contri, A., Tampellini, F., Pellicciari, L., Lopane, G., Buonaura, G. C., Palmerini, L., Zahid, N., … van Dieën, J. H. (2026). Steps against the burden of Parkinson’s disease (StepuP): Protocol of a randomized controlled trial elucidating the biomechanical and neurophysiological mechanisms of a speed dependent treadmill training intervention. PLOS One, 21(6), Article e0348957. https://doi.org/10.1371/journal.pone.0348957 Preprint\nLang, C., van Dieen, J. H., Brodie, M. A., Welzel, J., Maetzler, W., Singh, N. B., & Ravi, D. K. (2024). Complexities and challenges of translating intervention success to real world gait in people with Parkinson’s disease. Frontiers in Neurology, 15, Article 1455692. https://doi.org/10.3389/fneur.2024.1455692 Preprint"
-  },
-  {
-    "objectID": "projects/stepup.html#links",
-    "href": "projects/stepup.html#links",
-    "title": "StepuP: Steps against the burden of Parkinson’s disease",
-    "section": "Links",
-    "text": "Links\n\nTrial registrations on ClinicalTrials.gov: NCT07057219, NCT07058285 (Kiel) and NCT07105787 (Tel Aviv / Bologna)\nJPND project page\nStepuP consortium on GitHub"
-  },
-  {
-    "objectID": "projects/igor.html#what-igor-does",
-    "href": "projects/igor.html#what-igor-does",
-    "title": "IGOR: Interest Group on Open and Reproducible Research",
-    "section": "What IGOR does",
-    "text": "What IGOR does\nIGOR is a forum where members of the DGPs section Biological Psychology and Neuropsychology exchange ideas on how to make research in the field more open and reproducible. It works through grassroots community projects, training for early-career researchers and the annual IGOR Prize for Open and Reproducible Science. Its founding document (in German) is available here."
-  },
-  {
-    "objectID": "projects/igor.html#bids-consultation-hour",
-    "href": "projects/igor.html#bids-consultation-hour",
-    "title": "IGOR: Interest Group on Open and Reproducible Research",
-    "section": "BIDS Consultation Hour",
-    "text": "BIDS Consultation Hour\nIn 2024 I set up the IGOR BIDS Consultation Hour, an open online forum. Researchers bring their own datasets and conversion problems and get individual advice on organising them in the Brain Imaging Data Structure (BIDS). I cover EEG and motion data, and a colleague covers MRI. The website also collects BIDS learning materials, such as workshop slides and posters."
-  },
-  {
-    "objectID": "projects/igor.html#eegerp-preprocessing-umbrella-review",
-    "href": "projects/igor.html#eegerp-preprocessing-umbrella-review",
-    "title": "IGOR: Interest Group on Open and Reproducible Research",
-    "section": "EEG/ERP preprocessing umbrella review",
-    "text": "EEG/ERP preprocessing umbrella review\nTogether with Yu-Fang Yang, Mario Reutter-Dieker and Johannes Rodrigues, I co-lead an umbrella review of EEG/ERP preprocessing practices. It brings together the literature on how preprocessing pipelines and parameters are reported and justified. The aim is a shared, transparent set of extraction standards and evidence the field can reuse. The review is preregistered on OSF and complements my work on reporting standards for mobile EEG."
-  },
-  {
-    "objectID": "projects/igor.html#more-from-the-igor-community",
-    "href": "projects/igor.html#more-from-the-igor-community",
-    "title": "IGOR: Interest Group on Open and Reproducible Research",
-    "section": "More from the IGOR community",
-    "text": "More from the IGOR community\n\nARIADNE is a living, interactive navigator that guides researchers through the resources for each step of a transparent research project (Hartmann et al., 2025). I contributed glossary terms during its revision.\nEnhancing precision in human neuroscience is a community review on precision in human neuroscience (Nebe et al., 2023), with an accompanying workshop."
-  },
-  {
-    "objectID": "projects/index.html#earlier-projects",
-    "href": "projects/index.html#earlier-projects",
-    "title": "Projects",
-    "section": "Earlier projects",
-    "text": "Earlier projects\n\n\nEssential tremor\n\nTremor, feedback and video\nHow sensory feedback and arousal modulate action tremor, and whether smartphone-compatible computer vision (MediaPipe) can measure tremor from video.\nKiel · 2021–2025\n\n\n\nNeurogeriatrics\n\nComOn\nAn exploratory multicentre study of motor, cognitive and mobility deficits in 1,000 geriatric patients before and after routine clinical treatment.\nUKSH · 2017–2023\n\n\n\nEEG · Ageing\n\nSense-Age\nThe dynamics of attention: how selective and sustained information processing is controlled, and how it declines with age and cognitive impairment, studied with EEG and attention tests.\nEEG lab, UKSH"
-  },
-  {
-    "objectID": "teaching/index.html#data-in-practice",
-    "href": "teaching/index.html#data-in-practice",
-    "title": "Teaching",
-    "section": "Datascience in practice",
-    "text": "Datascience in practice\nA Master Course in psychology about Python based Data Science.\nTime: Winter 22/23\nLinks: Website"
-  },
-  {
-    "objectID": "teaching/index.html#func-neuro",
-    "href": "teaching/index.html#func-neuro",
-    "title": "Teaching",
-    "section": "Functional Neuroanatomy",
-    "text": "Functional Neuroanatomy\nA Bachelor Course in psychology about Functional Neuroanatomy.\nTime: Summer 22\nLinks: Website"
-  },
-  {
-    "objectID": "impressum/index.html#angaben-gemäß-5-ddg",
-    "href": "impressum/index.html#angaben-gemäß-5-ddg",
-    "title": "Impressum",
-    "section": "Angaben gemäß § 5 DDG",
-    "text": "Angaben gemäß § 5 DDG\nJulius Welzel Arnold-Heller-Str. 6 24114 Kiel\nKontakt: julius [punkt] welzel [at] gmail [punkt] com"
-  },
-  {
-    "objectID": "impressum/index.html#verantwortlich-für-den-inhalt-nach-18-abs.-2-mstv",
-    "href": "impressum/index.html#verantwortlich-für-den-inhalt-nach-18-abs.-2-mstv",
-    "title": "Impressum",
-    "section": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
-    "text": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV\nJulius Welzel, Anschrift wie oben.\nDies ist eine private, nicht-kommerzielle Website über meine wissenschaftliche Arbeit. Sie enthält keine Werbung."
-  },
-  {
-    "objectID": "impressum/index.html#haftungsausschluss",
-    "href": "impressum/index.html#haftungsausschluss",
-    "title": "Impressum",
-    "section": "Haftungsausschluss",
-    "text": "Haftungsausschluss\nHaftung für Inhalte. Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Die Publikationsliste wird automatisch aus öffentlichen Datenbanken (ORCID, OpenAlex, Crossref, Google Scholar) erstellt und kann daher Fehler enthalten.\nHaftung für Links. Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte übernehme ich keine Gewähr; verantwortlich ist stets der jeweilige Anbieter oder Betreiber der Seiten. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Werden mir Rechtsverletzungen bekannt, entferne ich die betreffenden Links umgehend.\nUrheberrecht. Die von mir erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Inhalte Dritter sind als solche gekennzeichnet. Die verwendeten Schriften (Libre Caslon, Source Serif 4, IBM Plex Sans) stehen unter der SIL Open Font License, die Animationsbibliothek Motion unter der MIT-Lizenz."
-  },
-  {
-    "objectID": "impressum/index.html#datenschutzerklärung",
-    "href": "impressum/index.html#datenschutzerklärung",
-    "title": "Impressum",
-    "section": "Datenschutzerklärung",
-    "text": "Datenschutzerklärung\n\nVerantwortlicher\nVerantwortlich für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist Julius Welzel (Kontakt siehe oben).\n\n\nHosting durch GitHub Pages\nDiese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Seiten verarbeitet GitHub technisch notwendige Daten, insbesondere Ihre IP-Adresse, Datum und Uhrzeit des Zugriffs, die aufgerufene Seite und Angaben zu Browser und Betriebssystem (Server-Logfiles). Dies dient der sicheren und zuverlässigen Bereitstellung der Website. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; mein berechtigtes Interesse liegt im störungsfreien Betrieb dieser Website.\nDabei können Daten in die USA übertragen werden. GitHub ist nach dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub.\n\n\nKeine Cookies, kein Tracking\nDiese Website setzt keine Cookies, verwendet keine Analyse- oder Tracking-Dienste und bindet keine Werbung, Social-Media-Plugins, Videos oder Karten von Drittanbietern ein.\n\n\nSchriften und Skripte lokal eingebunden\nAlle Schriften und Skripte, einschließlich der Animationsbibliothek Motion, werden direkt von dieser Website geladen. Es findet dabei keine Verbindung zu Servern von Google Fonts oder anderen Drittanbietern statt.\n\n\nExterne Links\nWenn Sie einem Link zu einer anderen Website folgen (zum Beispiel GitHub, Google Scholar, ORCID oder Fachzeitschriften), gelten dort die Datenschutzbestimmungen des jeweiligen Anbieters.\n\n\nKontakt per E-Mail\nWenn Sie mir eine E-Mail schreiben, verarbeite ich Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage (Art. 6 Abs. 1 lit. b bzw. f DSGVO) und lösche sie, sobald sie dafür nicht mehr benötigt werden, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.\n\n\nIhre Rechte\nSie haben jederzeit das Recht auf Auskunft über Ihre gespeicherten personenbezogenen Daten (Art. 15 DSGVO), auf Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO). Wenden Sie sich dazu an die oben genannte Kontaktadresse.\nAußerdem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, zum Beispiel beim Unabhängigen Landeszentrum für Datenschutz Schleswig-Holstein (ULD), Kiel."
-  },
-  {
-    "objectID": "cv/index.html",
-    "href": "cv/index.html",
-    "title": "Curriculum vitae",
-    "section": "",
-    "text": "CV\n\nCurriculum vitae\nA PDF version of my CV.\n\n\n\n\n\n  \n    Download current CV"
   }
 ]
