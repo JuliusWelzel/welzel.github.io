@@ -1,11 +1,33 @@
 ---
 title: Talks
-excerpt: "Open access version of recent talks and presentations."
-toc-location: right
-page-layout: full
+description: "Slides of recent talks and presentations."
 ---
 
-Here you can find a list of talks generated using a Markdown-based workflow.
+::: {.hero}
+[Talks]{.kicker}
+
+# Talks {.unlisted}
+
+[Open-access slides of recent talks and presentations, most of them written in Markdown.]{.dek}
+:::
+
+## BIDS for data sharing {#oosc-2025}
+
+**Event**: 1st Oldenburg Open Science Conference
+
+**Date**: 2025
+
+**Description**: The Brain Imaging Data Structure (BIDS) for data sharing
+
+## Motion-BIDS at the StepuP meeting {#stepup-amsterdam-2024}
+
+**Event**: First StepuP consortium meeting, Vrije Universiteit Amsterdam
+
+**Date**: 2024-02
+
+**Description**: Organising the StepuP data in the Brain Imaging Data Structure
+
+[**Slides**](https://juliuswelzel.github.io/bids_amsterdam_2024/)
 
 ## Motion-BIDS {#Motion-BIDS}
 

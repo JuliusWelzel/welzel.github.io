@@ -1,0 +1,77 @@
+# Configuration for scripts/update_publications.py
+#
+# The weekly "Update publications" GitHub Action reads this file, collects
+# publications from the enabled sources, and regenerates
+# publications/publications.yml and publications/_publications.md.
+# Edit this file (not the generated ones) to add, hide or correct entries.
+
+author:
+  name: Julius Welzel
+  orcid: 0000-0001-8958-0934
+  google_scholar: CWxKXBcAAAAJ
+  # Author entries matching this family name and given-name initial are
+  # shown in bold.
+  family: Welzel
+  given_initial: J
+
+# Contact address sent to OpenAlex and Crossref ("polite pool").
+contact_email: julius.welzel@gmail.com
+
+# Titles in Title Case are converted to APA sentence case. Acronyms
+# (EEG, BIDS), words with digits and the proper nouns listed here keep
+# their capitals. Fix individual titles under "overrides" if needed.
+sentence_case: true
+keep_case:
+  - Parkinson
+  - Parkinsonian
+  - Alzheimer
+  - Huntington
+  - Bayesian
+  - Gaussian
+  - Fourier
+  - Kalman
+  - Kiel
+  - Oldenburg
+  - Amsterdam
+  - German
+  - Germany
+  - Europe
+  - European
+  - Python
+  - Julia
+  - Covid
+  - SARS-CoV-2
+
+sources:
+  orcid: true
+  openalex: true
+  crossref: true
+  google_scholar: true
+
+# Publications to hide, e.g. wrong attributions or duplicates.
+# Match by DOI or by exact title (case-insensitive).
+#   - doi: 10.1234/abcd
+#   - title: Some title that is not mine
+exclude: []
+
+# Corrections applied to an entry, keyed by DOI. Any field of an entry
+# (title, authors, year, venue, volume, issue, pages, url, type) can be set.
+#   10.1234/abcd:
+#     venue: Journal of Corrected Names
+overrides: {}
+
+# Publications that none of the sources know about. Fields:
+# title, authors (list of "Family, G."), year, venue, volume, issue,
+# pages, doi, url, type (article, preprint, conference, chapter, dataset,
+# software, thesis, other).
+add: []
+
+# Publications shown on the project pages (projects/_pubs/<project>.md),
+# listed by DOI or title.
+projects:
+  stepup:
+    - 10.1371/journal.pone.0348957
+    - 10.3389/fneur.2024.1455692
+  meta-rep:
+    - 10.1111/psyp.70352
+    - "Have we solved the replicability crisis? From open practices to systemic reform in cognitive neurosciences"

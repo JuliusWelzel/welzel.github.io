@@ -1,22 +1,21 @@
 project:
   type: website
   output-dir: docs
-  resources: data
+  resources:
+    - assets/js/
 
 website:
   title: "Julius Welzel"
+  site-url: https://juliuswelzel.github.io/welzel.github.io/
+  description: "Cognitive neuroscientist working on movement, mobile EEG and open, reproducible research."
   image: images/eeg.jpg
-  # cookie-consent: true
-  search: 
+  search:
     location: navbar
-    type: textbox
+    type: overlay
   navbar:
-    background: primary
-    pinned: true
+    pinned: false
     left:
-      # - text: About
-      #   href: index.qmd
-      - text: Research 
+      - text: Research
         href: research/index.qmd
       - text: Projects
         href: projects/index.qmd
@@ -28,26 +27,35 @@ website:
         href: teaching/index.qmd
       - text: Talks
         href: talks/index.qmd
-      # - text: CV
-      #  href: cv/index.qmd
     right:
-    - icon: envelope
-      aria-label: email
-      href: "mailto:julius.welzel@gmail.com"
-    - icon: github
-      href: https://github.com/JuliusWelzel
-    - icon: google
-      href: https://scholar.google.com/citations?user=CWxKXBcAAAAJ&hl
-    - icon: mastodon
-      href: https://mastodon.online/@JuliusWelzel
-  page-footer: 
-    left: "Copyright 2023, Julius Welzel" 
-    right: 
+      - icon: envelope
+        aria-label: Email
+        href: "mailto:julius.welzel@gmail.com"
+      - icon: github
+        aria-label: GitHub
+        href: https://github.com/JuliusWelzel
+      - icon: mortarboard
+        aria-label: Google Scholar
+        href: https://scholar.google.com/citations?user=CWxKXBcAAAAJ
+      - icon: person-badge
+        aria-label: ORCID
+        href: https://orcid.org/0000-0001-8958-0934
+      - icon: mastodon
+        aria-label: Mastodon
+        href: https://mastodon.online/@JuliusWelzel
+  page-footer:
+    left: "© Julius Welzel"
+    center: "Built with [Quarto](https://quarto.org) · publications updated weekly"
+    right:
       - text: Impressum
         href: impressum/index.qmd
 
 format:
   html:
-    theme: [lux, rwds.scss]
-    css: rwds.css
-    fontsize: 1.2em
+    theme: [default, theme.scss]
+    title-block-style: none
+    toc: false
+    smooth-scroll: true
+    link-external-newwindow: false
+    include-in-header:
+      - file: assets/motion-loader.html

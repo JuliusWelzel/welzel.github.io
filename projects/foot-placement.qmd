@@ -1,0 +1,67 @@
+---
+title: "Bayesian integration in foot placement control"
+description: "How the nervous system weighs noisy sensory estimates of body state against prior expectations when it decides where to step. A collaboration with Moira van Leeuwen and the Amsterdam group."
+---
+
+::: {.hero}
+[Project · Gait · Computational motor control]{.kicker}
+
+# Where to put the next foot {.unlisted}
+
+[Every step is a decision made under uncertainty. We ask whether the nervous system makes it like a Bayesian observer.]{.dek}
+:::
+
+::: {.facts .facts-group}
+::: {}
+[Collaborators]{.label}
+[Moira van Leeuwen](https://vu.nl/en/research/scientists/moira-van-leeuwen), Sjoerd Bruijn and Jaap van Dieën
+:::
+::: {}
+[Where]{.label}
+Department of Human Movement Sciences, Vrije Universiteit Amsterdam
+:::
+::: {}
+[Topic]{.label}
+Foot placement control and Bayesian observer models
+:::
+::: {}
+[Status]{.label}
+Ongoing
+:::
+:::
+
+{{< include _figures/bayes.md >}}
+
+## The question
+
+We keep our balance while walking mainly through foot placement. Where the foot lands is adjusted step by step to the state of the body's centre of mass (CoM). In steady-state walking, a simple linear model of CoM position and velocity during swing predicts a large part of where the next foot will land. The variance it explains is taken as the *degree of foot placement control*, and its residuals as *foot placement error* ([Wang & Srinivasan, 2014](https://doi.org/10.1098/rsbl.2014.0405); [Bruijn & van Dieën, 2018](https://doi.org/10.1098/rsif.2017.0816)).
+
+But the nervous system never knows the state of the centre of mass directly. It has to estimate it from noisy visual, vestibular and proprioceptive signals and from its own predictions. Bayesian observer models say how this should be done: weigh each source of information by its reliability, and combine the evidence with prior expectations ([Ernst & Banks, 2002](https://doi.org/10.1038/415429a); [Körding & Wolpert, 2004](https://doi.org/10.1038/nature02169)). Together with Moira van Leeuwen and the Amsterdam group, I ask whether foot placement follows these principles.
+
+::: {.pullquote}
+If the senses become less reliable, a Bayesian walker should rely less on the momentary state of the body, and more on what it expects.
+:::
+
+## Approach
+
+A Bayesian account makes testable predictions. If the sensory estimate of body state becomes less reliable, foot placement should depend less on the measured CoM state and shift towards prior expectations, as in the figure above. The project builds on three established lines of work:
+
+- the CoM-based **foot placement model** developed in Amsterdam (open-source [FootPlacement](https://github.com/SjoerdBruijn/FootPlacement) code by Moira van Leeuwen and Sjoerd Bruijn; [van Leeuwen et al., 2020](https://doi.org/10.1371/journal.pone.0242215))
+- earlier work that **degrades specific sensory cues** during walking, for example with muscle vibration ([Arvin et al., 2018](https://doi.org/10.3389/fphys.2018.01134)) or vestibular stimulation ([Magnani et al., 2021](https://doi.org/10.1038/s41598-021-93037-7))
+- **observer models** of state estimation and sensory integration in balance control ([Kuo, 2005](https://doi.org/10.1088/1741-2560/2/3/S07); [Maeda et al., 2017](https://doi.org/10.1152/jn.00015.2016))
+
+Moira and I also work together in [StepuP](stepup.qmd), where the Amsterdam work package studies whether treadmill training in Parkinson's disease improves foot placement coordination and the estimation of the body's state. We organised the first joint StepuP meeting at VU Amsterdam in February 2024.
+
+## Background reading
+
+::: {.references}
+- Arvin, M., Hoozemans, M. J. M., Pijnappels, M., Duysens, J., Verschueren, S. M., & van Dieën, J. H. (2018). Where to step? Contributions of stance leg muscle spindle afference to planning of mediolateral foot placement for balance control in young and old adults. *Frontiers in Physiology*, *9*, Article 1134. [https://doi.org/10.3389/fphys.2018.01134](https://doi.org/10.3389/fphys.2018.01134){.pub-doi}
+- Bruijn, S. M., & van Dieën, J. H. (2018). Control of human gait stability through foot placement. *Journal of the Royal Society Interface*, *15*(143), Article 20170816. [https://doi.org/10.1098/rsif.2017.0816](https://doi.org/10.1098/rsif.2017.0816){.pub-doi}
+- Ernst, M. O., & Banks, M. S. (2002). Humans integrate visual and haptic information in a statistically optimal fashion. *Nature*, *415*(6870), 429–433. [https://doi.org/10.1038/415429a](https://doi.org/10.1038/415429a){.pub-doi}
+- Körding, K. P., & Wolpert, D. M. (2004). Bayesian integration in sensorimotor learning. *Nature*, *427*(6971), 244–247. [https://doi.org/10.1038/nature02169](https://doi.org/10.1038/nature02169){.pub-doi}
+- Kuo, A. D. (2005). An optimal state estimation model of sensory integration in human postural balance. *Journal of Neural Engineering*, *2*(3), S235–S249. [https://doi.org/10.1088/1741-2560/2/3/S07](https://doi.org/10.1088/1741-2560/2/3/S07){.pub-doi}
+- Magnani, R. M., Bruijn, S. M., van Dieën, J. H., & Forbes, P. A. (2021). Stabilization demands of walking modulate the vestibular contributions to gait. *Scientific Reports*, *11*. [https://doi.org/10.1038/s41598-021-93037-7](https://doi.org/10.1038/s41598-021-93037-7){.pub-doi}
+- Maeda, R. S., O'Connor, S. M., Donelan, J. M., & Marigold, D. S. (2017). Foot placement relies on state estimation during visually guided walking. *Journal of Neurophysiology*, *117*(2), 480–491. [https://doi.org/10.1152/jn.00015.2016](https://doi.org/10.1152/jn.00015.2016){.pub-doi}
+- van Leeuwen, A. M., van Dieën, J. H., Daffertshofer, A., & Bruijn, S. M. (2020). Active foot placement control ensures stable gait: Effect of constraints on foot placement and ankle moments. *PLOS ONE*, *15*(12), Article e0242215. [https://doi.org/10.1371/journal.pone.0242215](https://doi.org/10.1371/journal.pone.0242215){.pub-doi}
+- Wang, Y., & Srinivasan, M. (2014). Stepping in the direction of the fall: The next foot placement can be predicted from current upper body state in steady-state walking. *Biology Letters*, *10*(9), Article 20140405. [https://doi.org/10.1098/rsbl.2014.0405](https://doi.org/10.1098/rsbl.2014.0405){.pub-doi}
+:::

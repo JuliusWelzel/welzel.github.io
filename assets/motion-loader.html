@@ -1,0 +1,23 @@
+<script>
+  // Loads the self-hosted animation scripts (assets/js) on every page.
+  // "motion-ready" lets CSS hide animated elements until they are revealed;
+  // it is removed again if the scripts do not start within three seconds.
+  (function () {
+    var doc = document.documentElement;
+    var meta = document.querySelector('meta[name="quarto:offset"]');
+    var base = meta ? meta.getAttribute("content") : "./";
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduce) {
+      doc.classList.add("motion-ready");
+      setTimeout(function () {
+        if (!window.__siteMotionStarted) doc.classList.remove("motion-ready");
+      }, 3000);
+    }
+    ["assets/js/motion-12.23.12.min.js", "assets/js/site-motion.js"].forEach(function (src) {
+      var script = document.createElement("script");
+      script.src = base + src;
+      script.async = false;
+      document.head.appendChild(script);
+    });
+  })();
+</script>

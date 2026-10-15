@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Meta-science of mobile EEG within the DFG Priority Programme META-REP (SPP 2317), with a reporting standard for mobile EEG as its cornerstone.">
+
+<title>META-REP: Replicability of mobile EEG – Julius Welzel</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-de09496b9f3dc02ddc0210fe5493c38a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script>
+  // Loads the self-hosted animation scripts (assets/js) on every page.
+  // "motion-ready" lets CSS hide animated elements until they are revealed;
+  // it is removed again if the scripts do not start within three seconds.
+  (function () {
+    var doc = document.documentElement;
+    var meta = document.querySelector('meta[name="quarto:offset"]');
+    var base = meta ? meta.getAttribute("content") : "./";
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduce) {
+      doc.classList.add("motion-ready");
+      setTimeout(function () {
+        if (!window.__siteMotionStarted) doc.classList.remove("motion-ready");
+      }, 3000);
+    }
+    ["assets/js/motion-12.23.12.min.js", "assets/js/site-motion.js"].forEach(function (src) {
+      var script = document.createElement("script");
+      script.src = base + src;
+      script.async = false;
+      document.head.appendChild(script);
+    });
+  })();
+</script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Julius Welzel</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../research/index.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publications/index.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../software/index.html"> 
+<span class="menu-text">Software</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../teaching/index.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../talks/index.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:julius.welzel@gmail.com"> <i class="bi bi-envelope" role="img" aria-label="Email">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/JuliusWelzel"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=CWxKXBcAAAAJ"> <i class="bi bi-mortarboard" role="img" aria-label="Google Scholar">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://orcid.org/0000-0001-8958-0934"> <i class="bi bi-person-badge" role="img" aria-label="ORCID">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://mastodon.online/@JuliusWelzel"> <i class="bi bi-mastodon" role="img" aria-label="Mastodon">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">META-REP: Replicability of mobile EEG</h1></header>
+
+<header id="title-block-header">
+
+
+</header>
+
+
+<div class="hero">
+<p><span class="kicker">Project · Meta-science · Mobile EEG</span></p>
+<section id="meta-rep" class="level1 unlisted">
+<h1 class="unlisted">META-REP</h1>
+<p><span class="dek">Taking EEG out of the lab multiplies the choices a researcher has to make. If we want results that replicate, we first have to report those choices.</span></p>
+</section>
+</div>
+<div class="facts facts-group">
+<div>
+<p><span class="label">Programme</span> <a href="https://www.meta-rep.uni-muenchen.de/">META-REP</a>, DFG Priority Programme SPP 2317</p>
+</div>
+<div>
+<p><span class="label">Funding</span> <a href="https://gepris.dfg.de/gepris/projekt/441890184">Deutsche Forschungsgemeinschaft (DFG)</a></p>
+</div>
+<div>
+<p><span class="label">Where</span> <a href="https://uol.de/en/neuropsychologie">Neuropsychology Lab</a> (Stefan Debener), University of Oldenburg</p>
+</div>
+<div>
+<p><span class="label">Cornerstone</span> A reporting standard for mobile EEG studies</p>
+</div>
+</div>
+<section id="the-programme" class="level2">
+<h2 class="anchored" data-anchor-id="the-programme">The programme</h2>
+<p><a href="https://www.meta-rep.uni-muenchen.de/">META-REP</a>, short for <em>A Meta-scientific Programme to Analyse and Optimise Replicability in the Behavioural, Social, and Cognitive Sciences</em>, is a DFG Priority Programme (SPP 2317). It brings together projects that study why findings do or do not replicate, and that develop ways to make them more robust. In Oldenburg, META-REP’s METEOR project looks at the “forking paths” of noisy, complex neural data: the many defensible analysis decisions between a raw recording and a published result. My work within META-REP is about these forking paths in mobile EEG.</p>
+<figure class="figure-anim figure">
+<svg data-anim="forest" viewbox="0 0 720 330" role="img" aria-label="Schematic forest plot: estimates from ten labs and their pooled estimate"><line x1="360" y1="16" x2="360" y2="300" stroke="#dcd7cc"></line><g class="lab"><text x="150" y="34" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 1</text><line x1="399.0" y1="30" x2="517.7" y2="30" stroke="#141414" stroke-width="1.2"></line><rect x="452.3" y="23.9" width="12.1" height="12.1" fill="#141414"></rect></g><g class="lab"><text x="150" y="58" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 2</text><line x1="379.8" y1="54" x2="576.9" y2="54" stroke="#141414" stroke-width="1.2"></line><rect x="474.2" y="49.9" width="8.2" height="8.2" fill="#141414"></rect></g><g class="lab"><text x="150" y="82" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 3</text><line x1="375.4" y1="78" x2="480.5" y2="78" stroke="#141414" stroke-width="1.2"></line><rect x="421.0" y="71.1" width="13.8" height="13.8" fill="#141414"></rect></g><g class="lab"><text x="150" y="106" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 4</text><line x1="366.4" y1="102" x2="510.5" y2="102" stroke="#141414" stroke-width="1.2"></line><rect x="433.4" y="96.9" width="10.2" height="10.2" fill="#141414"></rect></g><g class="lab"><text x="150" y="130" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 5</text><line x1="331.3" y1="126" x2="435.1" y2="126" stroke="#141414" stroke-width="1.2"></line><rect x="376.2" y="119.0" width="14.0" height="14.0" fill="#141414"></rect></g><g class="lab"><text x="150" y="154" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 6</text><line x1="366.9" y1="150" x2="480.4" y2="150" stroke="#141414" stroke-width="1.2"></line><rect x="417.3" y="143.6" width="12.7" height="12.7" fill="#141414"></rect></g><g class="lab"><text x="150" y="178" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 7</text><line x1="363.3" y1="174" x2="492.6" y2="174" stroke="#141414" stroke-width="1.2"></line><rect x="422.4" y="168.4" width="11.2" height="11.2" fill="#141414"></rect></g><g class="lab"><text x="150" y="202" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 8</text><line x1="334.2" y1="198" x2="466.7" y2="198" stroke="#141414" stroke-width="1.2"></line><rect x="395.0" y="192.5" width="10.9" height="10.9" fill="#141414"></rect></g><g class="lab"><text x="150" y="226" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 9</text><line x1="396.4" y1="222" x2="563.2" y2="222" stroke="#141414" stroke-width="1.2"></line><rect x="475.3" y="217.5" width="9.1" height="9.1" fill="#141414"></rect></g><g class="lab"><text x="150" y="250" text-anchor="end" class="svg-label" fill="#6e6a62">Lab 10</text><line x1="362.6" y1="246" x2="501.6" y2="246" stroke="#141414" stroke-width="1.2"></line><rect x="426.9" y="240.8" width="10.5" height="10.5" fill="#141414"></rect></g><g class="pooled"><text x="150" y="290" text-anchor="end" class="svg-label" fill="#b3261e">Pooled</text><path d="M407.7,286 L427.9,278 L448.2,286 L427.9,294 Z" fill="#b3261e"></path><line x1="427.9" y1="16" x2="427.9" y2="276" stroke="#b3261e" stroke-dasharray="2 4"></line></g><text x="100" y="320" text-anchor="start" class="svg-label" fill="#6e6a62">smaller effect</text><text x="620" y="320" text-anchor="end" class="svg-label" fill="#6e6a62">larger effect</text></svg>
+<figcaption>Schematic: the same mobile EEG question answered by many labs. Replicability lives in the spread, and reporting standards make the rows comparable.</figcaption>
+</figure>
+</section>
+<section id="why-mobile-eeg-needs-a-reporting-standard" class="level2">
+<h2 class="anchored" data-anchor-id="why-mobile-eeg-needs-a-reporting-standard">Why mobile EEG needs a reporting standard</h2>
+<p>Mobile EEG lets us study the brain while people walk, turn and navigate the real world. The price is a large space of decisions that stationary EEG rarely faces: which amplifier and cap, how cables are secured, how EEG is synchronised with motion sensors, how gait events are detected, and how movement artefacts are removed, in which order and with which parameters.</p>
+<p>In <em>Preprocessing on the Go</em> we reviewed studies that combined mobile EEG with gait measurements (<a href="https://doi.org/10.1111/psyp.70352">Vinod et al., 2026</a>). The preprocessing steps differed widely, as did their order and combination, and especially the tools and reporting of artefact rejection. Many studies described their pipeline too vaguely to reproduce it. Our conclusion is that the field does not need one mandatory pipeline. It does need <strong>standardised reporting</strong>, so that different pipelines become comparable and studies can be repeated. An earlier META-REP review of P3 studies during walking came to a similar verdict (<a href="https://doi.org/10.1111/psyp.14743">Jacobsen et al., 2025</a>).</p>
+<div class="pullquote">
+<p>The field does not need one mandatory pipeline. It needs every pipeline to be reported well enough to repeat.</p>
+</div>
+</section>
+<section id="a-reporting-standard-for-mobile-eeg" class="level2">
+<h2 class="anchored" data-anchor-id="a-reporting-standard-for-mobile-eeg">A reporting standard for mobile EEG</h2>
+<p>The cornerstone of my META-REP work is a reporting standard for mobile EEG studies, now in preparation: a shared minimum of what a paper reports, so that readers can evaluate, compare and repeat it. Its starting point is what the review found missing most often:</p>
+<div class="checklist">
+<ul>
+<li><strong>Recording context</strong> Setting and task, such as indoor or outdoor, treadmill or overground walking, and the equipment used.</li>
+<li><strong>Preprocessing steps</strong> Every step with its order and tools, in particular how movement artefacts are rejected.</li>
+<li><strong>Software parameters</strong> The settings of each tool, so that a pipeline can be re-run.</li>
+<li><strong>Open code and workflows</strong> Analysis code and workflows shared openly, ideally with data in community standards such as EEG-BIDS and <a href="../software/index.html#bids">Motion-BIDS</a>.</li>
+</ul>
+</div>
+</section>
+<section id="related-work" class="level2">
+<h2 class="anchored" data-anchor-id="related-work">Related work</h2>
+<ul>
+<li><a href="../projects/eegmanysteps.html"><strong>EEGManySteps</strong></a>: a many-labs effort that measures how much setups and pipelines change gait-related EEG results.</li>
+<li><a href="../projects/igor.html"><strong>IGOR umbrella review</strong></a>: a review of how EEG/ERP preprocessing is reported and justified across the literature.</li>
+<li><strong>Multiverse analyses</strong>: <a href="https://github.com/NeuropsyOL/mobileEEG_multiverse">mapping preprocessing choices in mobile EEG</a> and a <a href="https://github.com/vaishvd/betaGaitMultiverse">multiverse of beta activity during gait</a> by Vaishali Vinod. The first maps the choices made in the literature (Oldenburg METEOR team); the second varies preprocessing choices on two walking datasets.</li>
+</ul>
+</section>
+<section id="publications" class="level2">
+<h2 class="anchored" data-anchor-id="publications">Publications</h2>
+<!-- Generated by scripts/update_publications.py from the "projects" section
+     of publications/config.yml. Do not edit by hand. -->
+<div class="pub-list">
+<ul>
+<li><strong>Welzel, J.</strong>, … (2026). <em>Have we solved the replicability crisis? From open practices to systemic reform in cognitive neurosciences</em>. MetaArXiv. <a href="https://osf.io/preprints/metaarxiv/m6rng_v1" class="pub-doi">https://osf.io/preprints/metaarxiv/m6rng_v1</a> <span class="pub-badge pub-preprint">Preprint</span></li>
+<li>Vinod, V., Papin, L. J., Romijnders, R., Maetzler, W., &amp; <strong>Welzel, J.</strong> (2026). Preprocessing on the go: Practices in gait-related mobile EEG. <em>Psychophysiology</em>, <em>63</em>(6), Article e70352. <a href="https://doi.org/10.1111/psyp.70352" class="pub-doi">https://doi.org/10.1111/psyp.70352</a></li>
+</ul>
+</div>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<ul>
+<li><a href="https://www.meta-rep.uni-muenchen.de/">META-REP programme website</a></li>
+<li><a href="https://gepris.dfg.de/gepris/projekt/441890184">SPP 2317 in the DFG project database (GEPRIS)</a></li>
+<li><a href="https://meteor-eeg-oldenburg.shinyapps.io/preprocessing/">Interactive overview of mobile EEG preprocessing choices (METEOR app)</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/juliuswelzel\.github\.io\/welzel\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Julius Welzel</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Built with <a href="https://quarto.org">Quarto</a> · publications updated weekly</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../impressum/index.html">
+<p>Impressum</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
