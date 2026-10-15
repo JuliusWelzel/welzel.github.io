@@ -75,12 +75,18 @@ exclude:
   - doi: 10.1101/2020.12.11.420919
   - doi: 10.22541/au.172464977.75584057/v1   # Post-COVID HrQoL preprint (removed on request)
   - doi: 10.1101/2024.03.29.24304902         # rectal biopsy preprint (removed on request)
+  - doi: 10.21203/rs.3.rs-4201254/v1   # preprint of 10.1038/s41598-025-97252-4
+  - doi: 10.21203/rs.3.rs-4501757/v1   # preprint of 10.1186/s12883-024-03942-3
 
 # Corrections applied to an entry, keyed by DOI. Any field of an entry
 # (title, authors, year, venue, volume, issue, pages, url, type) can be set.
 #   10.1234/abcd:
 #     venue: Journal of Corrected Names
 overrides:
+  10.1038/s41598-025-97252-4:
+    preprint_url: https://doi.org/10.21203/rs.3.rs-4201254/v1
+  10.1186/s12883-024-03942-3:
+    preprint_url: https://doi.org/10.21203/rs.3.rs-4501757/v1
   10.1111/psyp.70352:
     preprint_url: https://doi.org/10.22541/au.176906185.59261482/v1
   10.1038/s41597-024-03559-8:
@@ -92,7 +98,43 @@ overrides:
 # title, authors (list of "Family, G."), year, venue, volume, issue,
 # pages, doi, url, type (article, preprint, conference, chapter, dataset,
 # software, thesis, other).
-add: []
+# Pinned: OpenAlex stopped listing this preprint under the ORCID in October 2026.
+add:
+- doi: 10.21203/rs.3.rs-10753262/v1
+  title: 'Fatigue is associated with stimulus-related theta and alpha power and distinguishes subjective from objective cognition in a post-viral cohort: A cross-sectional study'
+  authors:
+  - Neumann, C.
+  - Godbersen, L.
+  - Schmeer, L.
+  - Hauffe, J. M.
+  - Helzel, K.
+  - Geritz, J.
+  - Hermann, G.
+  - Stagneth, L.
+  - Egerer, L.
+  - Fuglsang, L.
+  - Buschung, M.
+  - Reinke, L.
+  - Poick, S.
+  - Lieb, W.
+  - Franzpötter, K.
+  - Ruß, A.-K.
+  - Pütz, S.
+  - Raquib, S.
+  - Schmidbauer, L.
+  - Vehreschild, J. J.
+  - Lorenz-Depiereux, B.
+  - Schreiber, S.
+  - Krawczak, M.
+  - Bahmer, T.
+  - Heyckendorf, J.
+  - Maetzler, W.
+  - Keil, J.
+  - Welzel, J.
+  year: 2026
+  date: '2026-09-04'
+  venue: Research Square
+  type: preprint
 
 # Publications shown on the project pages (projects/_pubs/<project>.md),
 # listed by DOI or title.

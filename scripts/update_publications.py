@@ -617,6 +617,19 @@ def apply_curation(records: list[dict], config: dict) -> list[dict]:
     return out
 
 
+ARXIV_ID = re.compile(r"arxiv[:\s.]*(\d{4}\.\d{4,5})", re.I)
+
+
+def add_arxiv_doi(rec: dict) -> dict:
+    """Give DOI-less arXiv entries (Scholar lists them as "arXiv preprint arXiv:2412.21159")
+    their arXiv DOI, so they merge with the same preprint from other sources."""
+    if not rec.get("doi"):
+        match = ARXIV_ID.search(rec.get("venue") or "")
+        if match:
+            rec["doi"] = f"10.48550/arxiv.{match.group(1)}"
+    return rec
+
+
 def manual_records(config: dict) -> list[dict]:
     out = []
     for entry in config.get("add") or []:
@@ -969,7 +982,7 @@ def main() -> int:
     else:
         records, failed = collect(config, previous)
 
-    records = [r for r in records if r.get("title") and r.get("type") != "drop" and not is_supplement(r)]
+    records = [add_arxiv_doi(r) for r in records if r.get("title") and r.get("type") != "drop" and not is_supplement(r)]
     records = merge_by_title(merge_by_doi(records + manual_records(config)))
     records = apply_curation(records, config)
     data = dump_records(records)
