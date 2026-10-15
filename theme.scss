@@ -1,0 +1,746 @@
+/*-- scss:defaults --*/
+
+// Editorial palette: paper, ink and a single red for rubrics.
+$paper: #fbfaf6;
+$paper-deep: #f3f0e8;
+$ink: #141414;
+$ink-soft: #3b3a37;
+$muted: #6e6a62;
+$hairline: #dcd7cc;
+$accent: #b3261e;
+$accent-soft: #f4e3df;
+
+$font-display: "Libre Caslon Display", "Libre Caslon Text", Georgia, "Times New Roman", serif;
+$font-caslon: "Libre Caslon Text", Georgia, "Times New Roman", serif;
+$font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+$font-sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+
+$body-bg: $paper;
+$body-color: $ink;
+$primary: $ink;
+$secondary: $muted;
+$danger: $accent;
+$link-color: $ink;
+$link-hover-color: $accent;
+$link-decoration: underline;
+
+$font-family-sans-serif: $font-serif;
+$font-family-base: $font-serif;
+$headings-font-family: $font-caslon;
+$headings-font-weight: 400;
+$headings-color: $ink;
+$font-size-base: 1.125rem;
+$line-height-base: 1.62;
+
+$border-color: $hairline;
+$hr-border-color: $ink;
+
+$navbar-bg: $paper;
+$navbar-fg: $ink;
+$navbar-hl: $accent;
+$footer-bg: $paper;
+$footer-fg: $muted;
+
+$toc-color: $muted;
+$toc-active-border: $accent;
+
+/*-- scss:rules --*/
+
+// ---------------------------------------------------------------------------
+// Self-hosted fonts (no requests to third-party font services)
+
+$latin: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+$latin-ext: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+
+@mixin face($family, $file, $weight: 400, $style: normal) {
+  @each $subset, $range in (latin: $latin, latin-ext: $latin-ext) {
+    @font-face {
+      font-family: $family;
+      font-style: $style;
+      font-weight: $weight;
+      font-display: swap;
+      src: url("assets/fonts/#{$file}-#{$subset}-#{$weight}-#{$style}.woff2") format("woff2");
+      unicode-range: $range;
+    }
+  }
+}
+
+@include face("Libre Caslon Display", "libre-caslon-display");
+@include face("Libre Caslon Text", "libre-caslon-text");
+@include face("Libre Caslon Text", "libre-caslon-text", 400, italic);
+@include face("Libre Caslon Text", "libre-caslon-text", 700);
+@include face("IBM Plex Sans", "ibm-plex-sans");
+@include face("IBM Plex Sans", "ibm-plex-sans", 500);
+@include face("IBM Plex Sans", "ibm-plex-sans", 600);
+
+@each $subset, $range in (latin: $latin, latin-ext: $latin-ext) {
+  @each $style in (normal, italic) {
+    @font-face {
+      font-family: "Source Serif 4";
+      font-style: $style;
+      font-weight: 200 900;
+      font-display: swap;
+      src: url("assets/fonts/source-serif-4-#{$subset}-wght-#{$style}.woff2") format("woff2-variations");
+      unicode-range: $range;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Base typography
+
+body {
+  font-family: $font-serif;
+  font-optical-sizing: auto;
+  font-feature-settings: "kern", "liga", "onum";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+  font-family: $font-caslon;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  color: $ink;
+}
+
+#quarto-content main h2 {
+  font-size: 1.85rem;
+  margin-top: 3rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid $ink;
+  border-bottom: none;
+}
+
+#quarto-content main h3 {
+  font-size: 1.35rem;
+  margin-top: 2rem;
+}
+
+main a:not(.btn):not(.nav-link):not(.card-link):not(.chip) {
+  color: $ink;
+  text-decoration-color: rgba($accent, 0.55);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+
+  &:hover {
+    color: $accent;
+    text-decoration-color: $accent;
+  }
+}
+
+::selection {
+  background: $accent-soft;
+}
+
+blockquote {
+  font-family: $font-caslon;
+  font-style: italic;
+  font-size: 1.25rem;
+  border-left: 2px solid $accent;
+  color: $ink-soft;
+}
+
+figcaption, .figure-caption, .caption {
+  font-family: $font-sans;
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  color: $muted;
+}
+
+// Small-caps rubric used above headlines and on cards.
+.kicker {
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.dek {
+  font-family: $font-caslon;
+  font-style: italic;
+  font-size: 1.32rem;
+  line-height: 1.45;
+  color: $ink-soft;
+}
+
+.dropcap > p:first-of-type::first-letter,
+p.dropcap::first-letter {
+  float: left;
+  font-family: $font-display;
+  font-size: 4.6em;
+  line-height: 0.8;
+  padding: 0.08em 0.1em 0 0;
+  color: $ink;
+}
+
+.byline, .label {
+  font-family: $font-sans;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $muted;
+}
+
+// ---------------------------------------------------------------------------
+// Navigation: centred masthead with a rule underneath
+
+.navbar {
+  border-bottom: 1px solid $ink;
+  box-shadow: none;
+  padding-top: 0.6rem;
+  padding-bottom: 0.35rem;
+
+  .navbar-title {
+    font-family: $font-display;
+    font-size: 1.75rem;
+    letter-spacing: 0.01em;
+    color: $ink;
+  }
+
+  .nav-link {
+    font-family: $font-sans;
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: $ink;
+
+    &:hover, &.active {
+      color: $accent !important;
+    }
+  }
+
+  .aa-DetachedSearchButton, #quarto-search {
+    font-family: $font-sans;
+  }
+}
+
+@media (min-width: 992px) {
+  // Row 1: centred masthead (search on the right); row 2: centred sections
+  // with the social icons on the right.
+  .navbar .navbar-container {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar .navbar-brand-container {
+    flex: 1 0 100%;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .navbar .navbar-brand {
+    margin: 0 auto;
+  }
+
+  .navbar .navbar-title {
+    font-size: 2.35rem;
+  }
+
+  .navbar #quarto-search {
+    position: absolute;
+    top: 0.85rem;
+    right: 1rem;
+  }
+
+  .navbar #navbarCollapse {
+    position: relative;
+    flex: 1 0 100%;
+    justify-content: center;
+    border-top: 1px solid $hairline;
+    margin-top: 0.4rem;
+    padding-top: 0.15rem;
+
+    > .navbar-nav.me-auto {
+      margin: 0 !important;
+    }
+
+    > .navbar-nav.ms-auto {
+      position: absolute;
+      right: 0;
+      top: 0.15rem;
+    }
+  }
+
+  .navbar .quarto-navbar-tools:empty {
+    display: none;
+  }
+}
+
+.navbar .navbar-toggler {
+  border-color: $ink;
+}
+
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23141414' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+// Quarto still emits a plain title header with title-block-style: none;
+// every page has its own .hero instead.
+header.quarto-title-block {
+  display: none;
+}
+
+// ---------------------------------------------------------------------------
+// Page hero (replaces Quarto's title block)
+
+.hero {
+  text-align: center;
+  margin: 2.75rem auto 2.5rem;
+  max-width: 46rem;
+
+  h1, .hero-title {
+    font-family: $font-display;
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    line-height: 1.04;
+    margin: 0.45rem 0 0.9rem;
+    border: none;
+  }
+
+  .dek {
+    display: block;
+    max-width: 38rem;
+    margin: 0 auto;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 3.5rem;
+    margin: 2rem auto 0;
+    border-top: 1px solid $ink;
+  }
+}
+
+.hero-figure {
+  margin: 0 auto 2.5rem;
+  text-align: center;
+
+  img {
+    width: 100%;
+    max-height: 26rem;
+    object-fit: cover;
+    filter: grayscale(1) contrast(1.05);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Home page
+
+.home-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 992px) {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+}
+
+.aside-card {
+  border-top: 3px solid $ink;
+  padding-top: 0.9rem;
+  font-family: $font-sans;
+  font-size: 0.9rem;
+  line-height: 1.5;
+
+  p { margin-bottom: 0.65rem; }
+  ul { padding-left: 0; list-style: none; }
+  li { padding: 0.35rem 0; border-bottom: 1px solid $hairline; }
+}
+
+.section-link {
+  font-family: $font-sans;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+// ---------------------------------------------------------------------------
+// Cards (projects, research areas)
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+  gap: 2rem 1.75rem;
+  margin: 2rem 0 1rem;
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid $ink;
+  padding-top: 0.9rem;
+  transition: transform 0.25s ease;
+
+  #quarto-content main & h3, h3 {
+    font-family: $font-caslon;
+    font-size: 1.45rem;
+    line-height: 1.2;
+    margin: 0.35rem 0 0.5rem;
+    border: none;
+    padding: 0;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: $ink-soft;
+    margin-bottom: 0.6rem;
+  }
+
+  .card-meta {
+    margin-top: auto;
+    font-family: $font-sans;
+    font-size: 0.74rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $muted;
+  }
+
+  .stretched {
+    color: inherit;
+    text-decoration: none !important;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  &:hover {
+    h3 { color: $accent; }
+  }
+
+  &.featured {
+    @media (min-width: 768px) {
+      grid-column: span 2;
+    }
+
+    h3 { font-size: 1.9rem; }
+  }
+}
+
+// Topic filter on the projects page
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.chip {
+  font-family: $font-sans;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $ink;
+  background: transparent;
+  border: 1px solid $ink;
+  border-radius: 999px;
+  padding: 0.38rem 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover { border-color: $accent; color: $accent; }
+
+  &[aria-pressed="true"] {
+    background: $ink;
+    color: $paper;
+    border-color: $ink;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Project detail pages
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 1rem 1.5rem;
+  margin: 1.5rem 0 2.25rem;
+  padding: 1rem 0;
+  border-top: 1px solid $ink;
+  border-bottom: 1px solid $hairline;
+  font-family: $font-sans;
+  font-size: 0.88rem;
+  line-height: 1.45;
+
+  .label {
+    display: block;
+    font-size: 0.68rem;
+    margin-bottom: 0.2rem;
+  }
+
+  p { margin: 0; }
+}
+
+.figure-anim {
+  margin: 0.5rem auto 2.5rem;
+  max-width: 44rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  figcaption {
+    text-align: center;
+    margin-top: 0.6rem;
+  }
+}
+
+.pullquote {
+  font-family: $font-display;
+  font-size: 1.7rem;
+  line-height: 1.3;
+  text-align: center;
+  margin: 2.5rem auto;
+  max-width: 34rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid $ink;
+  border-bottom: 1px solid $ink;
+}
+
+.callout-box {
+  background: $paper-deep;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  border-left: 3px solid $accent;
+
+  > :last-child { margin-bottom: 0; }
+}
+
+// ---------------------------------------------------------------------------
+// Publications
+
+.pub-meta {
+  font-family: $font-sans;
+  font-size: 0.82rem;
+  color: $muted;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.pub-list {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 0.85rem 0 0.85rem 1.4rem;
+    text-indent: -1.4rem;
+    border-bottom: 1px solid $hairline;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: $ink-soft;
+
+    strong { color: $ink; font-weight: 600; }
+  }
+}
+
+.pub-badge {
+  display: inline-block;
+  text-indent: 0;
+  font-family: $font-sans;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0.28rem 0.45rem 0.24rem;
+  margin-left: 0.25rem;
+  border: 1px solid $muted;
+  border-radius: 2px;
+  color: $muted;
+  vertical-align: 0.12em;
+  text-decoration: none !important;
+}
+
+a.pub-badge:hover { border-color: $accent; color: $accent; }
+.pub-preprint { border-color: $accent; color: $accent; }
+
+#quarto-content main h2[id^="year-"] {
+  font-family: $font-display;
+  font-size: 2.4rem;
+}
+
+// ---------------------------------------------------------------------------
+// TOC, footer, misc
+
+#TOC, .sidebar nav[role="doc-toc"] {
+  font-family: $font-sans;
+  font-size: 0.8rem;
+
+  h2, .toc-title {
+    font-family: $font-sans;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $muted;
+    border: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+.nav-footer {
+  font-family: $font-sans;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  border-top: 1px solid $ink;
+}
+
+.btn-primary {
+  font-family: $font-sans;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  border-radius: 0;
+}
+
+.logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem 2.5rem;
+  margin: 1.5rem 0;
+
+  img {
+    max-height: 3.2rem;
+    width: auto;
+    filter: grayscale(1);
+    opacity: 0.85;
+  }
+}
+
+// Hidden until assets/js/site-motion.js reveals them (see assets/motion-loader.html).
+.motion-ready {
+  .hero > *,
+  .card-grid > *,
+  .home-grid > *,
+  .facts-group > *,
+  .logo-strip > *,
+  .checklist li,
+  .reveal,
+  svg[data-anim] {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Inline SVG figures (projects/_figures)
+
+.svg-label {
+  font-family: $font-sans;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.svg-core {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.noise-label {
+  font-family: $font-caslon;
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+svg[data-anim] .step,
+svg[data-anim] .node {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.pub-doi {
+  font-family: $font-sans;
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  word-break: break-all;
+  color: $muted !important;
+}
+
+// Reporting checklist (META-REP page)
+.checklist {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: item;
+    columns: 2 18rem;
+    column-gap: 2.5rem;
+  }
+
+  li {
+    break-inside: avoid;
+    position: relative;
+    padding: 0.7rem 0 0.7rem 2.4rem;
+    border-top: 1px solid $hairline;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    &::before {
+      counter-increment: item;
+      content: counter(item, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: 0.78rem;
+      font-family: $font-sans;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: $accent;
+    }
+
+    strong {
+      font-family: $font-sans;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: block;
+      color: $ink;
+    }
+  }
+}
+
+.references {
+  font-size: 0.95rem;
+
+  ul { list-style: none; padding-left: 0; }
+
+  li {
+    padding: 0.45rem 0 0.45rem 1.4rem;
+    text-indent: -1.4rem;
+    color: $ink-soft;
+  }
+}

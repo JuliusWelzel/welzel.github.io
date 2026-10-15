@@ -1,7 +1,14 @@
 ---
 title: Impressum
-comments: false
 ---
+
+::: {.hero}
+[Legal]{.kicker}
+
+# Impressum {.unlisted}
+
+[Kontakt, Verantwortlichkeit und Datenschutz.]{.dek}
+:::
 
 
 ### Kontakt:

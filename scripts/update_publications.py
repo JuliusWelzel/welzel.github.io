@@ -19,6 +19,8 @@ Outputs:
 * publications/publications.yml  - merged data (machine readable)
 * publications/_publications.md  - markdown included by publications/index.qmd
 * publications/_recent.md        - the newest entries, included by the home page
+* projects/_pubs/<project>.md    - publications of each project (see "projects"
+                                   in publications/config.yml)
 
 When a source fails, entries previously found through it are kept, so a
 temporary outage never empties the page. If the list would shrink by more
@@ -55,6 +57,7 @@ DATA_FILE = PUB_DIR / "publications.yml"
 MARKDOWN_FILE = PUB_DIR / "_publications.md"
 RECENT_FILE = PUB_DIR / "_recent.md"
 RECENT_COUNT = 5
+PROJECT_PUB_DIR = ROOT / "projects" / "_pubs"
 
 TIMEOUT = 30
 MAX_SHRINK = 0.25
@@ -79,6 +82,7 @@ DROP_TYPES = {
 
 PREPRINT_DOI_PREFIXES = (
     "10.1101/",     # bioRxiv, medRxiv
+    "10.64898/",    # medRxiv (2026 onwards)
     "10.31234/",    # PsyArXiv
     "10.31219/",    # OSF Preprints
     "10.31235/",    # SocArXiv
@@ -262,7 +266,7 @@ class Http:
 def record(**fields: Any) -> dict:
     rec = {
         "doi": "", "title": "", "authors": [], "year": None, "date": "",
-        "venue": "", "volume": "", "issue": "", "pages": "", "type": "other",
+        "venue": "", "volume": "", "issue": "", "pages": "", "article_number": "", "type": "other",
         "url": "", "preprint_url": "", "sources": [],
     }
     rec.update({k: v for k, v in fields.items() if v not in (None, "")})
@@ -449,7 +453,8 @@ def crossref_fields(msg: dict) -> dict:
         "venue": venue,
         "volume": clean_text(msg.get("volume")),
         "issue": clean_text(msg.get("issue")),
-        "pages": clean_text(msg.get("page")).replace("-", "–") or clean_text(msg.get("article-number")),
+        "pages": clean_text(msg.get("page")).replace("-", "–"),
+        "article_number": clean_text(msg.get("article-number")),
         "type": normalise_type(msg.get("type", ""), doi, venue),
     }
     if date:
@@ -519,16 +524,18 @@ def merge_by_title(records: list[dict]) -> list[dict]:
     """Fold duplicates with (nearly) the same title.
 
     A preprint matching a published entry becomes its 'preprint_url'.
-    Software releases that differ only by version number collapse into one.
+    Software and data releases that differ only by version number collapse
+    into one.
     """
     kept: list[dict] = []
     for rec in sorted(records, key=rank, reverse=True):
         title = rec["title"]
-        if rec.get("type") == "software":
+        if rec.get("type") in {"software", "dataset"}:
             title = strip_version(title)
         match = None
         for other in kept:
-            other_title = strip_version(other["title"]) if other.get("type") == "software" else other["title"]
+            other_title = (strip_version(other["title"]) if other.get("type") in {"software", "dataset"}
+                           else other["title"])
             if not titles_match(title, other_title):
                 continue
             # Same title but clearly different DOIs of the same type and
@@ -600,18 +607,70 @@ def is_me(author: str, config: dict) -> bool:
 
 
 def format_authors(authors: list[str], config: dict) -> str:
+    """APA 7 author list; the site owner's name in bold.
+
+    Up to 20 authors are listed. Longer lists show the first 19, an
+    ellipsis and the final author; if the owner falls into the omitted
+    part, their name is kept visible between two ellipses.
+    """
     if not authors:
         return ""
     marked = [f"**{md_escape(a)}**" if is_me(a, config) else md_escape(a) for a in authors]
+    if any(a in {"…", "..."} for a in authors):  # already abbreviated by hand
+        return ", ".join(marked)
     if len(marked) > 20:
         me = next((i for i, a in enumerate(authors) if is_me(a, config)), None)
-        head = marked[:10]
-        if me is not None and 10 <= me < len(marked) - 1:
-            head += ["…", marked[me]]
-        return ", ".join(head) + ", … " + marked[-1]
+        shown = ", ".join(marked[:19])
+        if me is not None and 19 <= me < len(marked) - 1:
+            shown += ", … " + marked[me]
+        return shown + ", … " + marked[-1]
     if len(marked) == 1:
         return marked[0]
     return ", ".join(marked[:-1]) + ", & " + marked[-1]
+
+
+def _keep_word(word: str, keep: set[str]) -> bool:
+    core = word.strip("([{\"'“‘”’)]}.,;:!?")
+    base = re.sub(r"['’]s$", "", core)
+    return (
+        not core
+        or any(ch.isdigit() for ch in core)
+        or any(ch.isupper() for ch in core[1:])   # EEG, KielMAT, MoBI
+        or not core[0].isupper()                  # already lower case / iPad
+        or core.lower() in keep or base.lower() in keep
+    )
+
+
+def sentence_case(title: str, keep: set[str]) -> str:
+    """Convert Title Case to APA sentence case.
+
+    Titles that are not in title case are returned unchanged. The first word,
+    words after a colon, acronyms, words with digits and the proper nouns in
+    `keep` keep their capitalisation.
+    """
+    words = re.findall(r"[A-Za-z][A-Za-z'’]*", title)
+    long_words = [w for w in words[1:] if len(w) > 3]
+    if not long_words or sum(w[0].isupper() for w in long_words) / len(long_words) < 0.6:
+        return title
+    out, start = [], True
+    for token in re.split(r"(\s+)", title):
+        if not token or token.isspace():
+            out.append(token)
+            continue
+        parts = token.split("-")
+        converted = []
+        for i, part in enumerate(parts):
+            if (start and i == 0) or _keep_word(part, keep):
+                converted.append(part)
+            else:
+                converted.append(part.lower())
+        out.append("-".join(converted))
+        start = token.endswith((":", "?", "!"))
+    return "".join(out)
+
+
+def end_sentence(text: str) -> str:
+    return text if text.endswith(("?", "!", ".")) else text + "."
 
 
 def entry_link(rec: dict) -> str:
@@ -621,25 +680,50 @@ def entry_link(rec: dict) -> str:
 
 
 def format_entry(rec: dict, config: dict) -> str:
+    """One APA 7 reference as a markdown list item."""
+    keep = {w.lower() for w in config.get("keep_case") or []}
+    rtype = rec.get("type", "other")
     authors = format_authors(rec.get("authors") or [], config)
     year = rec.get("year") or "n.d."
-    title = md_escape(rec["title"].rstrip("."))
-    link = entry_link(rec)
+    title = rec["title"].strip()
+    if config.get("sentence_case", True):
+        title = sentence_case(title, keep)
+    title = md_escape(title.rstrip("."))
+    venue = md_escape(rec.get("venue") or "")
+
     parts = [f"{authors} ({year})." if authors else f"({year})."]
-    parts.append(f"[{title}]({link})." if link else f"{title}.")
-    if rec.get("venue"):
-        venue = f"*{md_escape(rec['venue'])}*"
-        if rec.get("volume"):
-            venue += f", *{md_escape(str(rec['volume']))}*"
-            if rec.get("issue"):
-                venue += f"({md_escape(str(rec['issue']))})"
-        if rec.get("pages"):
-            venue += f", {md_escape(str(rec['pages']))}"
-        parts.append(venue + ".")
+    if rtype in {"preprint", "dataset", "software", "thesis"}:
+        described = {"dataset": " \\[Data set\\]", "software": " \\[Computer software\\]",
+                     "thesis": " \\[Thesis\\]"}.get(rtype, "")
+        parts.append(f"*{title}*{described}." if described else end_sentence(f"*{title}*"))
+        if venue:
+            parts.append(end_sentence(venue))
+    elif rtype == "chapter":
+        parts.append(end_sentence(title))
+        if venue:
+            pages = f" (pp. {md_escape(str(rec['pages']))})" if rec.get("pages") else ""
+            parts.append(f"In *{venue}*{pages}.")
+    else:
+        parts.append(end_sentence(title))
+        if venue:
+            source = f"*{venue}*"
+            if rec.get("volume"):
+                source += f", *{md_escape(str(rec['volume']))}*"
+                if rec.get("issue"):
+                    source += f"({md_escape(str(rec['issue']))})"
+            if rec.get("article_number"):
+                source += f", Article {md_escape(str(rec['article_number']))}"
+            elif rec.get("pages"):
+                source += f", {md_escape(str(rec['pages']))}"
+            parts.append(source + ".")
+    link = entry_link(rec)
+    if link:
+        parts.append(f"[{link}]({link}){{.pub-doi}}")
+
     badges = []
-    label = TYPE_LABELS.get(rec.get("type", "other"))
-    if label:
-        badges.append(f"[{label}]{{.pub-badge .pub-{rec['type']}}}")
+    label = TYPE_LABELS.get(rtype)
+    if label and rtype not in {"dataset", "software"}:
+        badges.append(f"[{label}]{{.pub-badge .pub-{rtype}}}")
     if rec.get("preprint_url"):
         badges.append(f"[Preprint]({rec['preprint_url']}){{.pub-badge .pub-preprint-link}}")
     if badges:
@@ -692,9 +776,30 @@ def render_recent(records: list[dict], config: dict) -> str:
     return "\n".join(lines)
 
 
+def render_projects(records: list[dict], config: dict) -> dict[str, str]:
+    """Publication lists for the project pages, keyed by project slug."""
+    out = {}
+    for slug, refs in (config.get("projects") or {}).items():
+        items = []
+        for ref in refs or []:
+            doi = norm_doi(ref)
+            match = next((r for r in records if (doi and r.get("doi") == doi)
+                          or titles_match(r["title"], str(ref))), None)
+            if match is None:
+                log(f"WARNING project '{slug}': no publication matches {ref}")
+            elif match not in items:
+                items.append(match)
+        lines = ["<!-- Generated by scripts/update_publications.py from the \"projects\" section",
+                 "     of publications/config.yml. Do not edit by hand. -->", "", "::: {.pub-list}"]
+        lines += [format_entry(rec, config) for rec in sorted_records(items)]
+        lines += [":::", ""]
+        out[slug] = "\n".join(lines)
+    return out
+
+
 def dump_records(records: list[dict]) -> list[dict]:
     keys = ["doi", "title", "authors", "year", "date", "venue", "volume", "issue", "pages",
-            "type", "url", "preprint_url", "sources"]
+            "article_number", "type", "url", "preprint_url", "sources"]
     out = []
     for rec in sorted_records(records):
         out.append({k: rec[k] for k in keys if rec.get(k) not in (None, "", [])})
@@ -773,9 +878,12 @@ def collect(config: dict, previous: list[dict]) -> tuple[list[dict], set[str]]:
 
     # Keep what a source that failed now contributed last time: previous
     # entries it found are kept, and fields it supplied are filled back in.
+    # Entries from the former hand-maintained list ("legacy") are kept until
+    # a run in which every source succeeds.
     if failed:
+        retain = failed | {"legacy"}
         for old in previous:
-            if not set(old.get("sources", [])) & failed or "manual" in old.get("sources", []):
+            if not set(old.get("sources", [])) & retain or "manual" in old.get("sources", []):
                 continue
             match = next((r for r in merged if (old.get("doi") and r.get("doi") == old["doi"])
                           or titles_match(old["title"], r["title"])), None)
@@ -837,10 +945,19 @@ def main() -> int:
         body = yaml.safe_dump({"updated": updated, "count": len(data), "publications": data},
                               sort_keys=False, allow_unicode=True, width=1000)
         DATA_FILE.write_text(header + body, encoding="utf-8")
-    for path, text in ((MARKDOWN_FILE, render_markdown(records, config, updated)),
-                       (RECENT_FILE, render_recent(records, config))):
+    outputs = [(MARKDOWN_FILE, render_markdown(records, config, updated)),
+               (RECENT_FILE, render_recent(records, config))]
+    outputs += [(PROJECT_PUB_DIR / f"{slug}.md", text)
+                for slug, text in render_projects(records, config).items()]
+    for path, text in outputs:
+        path.parent.mkdir(parents=True, exist_ok=True)
         if not path.exists() or path.read_text(encoding="utf-8") != text:
             path.write_text(text, encoding="utf-8")
+    # Remove lists of projects that are no longer configured.
+    current = {path for path, _ in outputs}
+    for stale in PROJECT_PUB_DIR.glob("*.md"):
+        if stale not in current:
+            stale.unlink()
 
     if os.environ.get("GITHUB_OUTPUT"):
         with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:

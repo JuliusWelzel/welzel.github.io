@@ -1,11 +1,15 @@
 ---
-title: Teaching acitivities
-excerpt: "Teaching acitivities"
-toc-location: right
-page-layout: full
+title: Teaching
+description: "Courses and workshops on data science, neuroanatomy, BIDS and open science."
 ---
 
-I really like to teach, online and offline.
+::: {.hero}
+[Teaching]{.kicker}
+
+# Teaching {.unlisted}
+
+[I like to teach, online and offline: data science, neuroanatomy, and the tools and standards of open science.]{.dek}
+:::
 
 ## Datascience in practice {#data-in-practice}
 

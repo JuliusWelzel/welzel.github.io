@@ -1,73 +1,186 @@
 ---
 title: Projects
-excerpt: "An overview of my projects"
-toc-location: right
-page-layout: full
+description: "Research projects, tools and collaborations: mobile EEG, gait, movement disorders and open science."
 ---
 
+::: {.hero}
+[Projects]{.kicker}
 
-## StepUp {#stepup}
+# Brains, bodies and better science {.unlisted}
 
-EEG while walking in parkinsons disease.
+[From treadmill training in Parkinson's disease to reporting standards for mobile EEG: what I work on, and with whom.]{.dek}
+:::
 
-![](../images/stepup_logo.png){width="40%"}
+{{< include _figures/walking.md >}}
 
-Overarching Topics: 
-[EEG](../research#eeg), 
+```{=html}
+<div class="chip-row" role="group" aria-label="Filter projects by topic">
+  <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+  <button class="chip" type="button" data-filter="eeg" aria-pressed="false">Mobile EEG</button>
+  <button class="chip" type="button" data-filter="gait" aria-pressed="false">Gait &amp; balance</button>
+  <button class="chip" type="button" data-filter="movement" aria-pressed="false">Movement disorders</button>
+  <button class="chip" type="button" data-filter="open" aria-pressed="false">Open science</button>
+  <button class="chip" type="button" data-filter="meta" aria-pressed="false">Meta-science</button>
+  <button class="chip" type="button" data-filter="tools" aria-pressed="false">Tools &amp; standards</button>
+</div>
+```
 
-Funders: [JPND](https://neurodegenerationresearch.eu/)
+::: {.card-grid}
 
-Funding Period: 2023 -- 2026
+::: {#stepup .project-card .featured data-topics="movement eeg gait"}
+[Parkinson's disease · Mobile EEG · Gait]{.kicker}
 
-## EPOC {#epoc}
+### [StepuP](stepup.qmd){.stretched}
 
-Fatigue and cognition in long-covid.
+*Steps against the burden of Parkinson's disease.* A JPND-funded trial in six countries that records EEG, EMG and motion capture together to find out why treadmill training improves walking in Parkinson's disease. I lead the Kiel site and run the consortium's multimodal data pipeline.
 
-Overarching Topics: 
-[EEG](../research#eeg), 
+[JPND · 2023–2026 · shared first author of the protocol]{.card-meta}
+:::
 
-Funders: [UKSH](https://www.uksh.de/)
+::: {#metarep .project-card .featured data-topics="meta eeg open"}
+[Meta-science · Mobile EEG]{.kicker}
 
-Funding Period: 2022 -- 2024
+### [META-REP](meta-rep.qmd){.stretched}
 
-## TremorDetect {#tremortdetect}
+Within the DFG Priority Programme META-REP, I study the "forking paths" of mobile EEG analysis, with a reporting standard for mobile EEG studies as the cornerstone.
 
-A [MediaPipe](https://developers.google.com/mediapipe/solutions/vision/hand_landmarker) framework to detect tremolous activity from video data.
+[DFG · SPP 2317 · Oldenburg]{.card-meta}
+:::
 
-![](../images/mp_tremor.gif){width="40%"}
-![](../images/mp_tremor_results.png){width="40%"}
+::: {#footplacement .project-card data-topics="gait"}
+[Gait · Computational motor control]{.kicker}
 
-Overarching Topics: 
-[Algorithms](../research#algorithms)
+### [Where to put the next foot](foot-placement.qmd){.stretched}
 
+Bayesian integration in foot placement control: how noisy estimates of body state and prior expectations combine into the next step. With Moira van Leeuwen and the Amsterdam group.
 
-## NGMT {#ngmt}
+[VU Amsterdam · ongoing]{.card-meta}
+:::
 
-A toolbox for gait and balance parameters in neurological cohorts.
-Documentation can be found [here](https://neurogeriatricskiel.github.io/NGMT/).
+::: {#igor .project-card data-topics="open meta"}
+[Open science · Community]{.kicker}
 
-Overarching Topics: 
-[Algorithms](../research#algorithms)
-[Software](../software#ngmt)
+### [IGOR](igor.qmd){.stretched}
 
-Funders: [UKSH](https://www.uksh.de/neurologie-kiel/Behandlungsschwerpunkte/Neurogeriatrie.html)
+The Interest Group on Open and Reproducible Research of the DGPs section Biological Psychology and Neuropsychology. I run its BIDS Consultation Hour and co-lead an umbrella review of EEG/ERP preprocessing.
 
-Funding Period: Ongoing
+[DGPs · since 2020]{.card-meta}
+:::
 
-## ComOn {#comon}
+::: {#eegmanysteps .project-card data-topics="eeg gait open meta"}
+[Mobile EEG · Many labs]{.kicker}
 
-A exploratory, multicenter study on motor, cognitive and mobility deficits in geriatric patients.
+### [EEGManySteps](eegmanysteps.qmd){.stretched}
 
-Overarching Topics: 
-[Clinical Data-Science](../research#datascience)
+A community-driven, many-labs initiative testing how hardware, setups and pipelines shape gait-related EEG. I am on the steering committee.
 
-Funders: [UKSH](https://www.uksh.de/neurologie-kiel/Behandlungsschwerpunkte/Neurogeriatrie.html)
+[Community · since 2024]{.card-meta}
+:::
 
-Funding Period: 2017-2023
+::: {#motion-bids .project-card data-topics="tools open gait"}
+[Data standard · Python]{.kicker}
 
-## Sense-Age {#senseage}
+### [Motion-BIDS](../software/index.qmd#bids){.stretched}
 
-This project investigates the dynamics of attention in cognitive processing, focusing on how selective and focused information processing is controlled, and explores the decline of sustained attention, particularly in the context of aging and cognitive impairments, using methodologies like EEG and attention tests.
+The BIDS extension for motion data, which I co-led, plus *motionbids*, a lightweight Python package for curating motion datasets in the standard.
 
-Overarching Topics: 
-[EEG](../research#eeg)
+[BIDS · 2024 · ongoing]{.card-meta}
+:::
+
+::: {#kielmat .project-card data-topics="tools gait movement"}
+[Software · Python]{.kicker}
+
+### [KielMAT](../software/index.qmd#kielmat){.stretched}
+
+The Kiel Motion Analysis Toolbox (formerly NGMT): validated gait and balance algorithms for wearable and motion-capture data from neurological cohorts, built around Motion-BIDS.
+
+[Neurogeriatrics Kiel · JOSS 2024]{.card-meta}
+:::
+
+::: {#unisep .project-card data-topics="tools open"}
+[Data standard]{.kicker}
+
+### [UNISEP](https://arxiv.org/abs/2412.21159){.stretched}
+
+A unified, modality-agnostic framework for describing where sensors are placed on the human body in motion capture and wearable research.
+
+[Preprint · 2024 · co-first author]{.card-meta}
+:::
+
+::: {#redcap .project-card data-topics="tools open"}
+[Software · Clinical data]{.kicker}
+
+### [REDCap workflows](../software/index.qmd#redcap){.stretched}
+
+*rcol* installs standardised questionnaires and tests into REDCap; *redcap2bids* turns REDCap exports into BIDS participant files.
+
+[Python · since 2025]{.card-meta}
+:::
+
+::: {#pocketable .project-card data-topics="eeg tools"}
+[Mobile EEG · Smartphones]{.kicker}
+
+### [Pocketable MoBI](https://neuropsyol.github.io/){.stretched}
+
+Low-cost brain and body imaging with smartphones and mobile EEG, developed in the Oldenburg Neuropsychology Lab, applied for example to basketball.
+
+[Oldenburg · 2024–2026]{.card-meta}
+:::
+
+::: {#epoc .project-card data-topics="eeg"}
+[EEG · Post-COVID]{.kicker}
+
+### [EPOC](https://github.com/christianneumannCAU/EPOC-Kiel){.stretched}
+
+EEG correlates of post-COVID fatigue and subjective cognitive complaints, a Kiel project I co-supervise.
+
+[Kiel · ongoing]{.card-meta}
+:::
+
+::: {#electrodes .project-card data-topics="eeg tools"}
+[EEG · Computer vision]{.kicker}
+
+### [Electrodes from video](https://github.com/evrim06/video-eeg-electrode-registration){.stretched}
+
+An open-source pipeline that locates EEG electrodes in 3D from a short smartphone video instead of dedicated digitisation hardware.
+
+[Oldenburg · 2025–2026]{.card-meta}
+:::
+
+:::
+
+## Earlier projects
+
+::: {.card-grid}
+
+::: {#tremordetect .project-card data-topics="movement tools"}
+[Essential tremor]{.kicker}
+
+### [Tremor, feedback and video](https://github.com/JuliusWelzel/tremor_feedback_jw){.stretched}
+
+How sensory feedback and arousal modulate action tremor, and whether smartphone-compatible computer vision (MediaPipe) can measure tremor from video.
+
+[Kiel · 2021–2025]{.card-meta}
+:::
+
+::: {#comon .project-card data-topics="gait movement"}
+[Neurogeriatrics]{.kicker}
+
+### ComOn
+
+An exploratory multicentre study of motor, cognitive and mobility deficits in 1,000 geriatric patients before and after routine clinical treatment.
+
+[UKSH · 2017–2023]{.card-meta}
+:::
+
+::: {#senseage .project-card data-topics="eeg"}
+[EEG · Ageing]{.kicker}
+
+### Sense-Age
+
+The dynamics of attention: how selective and sustained information processing is controlled, and how it declines with age and cognitive impairment, studied with EEG and attention tests.
+
+[EEG lab, UKSH]{.card-meta}
+:::
+
+:::

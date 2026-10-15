@@ -1,37 +1,36 @@
 ---
 title: Research
-excerpt: "An overview of my research"
-toc-location: right
-page-layout: full
+description: "Research themes: the moving brain, gait and foot placement, movement disorders, and open, reproducible science."
 ---
 
-I work with brains.
+::: {.hero}
+[Research]{.kicker}
 
-## EEG {#eeg}
+# Four questions about movement {.unlisted}
 
-I record EEG data and try to understand it.
+[How does the brain control walking? What changes in movement disorders? How do we measure it reliably? And how do we make sure others can repeat what we find?]{.dek}
+:::
 
-Current projects:
-- [StepUp](../projects#stepup)
-- [EPOC](../projects#epoc)
-- [NGMT](../projects#ngmt)
+## The moving brain {#eeg}
 
-## Algorithms development {#algorithms}
+For a long time, EEG meant sitting still. With mobile EEG we can record brain activity while people walk, turn and deal with the real world. I combine mobile EEG with motion capture, EMG and wearable sensors to study how the cortex takes part in controlling gait, for example through beta oscillations and corticomuscular coherence, and how this changes in Parkinson's disease.
 
-Use my limited CS skill and psychological background to improve algorithms in practice.
+Projects: [StepuP](../projects/stepup.qmd) · [EEGManySteps](../projects/eegmanysteps.qmd) · [Pocketable MoBI](../projects/index.qmd#pocketable) · [EPOC](../projects/index.qmd#epoc)
 
-Current projects:
-- [NGMT](../projects#ngmt)
-- [TremorDetect](../projects#tremordetect)
-- [ComOn](../projects#comon)
+## Gait, balance and foot placement {#algorithms}
 
-## Clinical Data-Science {#datascience}
+Walking is controlled step by step, largely through where we put our feet. I work on algorithms that turn raw sensor data into meaningful gait and balance parameters, and on models of how the nervous system plans foot placement under uncertainty.
 
-As a trained psychologist, I am keen on understanding the pathology of various disorders by the means of quatitive data.
+Projects: [Bayesian foot placement](../projects/foot-placement.qmd) · [KielMAT](../software/index.qmd#kielmat) · [StepuP](../projects/stepup.qmd)
 
-Current projects:
-- [ComOn](../projects#comon)
-- [StepUp](../projects#stepup)
+## Movement disorders {#datascience}
 
+Trained as a psychologist and neuroscientist, I want to understand movement disorders through quantitative data: how essential tremor responds to sensory feedback and arousal, which gait measures track the progression of Parkinson's disease, and how mobility, cognition and clinical scores relate in geriatric patients.
 
+Projects: [StepuP](../projects/stepup.qmd) · [Tremor](../projects/index.qmd#tremordetect) · [ComOn](../projects/index.qmd#comon)
 
+## Open and reproducible science {#open-science}
+
+Mobile EEG multiplies the analysis choices a researcher has to make. I study these choices and their consequences, develop reporting standards and data standards such as Motion-BIDS, and help build the communities that make open research the default.
+
+Projects: [META-REP](../projects/meta-rep.qmd) · [IGOR](../projects/igor.qmd) · [EEGManySteps](../projects/eegmanysteps.qmd) · [Motion-BIDS](../software/index.qmd#bids)

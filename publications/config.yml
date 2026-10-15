@@ -17,6 +17,31 @@ author:
 # Contact address sent to OpenAlex and Crossref ("polite pool").
 contact_email: julius.welzel@gmail.com
 
+# Titles in Title Case are converted to APA sentence case. Acronyms
+# (EEG, BIDS), words with digits and the proper nouns listed here keep
+# their capitals. Fix individual titles under "overrides" if needed.
+sentence_case: true
+keep_case:
+  - Parkinson
+  - Parkinsonian
+  - Alzheimer
+  - Huntington
+  - Bayesian
+  - Gaussian
+  - Fourier
+  - Kalman
+  - Kiel
+  - Oldenburg
+  - Amsterdam
+  - German
+  - Germany
+  - Europe
+  - European
+  - Python
+  - Julia
+  - Covid
+  - SARS-CoV-2
+
 sources:
   orcid: true
   openalex: true
@@ -40,3 +65,13 @@ overrides: {}
 # pages, doi, url, type (article, preprint, conference, chapter, dataset,
 # software, thesis, other).
 add: []
+
+# Publications shown on the project pages (projects/_pubs/<project>.md),
+# listed by DOI or title.
+projects:
+  stepup:
+    - 10.1371/journal.pone.0348957
+    - 10.3389/fneur.2024.1455692
+  meta-rep:
+    - 10.1111/psyp.70352
+    - "Have we solved the replicability crisis? From open practices to systemic reform in cognitive neurosciences"

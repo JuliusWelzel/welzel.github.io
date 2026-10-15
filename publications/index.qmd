@@ -1,7 +1,14 @@
 ---
 title: Publications
-excerpt: "A list of my scientific publications"
-toc-location: right
+description: "Scientific publications in APA style, updated automatically every week."
 ---
+
+::: {.hero}
+[Publications]{.kicker}
+
+# Publications {.unlisted}
+
+[Journal articles, preprints and software papers, newest first. The list updates itself every week from ORCID, OpenAlex, Crossref and Google Scholar.]{.dek}
+:::
 
 {{< include _publications.md >}}
