@@ -522,6 +522,16 @@ def rank(rec: dict) -> tuple:
     )
 
 
+SUPPLEMENT_TITLE = re.compile(
+    r"^(additional file|supplementary (material|information|data|file)|supplemental (material|data)"
+    r"|table s?\d+|figure s?\d+|data sheet \d+)\b", re.IGNORECASE)
+
+
+def is_supplement(rec: dict) -> bool:
+    """Supplementary files deposited separately (e.g. figshare 'Additional file 1 of ...')."""
+    return bool(SUPPLEMENT_TITLE.match(rec.get("title", "")))
+
+
 def merge_by_doi(records: Iterable[dict]) -> list[dict]:
     by_doi: dict[str, dict] = {}
     rest: list[dict] = []
@@ -553,7 +563,12 @@ def merge_by_title(records: list[dict]) -> list[dict]:
             other_title = (strip_version(other["title"]) if other.get("type") in {"software", "dataset"}
                            else other["title"])
             if not titles_match(title, other_title):
-                continue
+                na, nb = norm_title(title), norm_title(other_title)
+                prefix = (len(min(na, nb, key=len)) >= 40
+                          and (na.startswith(nb) or nb.startswith(na))
+                          and not (rec.get("doi") and other.get("doi")))
+                if not prefix:
+                    continue
             # Same title but clearly different DOIs of the same type and
             # several years apart (e.g. a replication) stay separate.
             if (rec.get("doi") and other.get("doi") and rec["doi"] != other["doi"]
@@ -938,7 +953,7 @@ def main() -> int:
     else:
         records, failed = collect(config, previous)
 
-    records = [r for r in records if r.get("title") and r.get("type") != "drop"]
+    records = [r for r in records if r.get("title") and r.get("type") != "drop" and not is_supplement(r)]
     records = merge_by_title(merge_by_doi(records + manual_records(config)))
     records = apply_curation(records, config)
     data = dump_records(records)
