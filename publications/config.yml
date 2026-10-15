@@ -1,0 +1,42 @@
+# Configuration for scripts/update_publications.py
+#
+# The weekly "Update publications" GitHub Action reads this file, collects
+# publications from the enabled sources, and regenerates
+# publications/publications.yml and publications/_publications.md.
+# Edit this file (not the generated ones) to add, hide or correct entries.
+
+author:
+  name: Julius Welzel
+  orcid: 0000-0001-8958-0934
+  google_scholar: CWxKXBcAAAAJ
+  # Author entries matching this family name and given-name initial are
+  # shown in bold.
+  family: Welzel
+  given_initial: J
+
+# Contact address sent to OpenAlex and Crossref ("polite pool").
+contact_email: julius.welzel@gmail.com
+
+sources:
+  orcid: true
+  openalex: true
+  crossref: true
+  google_scholar: true
+
+# Publications to hide, e.g. wrong attributions or duplicates.
+# Match by DOI or by exact title (case-insensitive).
+#   - doi: 10.1234/abcd
+#   - title: Some title that is not mine
+exclude: []
+
+# Corrections applied to an entry, keyed by DOI. Any field of an entry
+# (title, authors, year, venue, volume, issue, pages, url, type) can be set.
+#   10.1234/abcd:
+#     venue: Journal of Corrected Names
+overrides: {}
+
+# Publications that none of the sources know about. Fields:
+# title, authors (list of "Family, G."), year, venue, volume, issue,
+# pages, doi, url, type (article, preprint, conference, chapter, dataset,
+# software, thesis, other).
+add: []

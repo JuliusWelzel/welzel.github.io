@@ -9,4 +9,6 @@ jsconfig.json
 /.quarto/
 
 
-/docs
+# Python
+__pycache__/
+*.pyc

@@ -3,12 +3,10 @@ title: Curriculum vitae
 excerpt: My current CV
 date: 2023-03-10
 published-title: CV last updated
-engine: knitr 
-cv:
-  pdf: "cv_welzel.pdf"
 ---
 
-```{css echo=FALSE}
+```{=html}
+<style>
 .embed-container {
     position: relative;
     padding-bottom: 129%;
@@ -26,16 +24,15 @@ cv:
     width: 100%;
     height: 100%;
 }
-```
+</style>
 
-```{=html}
 <p class="text-center">
-  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$cv$pdf`" target="_blank">
+  <a class="btn btn-primary btn-lg cv-download" href="cv_welzel.pdf" target="_blank">
     Download current CV
   </a>
 </p>
 
 <div class="embed-container">
-  <iframe src="`r rmarkdown::metadata$cv$pdf`" style="border: 0.5px"></iframe>
+  <iframe src="cv_welzel.pdf" style="border: 0.5px"></iframe>
 </div>
 ```
