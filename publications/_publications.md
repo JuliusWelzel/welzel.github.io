@@ -2,11 +2,11 @@
      use publications/config.yml to add, hide or correct entries. -->
 
 ::: {.pub-meta}
-49 publications · updated automatically every week from [ORCID](https://orcid.org/0000-0001-8958-0934), [Google Scholar](https://scholar.google.com/citations?user=CWxKXBcAAAAJ), [OpenAlex](https://openalex.org) and [Crossref](https://www.crossref.org) · last change 2026-10-15
+50 publications · updated automatically every week from [ORCID](https://orcid.org/0000-0001-8958-0934), [Google Scholar](https://scholar.google.com/citations?user=CWxKXBcAAAAJ), [OpenAlex](https://openalex.org) and [Crossref](https://www.crossref.org) · last change 2026-11-02
 :::
 
 ::: {.pub-jump}
-[Journal articles (44)](#articles) · [Preprints (5)](#preprints)
+[Journal articles (45)](#articles) · [Preprints (5)](#preprints)
 :::
 
 ## Journal articles {#articles}
@@ -15,6 +15,7 @@
 
 ::: {.pub-list}
 - Eikens, H., **Welzel, J.**, Hansen, C., Maetzler, W., & Schmidt, G. (2026). Towards a model-based digital twin for gait analysis in Parkinson-related assessment. *Current Directions in Biomedical Engineering*, *12*(1), 119–122. [https://doi.org/10.1515/cdbme-2026-0131](https://doi.org/10.1515/cdbme-2026-0131){.pub-doi}
+- Papin, L. J., **Welzel, J.**, Koschate‐Storm, J., Zieschang, T., Witt, K., & Debener, S. (2026). Treadmill or overground? Cognitive–Motor interference effects in healthy older individuals. *European Journal of Neuroscience*, *64*(8), Article e70724. [https://doi.org/10.1111/ejn.70724](https://doi.org/10.1111/ejn.70724){.pub-doi}
 - Contreras-Altamirano, M., Klapprott, M., Jacobsen, N., Maanen, P., **Welzel, J.**, & Debener, S. (2026). A portable solution for simultaneous human movement and mobile EEG acquisition: readiness potential for basketball free-throw shooting. *Experimental Brain Research*, *244*(8), Article 153. [https://doi.org/10.1007/s00221-026-07342-6](https://doi.org/10.1007/s00221-026-07342-6){.pub-doi}
 - Stagneth, L., Geritz, J., Hermann, G., Dahl, L., Zuber, L., Neumann, C., Lassen, J., Maetzler, C., Kranczioch, C., **Welzel, J.**, & Maetzler, W. (2026). EEG-based assessment of sustained attention in geriatric inpatients: a feasibility study. *GeroScience*. [https://doi.org/10.1007/s11357-026-02406-5](https://doi.org/10.1007/s11357-026-02406-5){.pub-doi}
 - Haupt, T., Maanen, P., Daeglau, M., Contreras Altamirano, M., Stritzke, A. S., Kiene, F., **Welzel, J.**, Blum, S., Roheger, M., & Debener, S. (2026). Enhancing mobile brain and body imaging: Open-source solutions for real-world research applications. *iScience*, *29*(7), Article 116647. [https://doi.org/10.1016/j.isci.2026.116647](https://doi.org/10.1016/j.isci.2026.116647){.pub-doi} [Preprint](https://doi.org/10.2139/ssrn.5433769){.pub-badge .pub-preprint-link}
