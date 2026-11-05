@@ -4,8 +4,6 @@ description: "How the nervous system weighs noisy sensory estimates of body stat
 ---
 
 ::: {.hero}
-[Project · Gait · Computational motor control]{.kicker}
-
 # Where to put the next foot {.unlisted}
 
 [Every step is a decision made under uncertainty. We ask whether the nervous system makes it like a Bayesian observer.]{.dek}

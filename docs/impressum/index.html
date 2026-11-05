@@ -42,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-51fa64012ea3876c6fe3b7ea7def472d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9fda50ce9e18b0e6073902299ce06bd6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -95,9 +95,16 @@ ul.task-list li input[type="checkbox"] {
       document.head.appendChild(script);
     });
   })();
+
+  // Every page carries its own .hero heading; drop Quarto's duplicate (hidden) title block.
+  document.addEventListener("DOMContentLoaded", function () {
+    var header = document.getElementById("title-block-header");
+    if (header && document.querySelector(".hero h1")) header.remove();
+  });
 </script>
 
 
+<link rel="stylesheet" href="../tokens.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -185,13 +192,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="hero">
-<p><span class="kicker">Legal</span></p>
-<section id="impressum" class="level1 unlisted">
+<section id="impressum" class="level1 unlisted hero">
 <h1 class="unlisted">Impressum</h1>
 <p><span class="dek">Kontakt, Verantwortlichkeit und Datenschutz.</span></p>
 </section>
-</div>
 <section id="angaben-gemäß-5-ddg" class="level2">
 <h2 class="anchored" data-anchor-id="angaben-gemäß-5-ddg">Angaben gemäß § 5 DDG</h2>
 <p>Julius Welzel<br> Arnold-Heller-Str. 6<br> 24114 Kiel</p>
@@ -206,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="haftungsausschluss">Haftungsausschluss</h2>
 <p><strong>Haftung für Inhalte.</strong> Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Die Publikationsliste wird automatisch aus öffentlichen Datenbanken (ORCID, OpenAlex, Crossref, Google Scholar) erstellt und kann daher Fehler enthalten.</p>
 <p><strong>Haftung für Links.</strong> Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte übernehme ich keine Gewähr; verantwortlich ist stets der jeweilige Anbieter oder Betreiber der Seiten. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Werden mir Rechtsverletzungen bekannt, entferne ich die betreffenden Links umgehend.</p>
-<p><strong>Urheberrecht.</strong> Die von mir erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Inhalte Dritter sind als solche gekennzeichnet. Die verwendeten Schriften (Libre Caslon, Source Serif 4, IBM Plex Sans) stehen unter der SIL Open Font License, die Animationsbibliothek Motion unter der MIT-Lizenz.</p>
+<p><strong>Urheberrecht.</strong> Die von mir erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Inhalte Dritter sind als solche gekennzeichnet. Die verwendeten Schriften (Instrument Serif, Geist, Geist Mono) stehen unter der SIL Open Font License, die Animationsbibliothek Motion unter der MIT-Lizenz.</p>
 </section>
 <section id="datenschutzerklärung" class="level2">
 <h2 class="anchored" data-anchor-id="datenschutzerklärung">Datenschutzerklärung</h2>
@@ -652,7 +656,7 @@ ul.task-list li input[type="checkbox"] {
 <p>© Julius Welzel</p>
 </div>   
     <div class="nav-footer-center">
-<p>Built with <a href="https://quarto.org">Quarto</a> · publications updated weekly</p>
+<p>Built with <a href="https://quarto.org">Quarto</a>, publications updated weekly</p>
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">

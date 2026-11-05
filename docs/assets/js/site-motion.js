@@ -211,7 +211,7 @@
     var tag = $(".reported-label", svg);
     var others = forks.filter(function (f) { return f !== reported; });
     function highlight() {
-      reported.setAttribute("stroke", "#b3261e");
+      reported.setAttribute("stroke", "var(--color-accent)");
       reported.setAttribute("stroke-width", "2.4");
       reported.setAttribute("stroke-opacity", "1");
     }

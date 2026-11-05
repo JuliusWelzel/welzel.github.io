@@ -43,10 +43,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-51fa64012ea3876c6fe3b7ea7def472d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9fda50ce9e18b0e6073902299ce06bd6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -96,9 +96,16 @@ ul.task-list li input[type="checkbox"] {
       document.head.appendChild(script);
     });
   })();
+
+  // Every page carries its own .hero heading; drop Quarto's duplicate (hidden) title block.
+  document.addEventListener("DOMContentLoaded", function () {
+    var header = document.getElementById("title-block-header");
+    if (header && document.querySelector(".hero h1")) header.remove();
+  });
 </script>
 
 
+<link rel="stylesheet" href="../tokens.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -186,32 +193,29 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="hero">
-<p><span class="kicker">Research</span></p>
-<section id="research-topics" class="level1 unlisted">
+<section id="research-topics" class="level1 unlisted hero">
 <h1 class="unlisted">Research topics</h1>
 <p><span class="dek">Cortical contributions to gait, quantitative assessment of movement disorders, and methods for reproducible mobile EEG research.</span></p>
 </section>
-</div>
 <section id="eeg" class="level2">
 <h2 class="anchored" data-anchor-id="eeg">Mobile EEG during walking</h2>
 <p>I record EEG during walking and combine it with motion capture, EMG and wearable sensors to study cortical contributions to gait, for example gait-related beta oscillations and corticomuscular coherence, and their changes in Parkinson’s disease.</p>
-<p>Projects: <a href="../projects/stepup.html">StepuP</a> · <a href="../projects/eegmanysteps.html">EEGManySteps</a> · <a href="../projects/index.html#pocketable">Pocketable MoBI</a> · <a href="../projects/index.html#epoc">EPOC</a></p>
+<p>Projects: <a href="../projects/stepup.html">StepuP</a>, <a href="../projects/eegmanysteps.html">EEGManySteps</a>, <a href="../projects/index.html#pocketable">Pocketable MoBI</a>, <a href="../projects/index.html#epoc">EPOC</a></p>
 </section>
 <section id="algorithms" class="level2">
 <h2 class="anchored" data-anchor-id="algorithms">Gait and balance</h2>
 <p>I develop and validate algorithms that derive gait and balance parameters from wearable and motion-capture data, and apply them in neurological and geriatric cohorts.</p>
-<p>Projects: <a href="../software/index.html#kielmat">KielMAT</a> · <a href="../projects/stepup.html">StepuP</a></p>
+<p>Projects: <a href="../software/index.html#kielmat">KielMAT</a>, <a href="../projects/stepup.html">StepuP</a></p>
 </section>
 <section id="datascience" class="level2">
 <h2 class="anchored" data-anchor-id="datascience">Movement disorders</h2>
 <p>I use quantitative measures to characterise movement disorders, including the modulation of essential tremor by sensory feedback and arousal, gait measures as progression markers in Parkinson’s disease, and the relationship between mobility, cognition and clinical scores in geriatric patients.</p>
-<p>Projects: <a href="../projects/stepup.html">StepuP</a> · <a href="../projects/index.html#tremordetect">Tremor assessment</a> · <a href="../projects/index.html#comon">ComOn</a></p>
+<p>Projects: <a href="../projects/stepup.html">StepuP</a>, <a href="../projects/index.html#tremordetect">Tremor assessment</a>, <a href="../projects/index.html#comon">ComOn</a></p>
 </section>
 <section id="open-science" class="level2">
 <h2 class="anchored" data-anchor-id="open-science">Open and reproducible methods</h2>
 <p>I study analysis and reporting practices in mobile EEG, contribute to data standards such as Motion-BIDS, and support open-science initiatives in biological psychology.</p>
-<p>Projects: <a href="../projects/meta-rep.html">META-REP</a> · <a href="../projects/igor.html">IGOR</a> · <a href="../projects/eegmanysteps.html">EEGManySteps</a> · <a href="../projects/index.html#motion-bids">Motion-BIDS</a></p>
+<p>Projects: <a href="../projects/meta-rep.html">META-REP</a>, <a href="../projects/igor.html">IGOR</a>, <a href="../projects/eegmanysteps.html">EEGManySteps</a>, <a href="../projects/index.html#motion-bids">Motion-BIDS</a></p>
 
 
 </section>
@@ -624,7 +628,7 @@ ul.task-list li input[type="checkbox"] {
 <p>© Julius Welzel</p>
 </div>   
     <div class="nav-footer-center">
-<p>Built with <a href="https://quarto.org">Quarto</a> · publications updated weekly</p>
+<p>Built with <a href="https://quarto.org">Quarto</a>, publications updated weekly</p>
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">

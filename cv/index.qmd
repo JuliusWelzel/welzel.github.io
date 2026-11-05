@@ -4,8 +4,6 @@ description: "My CV"
 ---
 
 ::: {.hero}
-[CV]{.kicker}
-
 # Curriculum vitae {.unlisted}
 
 [A PDF version of my CV.]{.dek}

@@ -4,8 +4,6 @@ description: "Scientific publications in APA style, updated automatically every 
 ---
 
 ::: {.hero}
-[Publications]{.kicker}
-
 # Publications {.unlisted}
 
 [Peer-reviewed journal articles and preprints, newest first. Updated weekly from ORCID, OpenAlex, Crossref and Google Scholar.]{.dek}

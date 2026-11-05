@@ -4,8 +4,6 @@ description: "Preprocessing and reporting practices in mobile EEG within the DFG
 ---
 
 ::: {.hero}
-[Project · Meta-science · Mobile EEG]{.kicker}
-
 # META-REP {.unlisted}
 
 [Preprocessing and reporting practices in mobile EEG, and the development of a reporting standard for mobile EEG studies.]{.dek}

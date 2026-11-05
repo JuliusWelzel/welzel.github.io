@@ -43,10 +43,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-51fa64012ea3876c6fe3b7ea7def472d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9fda50ce9e18b0e6073902299ce06bd6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -96,9 +96,16 @@ ul.task-list li input[type="checkbox"] {
       document.head.appendChild(script);
     });
   })();
+
+  // Every page carries its own .hero heading; drop Quarto's duplicate (hidden) title block.
+  document.addEventListener("DOMContentLoaded", function () {
+    var header = document.getElementById("title-block-header");
+    if (header && document.querySelector(".hero h1")) header.remove();
+  });
 </script>
 
 
+<link rel="stylesheet" href="../tokens.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -186,13 +193,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="hero">
-<p><span class="kicker">Community · Open science · DGPs</span></p>
-<section id="igor" class="level1 unlisted">
+<section id="igor" class="level1 unlisted hero">
 <h1 class="unlisted">IGOR</h1>
 <p><span class="dek">Interest Group on Open and Reproducible Research of the section Biological Psychology and Neuropsychology of the German Psychological Society (DGPs).</span></p>
 </section>
-</div>
 <div class="facts facts-group">
 <div>
 <p><span class="label">Section</span> <a href="https://www.dgps.de/fachgruppen/fgbi/aktivitaeten-der-fachgruppe/igor/">Biological Psychology and Neuropsychology</a>, DGPs</p>
@@ -204,11 +208,11 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="label">My role</span> BIDS Consultation Hour; co-lead of the EEG/ERP preprocessing umbrella review</p>
 </div>
 <div>
-<p><span class="label">Links</span> <a href="https://www.dgps.de/fachgruppen/fgbi/aktivitaeten-der-fachgruppe/igor/">Website</a> · <a href="https://bsky.app/profile/igor-dgps.bsky.social">Bluesky</a> · <a href="https://github.com/IGOR-bioDGPs">GitHub</a></p>
+<p><span class="label">Links</span> <a href="https://www.dgps.de/fachgruppen/fgbi/aktivitaeten-der-fachgruppe/igor/">Website</a>, <a href="https://bsky.app/profile/igor-dgps.bsky.social">Bluesky</a>, <a href="https://github.com/IGOR-bioDGPs">GitHub</a></p>
 </div>
 </div>
 <figure class="figure-anim figure">
-<svg data-anim="network" viewbox="0 0 720 300" role="img" aria-label="A network of labs connected around IGOR"><path class="edge" d="M360.0,150.0 L626.6,147.5" stroke="#6e6a62" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L552.0,208.3" stroke="#6e6a62" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L533.8,239.6" stroke="#6e6a62" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L418.2,241.1" stroke="#6e6a62" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L286.7,255.0" stroke="#6e6a62" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L202.5,230.5" stroke="#6e6a62" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L139.5,189.2" stroke="#6e6a62" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L160.0,157.7" stroke="#6e6a62" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L136.8,97.2" stroke="#6e6a62" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L247.8,67.5" stroke="#6e6a62" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L315.7,43.3" stroke="#6e6a62" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L407.1,52.1" stroke="#6e6a62" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L499.7,57.1" stroke="#6e6a62" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L555.6,116.4" stroke="#6e6a62" stroke-width="1" fill="none"></path><path class="edge" d="M626.6,147.5 L552.0,208.3" stroke="#dcd7cc" stroke-width="1" fill="none"></path><path class="edge" d="M552.0,208.3 L533.8,239.6" stroke="#dcd7cc" stroke-width="1" fill="none"></path><path class="edge" d="M418.2,241.1 L286.7,255.0" stroke="#dcd7cc" stroke-width="1" fill="none"></path><path class="edge" d="M286.7,255.0 L160.0,157.7" stroke="#dcd7cc" stroke-width="1" fill="none"></path><path class="edge" d="M202.5,230.5 L136.8,97.2" stroke="#dcd7cc" stroke-width="1" fill="none"></path><path class="edge" d="M139.5,189.2 L160.0,157.7" stroke="#dcd7cc" stroke-width="1" fill="none"></path><path class="edge" d="M160.0,157.7 L136.8,97.2" stroke="#dcd7cc" stroke-width="1" fill="none"></path><path class="edge" d="M136.8,97.2 L407.1,52.1" stroke="#dcd7cc" stroke-width="1" fill="none"></path><path class="edge" d="M407.1,52.1 L499.7,57.1" stroke="#dcd7cc" stroke-width="1" fill="none"></path><path class="edge" d="M499.7,57.1 L552.0,208.3" stroke="#dcd7cc" stroke-width="1" fill="none"></path><path class="edge" d="M555.6,116.4 L552.0,208.3" stroke="#dcd7cc" stroke-width="1" fill="none"></path><circle class="node" cx="626.6" cy="147.5" r="4.9" fill="#141414"></circle><circle class="node" cx="552.0" cy="208.3" r="5.4" fill="#141414"></circle><circle class="node" cx="533.8" cy="239.6" r="7.0" fill="#141414"></circle><circle class="node" cx="418.2" cy="241.1" r="7.6" fill="#141414"></circle><circle class="node" cx="286.7" cy="255.0" r="4.6" fill="#141414"></circle><circle class="node" cx="202.5" cy="230.5" r="6.5" fill="#141414"></circle><circle class="node" cx="139.5" cy="189.2" r="7.2" fill="#141414"></circle><circle class="node" cx="160.0" cy="157.7" r="4.6" fill="#141414"></circle><circle class="node" cx="136.8" cy="97.2" r="7.4" fill="#141414"></circle><circle class="node" cx="247.8" cy="67.5" r="4.9" fill="#141414"></circle><circle class="node" cx="315.7" cy="43.3" r="6.6" fill="#141414"></circle><circle class="node" cx="407.1" cy="52.1" r="6.4" fill="#141414"></circle><circle class="node" cx="499.7" cy="57.1" r="6.7" fill="#141414"></circle><circle class="node" cx="555.6" cy="116.4" r="5.6" fill="#141414"></circle><g class="node"><circle cx="360" cy="150" r="34" fill="#b3261e"></circle><text x="360" y="155" text-anchor="middle" class="svg-label svg-core" fill="#fbfaf6">IGOR</text></g></svg>
+<svg data-anim="network" viewbox="0 0 720 300" role="img" aria-label="A network of labs connected around IGOR"><path class="edge" d="M360.0,150.0 L626.6,147.5" stroke="var(--color-muted)" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L552.0,208.3" stroke="var(--color-muted)" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L533.8,239.6" stroke="var(--color-muted)" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L418.2,241.1" stroke="var(--color-muted)" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L286.7,255.0" stroke="var(--color-muted)" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L202.5,230.5" stroke="var(--color-muted)" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L139.5,189.2" stroke="var(--color-muted)" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L160.0,157.7" stroke="var(--color-muted)" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L136.8,97.2" stroke="var(--color-muted)" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L247.8,67.5" stroke="var(--color-muted)" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L315.7,43.3" stroke="var(--color-muted)" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L407.1,52.1" stroke="var(--color-muted)" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L499.7,57.1" stroke="var(--color-muted)" stroke-width="1" fill="none"></path><path class="edge" d="M360.0,150.0 L555.6,116.4" stroke="var(--color-muted)" stroke-width="1" fill="none"></path><path class="edge" d="M626.6,147.5 L552.0,208.3" stroke="var(--color-rule-2)" stroke-width="1" fill="none"></path><path class="edge" d="M552.0,208.3 L533.8,239.6" stroke="var(--color-rule-2)" stroke-width="1" fill="none"></path><path class="edge" d="M418.2,241.1 L286.7,255.0" stroke="var(--color-rule-2)" stroke-width="1" fill="none"></path><path class="edge" d="M286.7,255.0 L160.0,157.7" stroke="var(--color-rule-2)" stroke-width="1" fill="none"></path><path class="edge" d="M202.5,230.5 L136.8,97.2" stroke="var(--color-rule-2)" stroke-width="1" fill="none"></path><path class="edge" d="M139.5,189.2 L160.0,157.7" stroke="var(--color-rule-2)" stroke-width="1" fill="none"></path><path class="edge" d="M160.0,157.7 L136.8,97.2" stroke="var(--color-rule-2)" stroke-width="1" fill="none"></path><path class="edge" d="M136.8,97.2 L407.1,52.1" stroke="var(--color-rule-2)" stroke-width="1" fill="none"></path><path class="edge" d="M407.1,52.1 L499.7,57.1" stroke="var(--color-rule-2)" stroke-width="1" fill="none"></path><path class="edge" d="M499.7,57.1 L552.0,208.3" stroke="var(--color-rule-2)" stroke-width="1" fill="none"></path><path class="edge" d="M555.6,116.4 L552.0,208.3" stroke="var(--color-rule-2)" stroke-width="1" fill="none"></path><circle class="node" cx="626.6" cy="147.5" r="4.9" fill="var(--color-ink)"></circle><circle class="node" cx="552.0" cy="208.3" r="5.4" fill="var(--color-ink)"></circle><circle class="node" cx="533.8" cy="239.6" r="7.0" fill="var(--color-ink)"></circle><circle class="node" cx="418.2" cy="241.1" r="7.6" fill="var(--color-ink)"></circle><circle class="node" cx="286.7" cy="255.0" r="4.6" fill="var(--color-ink)"></circle><circle class="node" cx="202.5" cy="230.5" r="6.5" fill="var(--color-ink)"></circle><circle class="node" cx="139.5" cy="189.2" r="7.2" fill="var(--color-ink)"></circle><circle class="node" cx="160.0" cy="157.7" r="4.6" fill="var(--color-ink)"></circle><circle class="node" cx="136.8" cy="97.2" r="7.4" fill="var(--color-ink)"></circle><circle class="node" cx="247.8" cy="67.5" r="4.9" fill="var(--color-ink)"></circle><circle class="node" cx="315.7" cy="43.3" r="6.6" fill="var(--color-ink)"></circle><circle class="node" cx="407.1" cy="52.1" r="6.4" fill="var(--color-ink)"></circle><circle class="node" cx="499.7" cy="57.1" r="6.7" fill="var(--color-ink)"></circle><circle class="node" cx="555.6" cy="116.4" r="5.6" fill="var(--color-ink)"></circle><g class="node"><circle cx="360" cy="150" r="34" fill="var(--color-accent)"></circle><text x="360" y="155" text-anchor="middle" class="svg-label svg-core" fill="var(--color-paper)">IGOR</text></g></svg>
 <figcaption>Open science is a community effort: labs in biological psychology and neuropsychology, connected through shared tools, data standards and know-how.</figcaption>
 </figure>
 <section id="about-igor" class="level2">
@@ -641,7 +645,7 @@ ul.task-list li input[type="checkbox"] {
 <p>© Julius Welzel</p>
 </div>   
     <div class="nav-footer-center">
-<p>Built with <a href="https://quarto.org">Quarto</a> · publications updated weekly</p>
+<p>Built with <a href="https://quarto.org">Quarto</a>, publications updated weekly</p>
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">

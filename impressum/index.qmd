@@ -3,8 +3,6 @@ title: Impressum
 ---
 
 ::: {.hero}
-[Legal]{.kicker}
-
 # Impressum {.unlisted}
 
 [Kontakt, Verantwortlichkeit und Datenschutz.]{.dek}
@@ -30,7 +28,7 @@ Dies ist eine private, nicht-kommerzielle Website über meine wissenschaftliche 
 
 **Haftung für Links.** Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte übernehme ich keine Gewähr; verantwortlich ist stets der jeweilige Anbieter oder Betreiber der Seiten. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Werden mir Rechtsverletzungen bekannt, entferne ich die betreffenden Links umgehend.
 
-**Urheberrecht.** Die von mir erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Inhalte Dritter sind als solche gekennzeichnet. Die verwendeten Schriften (Libre Caslon, Source Serif 4, IBM Plex Sans) stehen unter der SIL Open Font License, die Animationsbibliothek Motion unter der MIT-Lizenz.
+**Urheberrecht.** Die von mir erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Inhalte Dritter sind als solche gekennzeichnet. Die verwendeten Schriften (Instrument Serif, Geist, Geist Mono) stehen unter der SIL Open Font License, die Animationsbibliothek Motion unter der MIT-Lizenz.
 
 ## Datenschutzerklärung
 

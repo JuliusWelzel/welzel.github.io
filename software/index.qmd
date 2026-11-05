@@ -4,8 +4,6 @@ description: "Published open-source Python packages for motion analysis and rese
 ---
 
 ::: {.hero}
-[Software]{.kicker}
-
 # Software {.unlisted}
 
 [Published open-source Python packages for the analysis and management of motion and clinical research data.]{.dek}

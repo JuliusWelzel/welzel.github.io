@@ -1,17 +1,20 @@
 ---
 title: "Julius Welzel"
-pagetitle: "Julius Welzel · Cognitive neuroscientist"
+pagetitle: "Julius Welzel, cognitive neuroscientist"
 description: "Cognitive neuroscientist working on gait, movement disorders, mobile EEG and research data standards."
 aliases:
   - /about
 ---
 
 ::: {.hero}
-[Julius Welzel · Cognitive neuroscientist]{.kicker}
-
 # Movement, mobile EEG and open science {.unlisted}
 
 [Research on the cortical control of gait and on movement disorders, using mobile EEG, motion capture and wearable sensors.]{.dek}
+
+::: {.hero-actions}
+[projects](projects/index.qmd){.btn-pill .btn-pill--primary}
+[publications](publications/index.qmd){.btn-pill .btn-pill--ghost}
+:::
 :::
 
 ::: {.hero-figure .reveal}
@@ -30,7 +33,7 @@ For collaborations or thesis projects, please [contact me by email](mailto:juliu
 ::: {.aside-card}
 [Affiliations (each part-time)]{.label}
 
-Neuropsychology Lab, University of Oldenburg · Neurogeriatrics, Kiel University
+Neuropsychology Lab, University of Oldenburg, Neurogeriatrics, Kiel University
 
 [Current projects]{.label}
 
@@ -41,7 +44,7 @@ Neuropsychology Lab, University of Oldenburg · Neurogeriatrics, Kiel University
 
 [Profiles]{.label}
 
-[GitHub](https://github.com/JuliusWelzel) · [Google Scholar](https://scholar.google.com/citations?user=CWxKXBcAAAAJ) · [ORCID](https://orcid.org/0000-0001-8958-0934) · [Mastodon](https://mastodon.online/@JuliusWelzel)
+[GitHub](https://github.com/JuliusWelzel), [Google Scholar](https://scholar.google.com/citations?user=CWxKXBcAAAAJ), [ORCID](https://orcid.org/0000-0001-8958-0934), [Mastodon](https://mastodon.online/@JuliusWelzel)
 :::
 :::
 
@@ -49,33 +52,33 @@ Neuropsychology Lab, University of Oldenburg · Neurogeriatrics, Kiel University
 
 ::: {.card-grid}
 ::: {.project-card}
-[Parkinson's disease · Mobile EEG]{.kicker}
+[Parkinson's disease, Mobile EEG]{.kicker}
 
 ### [StepuP](projects/stepup.qmd){.stretched}
 
 Multicentre randomised controlled trial on the biomechanical and neurophysiological mechanisms of treadmill training in Parkinson's disease.
 
-[JPND · 2023–2026]{.card-meta}
+[JPND, 2023–2026]{.card-meta}
 :::
 
 ::: {.project-card}
-[Meta-science · Mobile EEG]{.kicker}
+[Meta-science, Mobile EEG]{.kicker}
 
 ### [META-REP](projects/meta-rep.qmd){.stretched}
 
 Preprocessing and reporting practices in mobile EEG, and a reporting standard for mobile EEG studies.
 
-[DFG · SPP 2317]{.card-meta}
+[DFG, SPP 2317]{.card-meta}
 :::
 
 ::: {.project-card}
-[Mobile EEG · Gait]{.kicker}
+[Mobile EEG, Gait]{.kicker}
 
 ### [EEGManySteps](projects/eegmanysteps.qmd){.stretched}
 
 Multi-lab collection of gait EEG data to quantify the influence of recording setups and analysis pipelines.
 
-[Community · since 2024]{.card-meta}
+[Community, since 2024]{.card-meta}
 :::
 
 ::: {.project-card}
@@ -85,7 +88,7 @@ Multi-lab collection of gait EEG data to quantify the influence of recording set
 
 Interest group on open and reproducible research of the DGPs section Biological Psychology and Neuropsychology.
 
-[DGPs · since 2020]{.card-meta}
+[DGPs, since 2020]{.card-meta}
 :::
 :::
 

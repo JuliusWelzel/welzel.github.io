@@ -1,39 +1,37 @@
 /*-- scss:defaults --*/
 
-// Editorial palette: paper, ink and a single red for rubrics.
-$paper: #fbfaf6;
-$paper-deep: #f3f0e8;
-$ink: #141414;
-$ink-soft: #3b3a37;
-$muted: #6e6a62;
-$hairline: #dcd7cc;
-$accent: #b3261e;
-$accent-soft: #f4e3df;
+// Hallmark · shape: Settled index · genre: atmospheric · theme: Lumen night (named by user) · redesign: full
+// hero: Settled (left-aligned head, one sentence, two actions) · nav: edge-aligned wordmark, links and icons in one row · footer: hairline row · imagery: the research figures drawn in hairline wells · signature: the BIDS pipeline, a walking person whose sensor signals become time series and a dataset tree
+// axes: dark/roman-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0
+// Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: S, dense publication list stays plain on purpose
+// waive 48 · Sass needs real colour values to derive Bootstrap's own variables; the hex below mirrors tokens.css and is not used for the design itself.
+// waive 38iii · no accented verb: the home headline has no verb and the owner's words stay.
 
-$font-display: "Libre Caslon Display", "Libre Caslon Text", Georgia, "Times New Roman", serif;
-$font-caslon: "Libre Caslon Text", Georgia, "Times New Roman", serif;
-$font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-$font-sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+$paper: #060510;
+$paper-2: #0d0b19;
+$ink: #f3f0f8;
+$muted: #9c98aa;
+$rule: #262436;
+$accent: #ffa54b;
 
 $body-bg: $paper;
 $body-color: $ink;
-$primary: $ink;
+$primary: $accent;
 $secondary: $muted;
-$danger: $accent;
 $link-color: $ink;
 $link-hover-color: $accent;
 $link-decoration: underline;
 
-$font-family-sans-serif: $font-serif;
-$font-family-base: $font-serif;
-$headings-font-family: $font-caslon;
+$font-family-sans-serif: "Geist", ui-sans-serif, system-ui, sans-serif;
+$font-family-base: $font-family-sans-serif;
+$headings-font-family: "Instrument Serif", ui-serif, Georgia, serif;
 $headings-font-weight: 400;
 $headings-color: $ink;
-$font-size-base: 1.125rem;
-$line-height-base: 1.62;
+$font-size-base: 1.0625rem;
+$line-height-base: 1.6;
 
-$border-color: $hairline;
-$hr-border-color: $ink;
+$border-color: $rule;
+$hr-border-color: $rule;
 
 $navbar-bg: $paper;
 $navbar-fg: $ink;
@@ -44,6 +42,9 @@ $footer-fg: $muted;
 $toc-color: $muted;
 $toc-active-border: $accent;
 
+$code-bg: $paper-2;
+$code-color: $ink;
+
 /*-- scss:rules --*/
 
 // ---------------------------------------------------------------------------
@@ -52,281 +53,269 @@ $toc-active-border: $accent;
 $latin: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 $latin-ext: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 
-@mixin face($family, $file, $weight: 400, $style: normal) {
+@mixin face($family, $file, $weight: 400) {
   @each $subset, $range in (latin: $latin, latin-ext: $latin-ext) {
     @font-face {
       font-family: $family;
-      font-style: $style;
+      font-style: normal;
       font-weight: $weight;
       font-display: swap;
-      src: url("assets/fonts/#{$file}-#{$subset}-#{$weight}-#{$style}.woff2") format("woff2");
+      src: url("assets/fonts-lumen/#{$file}-#{$subset}-#{$weight}-normal.woff2") format("woff2");
       unicode-range: $range;
     }
   }
 }
 
-@include face("Libre Caslon Display", "libre-caslon-display");
-@include face("Libre Caslon Text", "libre-caslon-text");
-@include face("Libre Caslon Text", "libre-caslon-text", 400, italic);
-@include face("Libre Caslon Text", "libre-caslon-text", 700);
-@include face("IBM Plex Sans", "ibm-plex-sans");
-@include face("IBM Plex Sans", "ibm-plex-sans", 500);
-@include face("IBM Plex Sans", "ibm-plex-sans", 600);
+@include face("Instrument Serif", "instrument-serif");
+@include face("Geist", "geist-sans");
+@include face("Geist Mono", "geist-mono");
 
-@each $subset, $range in (latin: $latin, latin-ext: $latin-ext) {
-  @each $style in (normal, italic) {
-    @font-face {
-      font-family: "Source Serif 4";
-      font-style: $style;
-      font-weight: 200 900;
-      font-display: swap;
-      src: url("assets/fonts/source-serif-4-#{$subset}-wght-#{$style}.woff2") format("woff2-variations");
-      unicode-range: $range;
-    }
-  }
+@font-face {
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts-lumen/geist-sans-latin-500-normal.woff2") format("woff2");
+  unicode-range: $latin;
 }
 
 // ---------------------------------------------------------------------------
-// Base typography
+// Base
+
+html, body { overflow-x: clip; }
+
+html {
+  scrollbar-color: var(--color-muted) var(--color-paper);
+  color-scheme: dark;
+}
 
 body {
-  font-family: $font-serif;
-  font-optical-sizing: auto;
-  font-feature-settings: "kern", "liga", "onum";
-  text-rendering: optimizeLegibility;
+  background: var(--color-paper);
+  color: var(--color-ink-2);
+  font-family: var(--font-body);
+  font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
-  font-family: $font-caslon;
-  font-weight: 400;
-  letter-spacing: -0.005em;
-  color: $ink;
-}
-
-#quarto-content main h2 {
-  font-size: 1.85rem;
-  margin-top: 3rem;
-  padding-top: 1.1rem;
-  border-top: 1px solid $ink;
-  border-bottom: none;
-}
-
-#quarto-content main h3 {
-  font-size: 1.35rem;
-  margin-top: 2rem;
-}
-
-main a:not(.btn):not(.nav-link):not(.card-link):not(.chip) {
-  color: $ink;
-  text-decoration-color: rgba($accent, 0.55);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
-  transition: color 0.15s ease, text-decoration-color 0.15s ease;
-
-  &:hover {
-    color: $accent;
-    text-decoration-color: $accent;
-  }
+  caret-color: var(--color-accent);
 }
 
 ::selection {
-  background: $accent-soft;
+  background: color-mix(in oklab, var(--color-accent) 28%, transparent);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  transition: none;
+}
+
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-synthesis: none;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-ink);
+  text-transform: lowercase;
+  overflow-wrap: break-word;
+  min-width: 0;
+  text-wrap: balance;
+}
+
+#quarto-content { max-width: var(--container); margin-inline: auto; }
+
+main p { max-width: 56ch; }
+
+#quarto-content main h2 {
+  font-size: var(--text-display-s);
+  line-height: 0.98;
+  margin-top: var(--section-gap-s);
+  padding-top: 0;
+  border: none;
+}
+
+#quarto-content main h3 {
+  font-size: var(--text-title);
+  line-height: 1.2;
+  margin-top: var(--space-xl);
+}
+
+main p, main li { color: var(--color-ink-2); }
+main strong { color: var(--color-ink); font-weight: 500; }
+
+main a:not(.btn):not(.nav-link):not(.card-link):not(.chip):not(.stretched) {
+  color: var(--color-ink);
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-rule-2);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color var(--dur-micro) var(--ease-out), text-decoration-color var(--dur-micro) var(--ease-out);
+
+  &:hover {
+    color: var(--color-ink);
+    text-decoration-color: var(--color-accent);
+  }
 }
 
 blockquote {
-  font-family: $font-caslon;
-  font-style: italic;
-  font-size: 1.25rem;
-  border-left: 2px solid $accent;
-  color: $ink-soft;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  border-left: 1px solid var(--color-accent);
+  color: var(--color-ink-2);
 }
 
-figcaption, .figure-caption, .caption {
-  font-family: $font-sans;
-  font-size: 0.78rem;
-  letter-spacing: 0.01em;
-  color: $muted;
+hr { border-color: var(--color-rule); opacity: 1; }
+
+code, pre, kbd {
+  font-family: var(--font-outlier);
+  font-size: 0.8125rem;
+  background: var(--color-paper-2);
+  color: var(--color-ink-2);
+  border-radius: var(--radius-card);
 }
 
-// Small-caps rubric used above headlines and on cards.
-.kicker {
-  display: inline-block;
-  font-family: $font-sans;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: $accent;
+// Labels: the body face a step smaller, lowercase, untracked.
+figcaption, .figure-caption, .caption, .kicker, .byline, .label {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-muted);
 }
 
 .dek {
-  font-family: $font-caslon;
-  font-style: italic;
-  font-size: 1.32rem;
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-lead);
   line-height: 1.45;
-  color: $ink-soft;
+  color: var(--color-ink-2);
+  max-width: 40rem;
 }
 
-.dropcap > p:first-of-type::first-letter,
-p.dropcap::first-letter {
-  float: left;
-  font-family: $font-display;
-  font-size: 4.6em;
-  line-height: 0.8;
-  padding: 0.08em 0.1em 0 0;
-  color: $ink;
-}
-
-.byline, .label {
-  font-family: $font-sans;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: $muted;
-}
+.dropcap > p:first-of-type { font-size: var(--text-lg); line-height: 1.5; color: var(--color-ink); }
 
 // ---------------------------------------------------------------------------
-// Navigation: centred masthead with a rule underneath
+// Navigation: one edge-aligned row, wordmark left
 
 .navbar {
-  border-bottom: 1px solid $ink;
+  background: var(--color-paper);
+  border-bottom: var(--rule-hair) solid var(--color-rule);
   box-shadow: none;
-  padding-top: 0.6rem;
-  padding-bottom: 0.35rem;
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
 
   .navbar-title {
-    font-family: $font-display;
-    font-size: 1.75rem;
-    letter-spacing: 0.01em;
-    color: $ink;
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    letter-spacing: var(--tracking-display);
+    text-transform: lowercase;
+    color: var(--color-ink);
   }
 
   .nav-link {
-    font-family: $font-sans;
-    font-size: 0.74rem;
-    font-weight: 500;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-    color: $ink;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    text-transform: lowercase;
+    letter-spacing: 0;
+    color: var(--color-muted);
+    transition: color var(--dur-micro) var(--ease-out);
 
-    &:hover, &.active {
-      color: $accent !important;
+    &:hover, &.active, &:focus-visible {
+      color: var(--color-ink) !important;
     }
+
+    &.active { text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 0.5em; }
   }
 
-  .aa-DetachedSearchButton, #quarto-search {
-    font-family: $font-sans;
-  }
+  .navbar-toggler { border-color: var(--color-rule-2); }
+  .navbar-toggler-icon { filter: invert(1); }
+
+  .aa-DetachedSearchButton, #quarto-search { font-family: var(--font-body); color: var(--color-muted); }
 }
 
 @media (min-width: 992px) {
-  // Row 1: centred masthead (search on the right); row 2: centred sections
-  // with the social icons on the right.
-  .navbar .navbar-container {
-    position: relative;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .navbar .navbar-brand-container {
-    flex: 1 0 100%;
-    justify-content: center;
-    margin: 0;
-  }
-
-  .navbar .navbar-brand {
-    margin: 0 auto;
-  }
-
-  .navbar .navbar-title {
-    font-size: 2.35rem;
-  }
-
-  .navbar #quarto-search {
-    position: absolute;
-    top: 0.85rem;
-    right: 1rem;
-  }
-
-  .navbar #navbarCollapse {
-    position: relative;
-    flex: 1 0 100%;
-    justify-content: center;
-    border-top: 1px solid $hairline;
-    margin-top: 0.4rem;
-    padding-top: 0.15rem;
-
-    > .navbar-nav.me-auto {
-      margin: 0 !important;
-    }
-
-    > .navbar-nav.ms-auto {
-      position: absolute;
-      right: 0;
-      top: 0.15rem;
-    }
-  }
-
-  .navbar .quarto-navbar-tools:empty {
-    display: none;
-  }
-}
-
-.navbar .navbar-toggler {
-  border-color: $ink;
-}
-
-.navbar .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23141414' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  .navbar .navbar-container { max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+  .navbar .quarto-navbar-tools:empty { display: none; }
 }
 
 // Quarto still emits a plain title header with title-block-style: none;
 // every page has its own .hero instead.
-header.quarto-title-block {
-  display: none;
+header.quarto-title-block { display: none; }
+
+// Search overlay and result list in the same ink on paper.
+.aa-Panel, .aa-DetachedContainer, .aa-DetachedOverlay {
+  --aa-background-color-rgb: 13, 11, 25;
+  --aa-text-color-rgb: 243, 240, 248;
+  --aa-muted-color-rgb: 156, 152, 170;
+  --aa-primary-color-rgb: 255, 165, 75;
 }
 
 // ---------------------------------------------------------------------------
-// Page hero (replaces Quarto's title block)
+// Page hero: Settled, left-aligned
 
 .hero {
-  text-align: center;
-  margin: 2.75rem auto 2.5rem;
-  max-width: 46rem;
+  text-align: left;
+  margin: var(--space-2xl) 0 var(--space-xl);
+  max-width: 54rem;
 
   h1, .hero-title {
-    font-family: $font-display;
-    font-size: clamp(2.6rem, 6vw, 4.4rem);
-    line-height: 1.04;
-    margin: 0.45rem 0 0.9rem;
+    font-family: var(--font-display);
+    font-size: var(--text-display);
+    line-height: 0.98;
+    margin: 0 0 var(--space-md);
     border: none;
+    max-width: 18ch;
   }
 
-  .dek {
-    display: block;
-    max-width: 38rem;
-    margin: 0 auto;
+  // The kicker above the headline is gone: the headline and the sentence say it.
+  .kicker { display: none; }
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: 500;
+  text-transform: lowercase;
+  text-decoration: none !important;
+  transition: background var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out);
+
+  &.btn-pill--primary {
+    background: var(--color-accent);
+    color: var(--color-accent-ink) !important;
+
+    &:hover { background: color-mix(in oklab, var(--color-accent) 88%, var(--color-ink)); }
   }
 
-  &::after {
-    content: "";
-    display: block;
-    width: 3.5rem;
-    margin: 2rem auto 0;
-    border-top: 1px solid $ink;
+  &.btn-pill--ghost {
+    box-shadow: inset 0 0 0 var(--rule-hair) var(--color-rule-2);
+    color: var(--color-ink) !important;
+
+    &:hover { background: var(--color-paper-2); }
   }
 }
 
 .hero-figure {
-  margin: 0 auto 2.5rem;
-  text-align: center;
+  margin: 0 0 var(--space-xl);
 
   img {
     width: 100%;
     max-height: 26rem;
     object-fit: cover;
-    filter: grayscale(1) contrast(1.05);
+    border-radius: var(--radius-card);
+    border: var(--rule-hair) solid var(--color-rule);
   }
 }
 
@@ -336,8 +325,8 @@ header.quarto-title-block {
 .home-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 2.5rem;
-  margin-bottom: 1rem;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-lg);
 
   @media (min-width: 992px) {
     grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
@@ -345,89 +334,87 @@ header.quarto-title-block {
 }
 
 .aside-card {
-  border-top: 3px solid $ink;
-  padding-top: 0.9rem;
-  font-family: $font-sans;
-  font-size: 0.9rem;
+  background: var(--color-paper-2);
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+  font-size: var(--text-sm);
   line-height: 1.5;
+  align-self: start;
 
-  p { margin-bottom: 0.65rem; }
-  ul { padding-left: 0; list-style: none; }
-  li { padding: 0.35rem 0; border-bottom: 1px solid $hairline; }
+  p { margin-bottom: var(--space-sm); }
+  ul { padding-left: 0; list-style: none; margin: 0; }
+  li { padding: var(--space-xs) 0; border-bottom: var(--rule-hair) solid var(--color-rule); }
+  li:last-child { border-bottom: none; }
+  .label { display: block; margin-bottom: var(--space-3xs); }
 }
 
-.section-link {
-  font-family: $font-sans;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
+.section-link { font-size: var(--text-sm); font-weight: 500; text-transform: lowercase; letter-spacing: 0; }
 
 // ---------------------------------------------------------------------------
-// Cards (projects, research areas)
+// Cards (projects, research areas): hairline wells
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(17.5rem, 100%), 1fr));
-  gap: 2rem 1.75rem;
-  margin: 2rem 0 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
+  gap: var(--space-lg);
+  margin: var(--space-xl) 0 var(--space-lg);
 }
 
 .project-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid $ink;
-  padding-top: 0.9rem;
-  transition: transform 0.25s ease;
+  background: var(--color-paper-2);
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+  transition: border-color var(--dur-short) var(--ease-out), background var(--dur-short) var(--ease-out);
 
   #quarto-content main & h3, h3 {
-    font-family: $font-caslon;
-    font-size: 1.45rem;
-    line-height: 1.2;
-    margin: 0.35rem 0 0.5rem;
+    order: 1;
+    font-size: var(--text-2xl);
+    line-height: 1;
+    margin: 0 0 var(--space-xs);
     border: none;
     padding: 0;
   }
 
+  // The topic line sits beneath the title, as a quiet tag.
+  .kicker { order: 2; margin: 0 0 var(--space-sm); }
+
   p {
-    font-size: 1rem;
+    order: 3;
+    font-size: var(--text-md);
     line-height: 1.55;
-    color: $ink-soft;
-    margin-bottom: 0.6rem;
+    color: var(--color-ink-2);
+    margin-bottom: var(--space-sm);
   }
 
   .card-meta {
+    order: 4;
     margin-top: auto;
-    font-family: $font-sans;
-    font-size: 0.74rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: $muted;
+    font-family: var(--font-outlier);
+    font-size: var(--text-xs);
+    letter-spacing: 0;
+    text-transform: lowercase;
+    color: var(--color-muted);
   }
 
   .stretched {
     color: inherit;
     text-decoration: none !important;
 
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-    }
+    &::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius-card); }
+    &:focus-visible { outline: none; }
+    &:focus-visible::after { outline: 2px solid var(--color-focus); outline-offset: 2px; }
   }
 
-  &:hover {
-    h3 { color: $accent; }
-  }
+  &:hover { background: var(--color-paper-3); border-color: var(--color-rule-2); }
 
   &.featured {
-    @media (min-width: 768px) {
-      grid-column: span 2;
-    }
-
-    h3 { font-size: 1.9rem; }
+    @media (min-width: 768px) { grid-column: span 2; }
+    h3 { font-size: var(--text-3xl); }
   }
 }
 
@@ -435,61 +422,66 @@ header.quarto-title-block {
 .chip-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 0 0 1.5rem;
+  gap: var(--space-xs);
+  margin: 0 0 var(--space-lg);
 }
 
 .chip {
-  font-family: $font-sans;
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: $ink;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: lowercase;
+  color: var(--color-ink);
   background: transparent;
-  border: 1px solid $ink;
-  border-radius: 999px;
-  padding: 0.38rem 0.9rem;
+  border: var(--rule-hair) solid var(--color-rule-2);
+  border-radius: var(--radius-pill);
+  padding: var(--space-xs) var(--space-md);
+  min-height: 44px;
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: background var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
 
-  &:hover { border-color: $accent; color: $accent; }
+  &:hover { background: var(--color-paper-2); }
 
   &[aria-pressed="true"] {
-    background: $ink;
-    color: $paper;
-    border-color: $ink;
+    background: var(--color-accent);
+    color: var(--color-accent-ink);
+    border-color: var(--color-accent);
   }
 }
+
+.chip-row[hidden] { display: none; }
 
 // ---------------------------------------------------------------------------
 // Project detail pages
 
 .facts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
-  gap: 1rem 1.5rem;
-  margin: 1.5rem 0 2.25rem;
-  padding: 1rem 0;
-  border-top: 1px solid $ink;
-  border-bottom: 1px solid $hairline;
-  font-family: $font-sans;
-  font-size: 0.88rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+  gap: var(--space-md) var(--space-lg);
+  margin: var(--space-lg) 0 var(--space-xl);
+  padding: var(--space-md) 0;
+  border-top: var(--rule-hair) solid var(--color-rule);
+  border-bottom: var(--rule-hair) solid var(--color-rule);
+  font-size: var(--text-sm);
   line-height: 1.45;
 
-  .label {
-    display: block;
-    font-size: 0.68rem;
-    margin-bottom: 0.2rem;
-  }
-
+  .label { display: block; margin-bottom: var(--space-3xs); }
   p { margin: 0; }
 }
 
+// Figures live in a hairline well over the faint blueprint grid.
 .figure-anim {
-  margin: 0.5rem auto 2.5rem;
-  max-width: 44rem;
+  margin: var(--space-md) 0 var(--space-xl);
+  padding: var(--space-lg);
+  background-color: var(--color-paper-2);
+  background-image:
+    linear-gradient(var(--rule-blueprint) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule-blueprint) 1px, transparent 1px);
+  background-size: 48px 48px;
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-card);
+  overflow-x: auto;
 
   svg {
     display: block;
@@ -499,28 +491,32 @@ header.quarto-title-block {
   }
 
   figcaption {
-    text-align: center;
-    margin-top: 0.6rem;
+    margin-top: var(--space-md);
+    padding-top: var(--space-sm);
+    border-top: var(--rule-hair) solid var(--color-rule);
   }
 }
 
+@media (max-width: 640px) {
+  .figure-anim svg { min-width: 600px; }
+}
+
 .pullquote {
-  font-family: $font-display;
-  font-size: 1.7rem;
-  line-height: 1.3;
-  text-align: center;
-  margin: 2.5rem auto;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  line-height: 1.2;
+  margin: var(--space-xl) 0;
   max-width: 34rem;
-  padding: 1.25rem 0;
-  border-top: 1px solid $ink;
-  border-bottom: 1px solid $ink;
+  padding-left: var(--space-lg);
+  border-left: 1px solid var(--color-accent);
 }
 
 .callout-box {
-  background: $paper-deep;
-  padding: 1.25rem 1.5rem;
-  margin: 2rem 0;
-  border-left: 3px solid $accent;
+  background: var(--color-paper-2);
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+  margin: var(--space-xl) 0;
 
   > :last-child { margin-bottom: 0; }
 }
@@ -528,86 +524,78 @@ header.quarto-title-block {
 // ---------------------------------------------------------------------------
 // Publications
 
-.pub-meta {
-  font-family: $font-sans;
-  font-size: 0.82rem;
-  color: $muted;
-  text-align: center;
-  margin-bottom: 1rem;
+.pub-meta { font-size: var(--text-sm); color: var(--color-muted); margin-bottom: var(--space-md); }
+
+.pub-jump {
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-lg);
+  color: var(--color-muted);
 }
 
 .pub-list {
-  ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-  }
+  ul { list-style: none; padding-left: 0; margin: 0; }
 
   li {
-    padding: 0.85rem 0 0.85rem 1.4rem;
-    text-indent: -1.4rem;
-    border-bottom: 1px solid $hairline;
-    font-size: 1rem;
+    padding: var(--space-md) 0 var(--space-md) var(--space-lg);
+    text-indent: calc(-1 * var(--space-lg));
+    border-bottom: var(--rule-hair) solid var(--color-rule);
+    font-size: var(--text-md);
     line-height: 1.55;
-    color: $ink-soft;
+    color: var(--color-ink-2);
 
-    strong { color: $ink; font-weight: 600; }
+    strong { color: var(--color-ink); font-weight: 500; }
   }
 }
 
 .pub-badge {
   display: inline-block;
   text-indent: 0;
-  font-family: $font-sans;
-  font-size: 0.64rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-family: var(--font-outlier);
+  font-size: var(--text-xs);
+  letter-spacing: 0;
+  text-transform: lowercase;
   line-height: 1;
-  padding: 0.28rem 0.45rem 0.24rem;
-  margin-left: 0.25rem;
-  border: 1px solid $muted;
-  border-radius: 2px;
-  color: $muted;
-  vertical-align: 0.12em;
+  padding: var(--space-2xs) var(--space-xs);
+  margin-left: var(--space-2xs);
+  border: var(--rule-hair) solid var(--color-rule-2);
+  border-radius: var(--radius-pill);
+  color: var(--color-muted);
+  vertical-align: 0.1em;
   text-decoration: none !important;
 }
 
-a.pub-badge:hover { border-color: $accent; color: $accent; }
-.pub-preprint { border-color: $accent; color: $accent; }
+a.pub-badge:hover { border-color: var(--color-accent); color: var(--color-ink); }
+.pub-preprint { border-color: var(--color-accent); color: var(--color-accent); }
 
 #quarto-content main section.pub-year > h3 {
-  font-family: $font-display;
-  font-size: 1.6rem;
-  margin-top: 2.2rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid $hairline;
+  font-size: var(--text-xl);
+  margin-top: var(--space-xl);
+  padding-bottom: var(--space-xs);
+  color: var(--color-muted);
+  border-bottom: var(--rule-hair) solid var(--color-rule);
 }
 
-.pub-jump {
-  font-family: $font-sans;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 1.5rem;
+.pub-doi {
+  font-family: var(--font-outlier);
+  font-size: var(--text-xs);
+  letter-spacing: 0;
+  word-break: break-all;
+  color: var(--color-muted) !important;
 }
 
 // ---------------------------------------------------------------------------
 // TOC, footer, misc
 
 #TOC, .sidebar nav[role="doc-toc"] {
-  font-family: $font-sans;
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
 
   h2, .toc-title {
-    font-family: $font-sans;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: $muted;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--color-muted);
     border: none;
     margin-top: 0;
     padding-top: 0;
@@ -615,36 +603,80 @@ a.pub-badge:hover { border-color: $accent; color: $accent; }
 }
 
 .nav-footer {
-  font-family: $font-sans;
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  border-top: 1px solid $ink;
-}
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  border-top: var(--rule-hair) solid var(--color-rule);
+  background: var(--color-paper);
 
-.btn-primary {
-  font-family: $font-sans;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.8rem;
-  border-radius: 0;
+  a { color: var(--color-muted); }
+  a:hover { color: var(--color-ink); }
 }
 
 .logo-strip {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.5rem 2.5rem;
-  margin: 1.5rem 0;
+  gap: var(--space-lg) var(--space-xl);
+  margin: var(--space-lg) 0;
 
-  img {
-    max-height: 3.2rem;
-    width: auto;
-    filter: grayscale(1);
-    opacity: 0.85;
+  img { max-height: 3.2rem; width: auto; filter: grayscale(1) invert(1); opacity: 0.85; }
+}
+
+// Reporting checklist (META-REP page)
+.checklist {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: item;
+    columns: 2 18rem;
+    column-gap: var(--space-xl);
+  }
+
+  li {
+    break-inside: avoid;
+    position: relative;
+    padding: var(--space-sm) 0 var(--space-sm) var(--space-xl);
+    border-top: var(--rule-hair) solid var(--color-rule);
+    font-size: var(--text-md);
+    line-height: 1.5;
+
+    &::before {
+      counter-increment: item;
+      content: counter(item, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: var(--space-md);
+      font-family: var(--font-outlier);
+      font-size: var(--text-xs);
+      color: var(--color-accent);
+    }
+
+    strong { display: block; color: var(--color-ink); font-weight: 500; }
   }
 }
 
-// Hidden until assets/js/site-motion.js reveals them (see assets/motion-loader.html).
+.references {
+  font-size: var(--text-md);
+
+  ul { list-style: none; padding-left: 0; }
+
+  li {
+    padding: var(--space-xs) 0 var(--space-xs) var(--space-lg);
+    text-indent: calc(-1 * var(--space-lg));
+    color: var(--color-ink-2);
+  }
+}
+
+// Long URLs (Impressum, DOIs) must wrap instead of widening the page.
+#quarto-content main { overflow-wrap: break-word; }
+#quarto-content main a { overflow-wrap: anywhere; }
+
+// Quarto's anchor icons add a second tab stop inside every card heading.
+.project-card .anchorjs-link { display: none; }
+
+// ---------------------------------------------------------------------------
+// Motion: hidden until assets/js/site-motion.js reveals them (see assets/motion-loader.html).
+
 .motion-ready {
   .hero > *,
   .card-grid > *,
@@ -662,29 +694,26 @@ a.pub-badge:hover { border-color: $accent; color: $accent; }
   *, *::before, *::after {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
 // ---------------------------------------------------------------------------
-// Inline SVG figures (projects/_figures)
+// Inline SVG figures (projects/_figures): colours come from the tokens.
 
 .svg-label {
-  font-family: $font-sans;
+  font-family: var(--font-body);
   font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: lowercase;
 }
 
-.svg-core {
-  font-size: 12px;
-  font-weight: 600;
-}
+.svg-core { font-size: 12px; font-weight: 500; }
 
 .noise-label {
-  font-family: $font-caslon;
-  font-style: italic;
-  font-size: 14px;
+  font-family: var(--font-body);
+  font-size: 13px;
   letter-spacing: 0;
   text-transform: none;
 }
@@ -695,100 +724,33 @@ svg[data-anim] .node {
   transform-origin: center;
 }
 
-.pub-doi {
-  font-family: $font-sans;
-  font-size: 0.78rem;
-  letter-spacing: 0.01em;
-  word-break: break-all;
-  color: $muted !important;
+.svg-mono {
+  font-family: var(--font-outlier);
+  font-size: 11.5px;
+  text-transform: lowercase;
 }
 
-// Reporting checklist (META-REP page)
-.checklist {
-  ul {
-    list-style: none;
-    padding-left: 0;
-    counter-reset: item;
-    columns: 2 18rem;
-    column-gap: 2.5rem;
-  }
-
-  li {
-    break-inside: avoid;
-    position: relative;
-    padding: 0.7rem 0 0.7rem 2.4rem;
-    border-top: 1px solid $hairline;
-    font-size: 1rem;
-    line-height: 1.5;
-
-    &::before {
-      counter-increment: item;
-      content: counter(item, decimal-leading-zero);
-      position: absolute;
-      left: 0;
-      top: 0.78rem;
-      font-family: $font-sans;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      color: $accent;
-    }
-
-    strong {
-      font-family: $font-sans;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      display: block;
-      color: $ink;
-    }
-  }
+.svg-option {
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
-.references {
-  font-size: 0.95rem;
-
-  ul { list-style: none; padding-left: 0; }
-
-  li {
-    padding: 0.45rem 0 0.45rem 1.4rem;
-    text-indent: -1.4rem;
-    color: $ink-soft;
-  }
+.svg-question {
+  font-family: var(--font-display);
+  font-size: 17px;
+  text-transform: lowercase;
 }
 
-// Long URLs (Impressum, DOIs) must wrap instead of widening the page.
-#quarto-content main {
-  overflow-wrap: break-word;
-}
-
-#quarto-content main a {
-  overflow-wrap: anywhere;
-}
-
-.chip-row[hidden] {
-  display: none;
-}
-
-// Quarto's anchor icons add a second tab stop inside every card heading.
-.project-card .anchorjs-link {
-  display: none;
-}
-
-// Figures keep a readable size on phones and scroll sideways instead of shrinking.
-.figure-anim {
-  overflow-x: auto;
-}
-
-@media (max-width: 640px) {
-  .figure-anim svg {
-    min-width: 600px;
-  }
-}
-
-// Printing or saving as PDF: show everything, whatever the scroll state.
+// Printing or saving as PDF: a light page, everything visible, whatever the scroll state.
 @media print {
+  :root {
+    --color-paper: white; --color-paper-2: white; --color-paper-3: white;
+    --color-ink: black; --color-ink-2: black; --color-muted: black;
+    --color-rule: black; --color-rule-2: black; --rule-blueprint: transparent;
+  }
+
   .motion-ready .hero > *,
   .motion-ready .card-grid > *,
   .motion-ready .home-grid > *,
@@ -809,28 +771,6 @@ svg[data-anim] .node {
     stroke-dashoffset: 0 !important;
   }
 
-  .project-card[hidden] {
-    display: flex !important;
-  }
-
-  .chip-row {
-    display: none !important;
-  }
-}
-
-.svg-mono {
-  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 11.5px;
-}
-
-.svg-option {
-  font-family: $font-sans;
-  font-size: 10.5px;
-  letter-spacing: 0.02em;
-  text-transform: none;
-}
-
-.svg-question {
-  font-family: $font-caslon;
-  font-size: 15px;
+  .project-card[hidden] { display: flex !important; }
+  .chip-row { display: none !important; }
 }

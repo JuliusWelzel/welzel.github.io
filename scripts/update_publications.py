@@ -806,11 +806,11 @@ def render_markdown(records: list[dict], config: dict, updated: str) -> str:
         "     use publications/config.yml to add, hide or correct entries. -->",
         "",
         "::: {.pub-meta}",
-        f"{len(records)} publications · updated automatically every week from "
+        f"{len(records)} publications. Updated automatically every week from "
         f"[ORCID](https://orcid.org/{author['orcid']}), "
         f"[Google Scholar](https://scholar.google.com/citations?user={author['google_scholar']}), "
-        "[OpenAlex](https://openalex.org) and [Crossref](https://www.crossref.org) · "
-        f"last change {updated}",
+        "[OpenAlex](https://openalex.org) and [Crossref](https://www.crossref.org). "
+        f"Last change {updated}.",
         ":::",
         "",
     ]
@@ -818,7 +818,7 @@ def render_markdown(records: list[dict], config: dict, updated: str) -> str:
     preprints = [r for r in sorted_records(records) if r.get("type") == "preprint"]
     sections = [("articles", "Journal articles", articles), ("preprints", "Preprints", preprints)]
     lines += ["::: {.pub-jump}",
-              " · ".join(f"[{title} ({len(items)})](#{key})" for key, title, items in sections if items),
+              ", ".join(f"[{title} ({len(items)})](#{key})" for key, title, items in sections if items),
               ":::", ""]
     for key, title, items in sections:
         if not items:
