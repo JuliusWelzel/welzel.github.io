@@ -4,8 +4,6 @@ description: "Open-science interest group of the DGPs section Biological Psychol
 ---
 
 ::: {.hero}
-[Community · Open science · DGPs]{.kicker}
-
 # IGOR {.unlisted}
 
 [Interest Group on Open and Reproducible Research of the section Biological Psychology and Neuropsychology of the German Psychological Society (DGPs).]{.dek}
@@ -26,7 +24,7 @@ BIDS Consultation Hour; co-lead of the EEG/ERP preprocessing umbrella review
 :::
 ::: {}
 [Links]{.label}
-[Website](https://www.dgps.de/fachgruppen/fgbi/aktivitaeten-der-fachgruppe/igor/) · [Bluesky](https://bsky.app/profile/igor-dgps.bsky.social) · [GitHub](https://github.com/IGOR-bioDGPs)
+[Website](https://www.dgps.de/fachgruppen/fgbi/aktivitaeten-der-fachgruppe/igor/), [Bluesky](https://bsky.app/profile/igor-dgps.bsky.social), [GitHub](https://github.com/IGOR-bioDGPs)
 :::
 :::
 

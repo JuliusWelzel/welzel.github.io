@@ -20,4 +20,10 @@
       document.head.appendChild(script);
     });
   })();
+
+  // Every page carries its own .hero heading; drop Quarto's duplicate (hidden) title block.
+  document.addEventListener("DOMContentLoaded", function () {
+    var header = document.getElementById("title-block-header");
+    if (header && document.querySelector(".hero h1")) header.remove();
+  });
 </script>

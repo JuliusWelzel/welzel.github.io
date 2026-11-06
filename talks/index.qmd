@@ -4,8 +4,6 @@ description: "Slides of recent talks and presentations."
 ---
 
 ::: {.hero}
-[Talks]{.kicker}
-
 # Talks {.unlisted}
 
 [Open-access slides of recent talks and presentations, most of them written in Markdown.]{.dek}

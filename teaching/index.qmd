@@ -4,8 +4,6 @@ description: "Courses and workshops on data science, neuroanatomy, BIDS and open
 ---
 
 ::: {.hero}
-[Teaching]{.kicker}
-
 # Teaching {.unlisted}
 
 [Courses and workshops in data science, neuroanatomy and research data management.]{.dek}

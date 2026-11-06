@@ -48,7 +48,7 @@ website:
         href: https://mastodon.online/@JuliusWelzel
   page-footer:
     left: "© Julius Welzel"
-    center: "Built with [Quarto](https://quarto.org) · publications updated weekly"
+    center: "Built with [Quarto](https://quarto.org), publications updated weekly"
     right:
       - text: Impressum
         href: impressum/index.qmd
@@ -56,6 +56,7 @@ website:
 format:
   html:
     theme: [default, theme.scss]
+    css: tokens.css
     title-block-style: none
     toc: false
     smooth-scroll: true

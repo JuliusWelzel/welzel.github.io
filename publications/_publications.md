@@ -2,11 +2,11 @@
      use publications/config.yml to add, hide or correct entries. -->
 
 ::: {.pub-meta}
-50 publications · updated automatically every week from [ORCID](https://orcid.org/0000-0001-8958-0934), [Google Scholar](https://scholar.google.com/citations?user=CWxKXBcAAAAJ), [OpenAlex](https://openalex.org) and [Crossref](https://www.crossref.org) · last change 2026-11-02
+50 publications. Updated automatically every week from [ORCID](https://orcid.org/0000-0001-8958-0934), [Google Scholar](https://scholar.google.com/citations?user=CWxKXBcAAAAJ), [OpenAlex](https://openalex.org) and [Crossref](https://www.crossref.org). Last change 2026-11-06.
 :::
 
 ::: {.pub-jump}
-[Journal articles (45)](#articles) · [Preprints (5)](#preprints)
+[Journal articles (45)](#articles), [Preprints (5)](#preprints)
 :::
 
 ## Journal articles {#articles}

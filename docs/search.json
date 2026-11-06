@@ -18,28 +18,28 @@
     "href": "research/index.html#eeg",
     "title": "Research",
     "section": "Mobile EEG during walking",
-    "text": "Mobile EEG during walking\nI record EEG during walking and combine it with motion capture, EMG and wearable sensors to study cortical contributions to gait, for example gait-related beta oscillations and corticomuscular coherence, and their changes in Parkinson’s disease.\nProjects: StepuP · EEGManySteps · Pocketable MoBI · EPOC"
+    "text": "Mobile EEG during walking\nI record EEG during walking and combine it with motion capture, EMG and wearable sensors to study cortical contributions to gait, for example gait-related beta oscillations and corticomuscular coherence, and their changes in Parkinson’s disease.\nProjects: StepuP, EEGManySteps, Pocketable MoBI, EPOC"
   },
   {
     "objectID": "research/index.html#algorithms",
     "href": "research/index.html#algorithms",
     "title": "Research",
     "section": "Gait and balance",
-    "text": "Gait and balance\nI develop and validate algorithms that derive gait and balance parameters from wearable and motion-capture data, and apply them in neurological and geriatric cohorts.\nProjects: KielMAT · StepuP"
+    "text": "Gait and balance\nI develop and validate algorithms that derive gait and balance parameters from wearable and motion-capture data, and apply them in neurological and geriatric cohorts.\nProjects: KielMAT, StepuP"
   },
   {
     "objectID": "research/index.html#datascience",
     "href": "research/index.html#datascience",
     "title": "Research",
     "section": "Movement disorders",
-    "text": "Movement disorders\nI use quantitative measures to characterise movement disorders, including the modulation of essential tremor by sensory feedback and arousal, gait measures as progression markers in Parkinson’s disease, and the relationship between mobility, cognition and clinical scores in geriatric patients.\nProjects: StepuP · Tremor assessment · ComOn"
+    "text": "Movement disorders\nI use quantitative measures to characterise movement disorders, including the modulation of essential tremor by sensory feedback and arousal, gait measures as progression markers in Parkinson’s disease, and the relationship between mobility, cognition and clinical scores in geriatric patients.\nProjects: StepuP, Tremor assessment, ComOn"
   },
   {
     "objectID": "research/index.html#open-science",
     "href": "research/index.html#open-science",
     "title": "Research",
     "section": "Open and reproducible methods",
-    "text": "Open and reproducible methods\nI study analysis and reporting practices in mobile EEG, contribute to data standards such as Motion-BIDS, and support open-science initiatives in biological psychology.\nProjects: META-REP · IGOR · EEGManySteps · Motion-BIDS"
+    "text": "Open and reproducible methods\nI study analysis and reporting practices in mobile EEG, contribute to data standards such as Motion-BIDS, and support open-science initiatives in biological psychology.\nProjects: META-REP, IGOR, EEGManySteps, Motion-BIDS"
   },
   {
     "objectID": "projects/stepup.html#aims",
@@ -88,7 +88,7 @@
     "href": "projects/index.html#completed-projects",
     "title": "Projects",
     "section": "Completed projects",
-    "text": "Completed projects\n\n\nEssential tremor\n\nTremor assessment\nEffects of sensory feedback and arousal on action tremor, and validity of tremor analysis with smartphone-compatible computer vision (MediaPipe).\nKiel · 2021–2025\n\n\n\nNeurogeriatrics\n\nComOn\nExploratory multicentre study of motor, cognitive and mobility deficits in geriatric patients before and after routine clinical treatment.\nUKSH · 2017–2023\n\n\n\nEEG · Ageing\n\nSense-Age\nEEG and behavioural measures of selective and sustained attention in ageing and cognitive impairment.\nEEG lab, UKSH"
+    "text": "Completed projects\n\n\nEssential tremor\n\nTremor assessment\nEffects of sensory feedback and arousal on action tremor, and validity of tremor analysis with smartphone-compatible computer vision (MediaPipe).\nKiel, 2021–2025\n\n\n\nNeurogeriatrics\n\nComOn\nExploratory multicentre study of motor, cognitive and mobility deficits in geriatric patients before and after routine clinical treatment.\nUKSH, 2017–2023\n\n\n\nEEG, Ageing\n\nSense-Age\nEEG and behavioural measures of selective and sustained attention in ageing and cognitive impairment.\nEEG lab, UKSH"
   },
   {
     "objectID": "projects/eegmanysteps.html#aims",
@@ -137,7 +137,7 @@
     "href": "impressum/index.html#haftungsausschluss",
     "title": "Impressum",
     "section": "Haftungsausschluss",
-    "text": "Haftungsausschluss\nHaftung für Inhalte. Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Die Publikationsliste wird automatisch aus öffentlichen Datenbanken (ORCID, OpenAlex, Crossref, Google Scholar) erstellt und kann daher Fehler enthalten.\nHaftung für Links. Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte übernehme ich keine Gewähr; verantwortlich ist stets der jeweilige Anbieter oder Betreiber der Seiten. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Werden mir Rechtsverletzungen bekannt, entferne ich die betreffenden Links umgehend.\nUrheberrecht. Die von mir erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Inhalte Dritter sind als solche gekennzeichnet. Die verwendeten Schriften (Libre Caslon, Source Serif 4, IBM Plex Sans) stehen unter der SIL Open Font License, die Animationsbibliothek Motion unter der MIT-Lizenz."
+    "text": "Haftungsausschluss\nHaftung für Inhalte. Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Die Publikationsliste wird automatisch aus öffentlichen Datenbanken (ORCID, OpenAlex, Crossref, Google Scholar) erstellt und kann daher Fehler enthalten.\nHaftung für Links. Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte übernehme ich keine Gewähr; verantwortlich ist stets der jeweilige Anbieter oder Betreiber der Seiten. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Werden mir Rechtsverletzungen bekannt, entferne ich die betreffenden Links umgehend.\nUrheberrecht. Die von mir erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Inhalte Dritter sind als solche gekennzeichnet. Die verwendeten Schriften (Instrument Serif, Geist, Geist Mono) stehen unter der SIL Open Font License, die Animationsbibliothek Motion unter der MIT-Lizenz."
   },
   {
     "objectID": "impressum/index.html#datenschutzerklärung",
@@ -151,14 +151,14 @@
     "href": "cv/index.html",
     "title": "Curriculum vitae",
     "section": "",
-    "text": "CV\n\nCurriculum vitae\nA PDF version of my CV.\n\n\n\n\n\n  \n    Download current CV"
+    "text": "Curriculum vitae\nA PDF version of my CV.\n\n\n\n\n  \n    Download current CV"
   },
   {
     "objectID": "index.html#projects",
     "href": "index.html#projects",
     "title": "Julius Welzel",
     "section": "Projects",
-    "text": "Projects\n\n\nParkinson’s disease · Mobile EEG\n\nStepuP\nMulticentre randomised controlled trial on the biomechanical and neurophysiological mechanisms of treadmill training in Parkinson’s disease.\nJPND · 2023–2026\n\n\n\nMeta-science · Mobile EEG\n\nMETA-REP\nPreprocessing and reporting practices in mobile EEG, and a reporting standard for mobile EEG studies.\nDFG · SPP 2317\n\n\n\nMobile EEG · Gait\n\nEEGManySteps\nMulti-lab collection of gait EEG data to quantify the influence of recording setups and analysis pipelines.\nCommunity · since 2024\n\n\n\nOpen science\n\nIGOR\nInterest group on open and reproducible research of the DGPs section Biological Psychology and Neuropsychology.\nDGPs · since 2020\n\n\n\nAll projects →"
+    "text": "Projects\n\n\nParkinson’s disease, Mobile EEG\n\nStepuP\nMulticentre randomised controlled trial on the biomechanical and neurophysiological mechanisms of treadmill training in Parkinson’s disease.\nJPND, 2023–2026\n\n\n\nMeta-science, Mobile EEG\n\nMETA-REP\nPreprocessing and reporting practices in mobile EEG, and a reporting standard for mobile EEG studies.\nDFG, SPP 2317\n\n\n\nMobile EEG, Gait\n\nEEGManySteps\nMulti-lab collection of gait EEG data to quantify the influence of recording setups and analysis pipelines.\nCommunity, since 2024\n\n\n\nOpen science\n\nIGOR\nInterest group on open and reproducible research of the DGPs section Biological Psychology and Neuropsychology.\nDGPs, since 2020\n\n\n\nAll projects →"
   },
   {
     "objectID": "index.html#recent-publications",
@@ -200,7 +200,7 @@
     "href": "projects/meta-rep.html#the-programme",
     "title": "META-REP: Replicability of mobile EEG",
     "section": "The programme",
-    "text": "The programme\nMETA-REP (A Meta-scientific Programme to Analyse and Optimise Replicability in the Behavioural, Social, and Cognitive Sciences) is a DFG Priority Programme (SPP 2317) on the replicability of findings and on methods to improve it. In Oldenburg, the METEOR project addresses the many defensible analysis decisions between a raw neural recording and a published result. My work within META-REP concerns these decisions in mobile EEG.\n\nRAW EEGHIGH-PASS0.1 Hz1 HzARTEFACTSASRICAnoneREFERENCEaveragemastoidsRESULTreported\nSchematic: twelve defensible preprocessing pipelines applied to the same raw EEG lead to different results. A reporting standard makes the chosen path (red) explicit."
+    "text": "The programme\nMETA-REP (A Meta-scientific Programme to Analyse and Optimise Replicability in the Behavioural, Social, and Cognitive Sciences) is a DFG Priority Programme (SPP 2317) on the replicability of findings and on methods to improve it. In Oldenburg, the METEOR project addresses the many defensible analysis decisions between a raw neural recording and a published result. My work within META-REP concerns these decisions in mobile EEG.\n\nRAW EEGHIGH-PASS0.1 Hz1 HzARTEFACTSASRICAnoneREFERENCEaveragemastoidsRESULTreported\nSchematic: twelve defensible preprocessing pipelines applied to the same raw EEG lead to different results. A reporting standard makes the chosen path (highlighted) explicit."
   },
   {
     "objectID": "projects/meta-rep.html#background",

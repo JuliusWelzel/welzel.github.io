@@ -4,8 +4,6 @@ description: "Community-driven multi-lab initiative on the influence of hardware
 ---
 
 ::: {.hero}
-[Project · Multi-lab · Mobile EEG]{.kicker}
-
 # EEGManySteps {.unlisted}
 
 [A multi-lab collection of gait EEG data to quantify how recording setups and analysis pipelines affect the results.]{.dek}
