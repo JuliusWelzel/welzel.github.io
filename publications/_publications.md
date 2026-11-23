@@ -2,11 +2,11 @@
      use publications/config.yml to add, hide or correct entries. -->
 
 ::: {.pub-meta}
-50 publications. Updated automatically every week from [ORCID](https://orcid.org/0000-0001-8958-0934), [Google Scholar](https://scholar.google.com/citations?user=CWxKXBcAAAAJ), [OpenAlex](https://openalex.org) and [Crossref](https://www.crossref.org). Last change 2026-11-06.
+51 publications. Updated automatically every week from [ORCID](https://orcid.org/0000-0001-8958-0934), [Google Scholar](https://scholar.google.com/citations?user=CWxKXBcAAAAJ), [OpenAlex](https://openalex.org) and [Crossref](https://www.crossref.org). Last change 2026-11-23.
 :::
 
 ::: {.pub-jump}
-[Journal articles (45)](#articles), [Preprints (5)](#preprints)
+[Journal articles (46)](#articles), [Preprints (5)](#preprints)
 :::
 
 ## Journal articles {#articles}
@@ -14,6 +14,7 @@
 ### 2026 {#articles-2026 .pub-year}
 
 ::: {.pub-list}
+- Wolke, R., Kerhoff, S., Naumann, J., Gless, A., **Welzel, J.**, Martínez‐Fernández, R., Obeso, J. A., Natera‐Villalba, E., Rojas, R. R., Lenuweit, J., Baumann, A., Möller, B., Hensler, J., Helmers, A., Drucks, B., Lübbing, I., Berg, D., Deuschl, G., & Paschen, S. (2026). Responder analysis of the therapeutic effect of magnetic Resonance–Guided focused ultrasound thalamotomy on essential tremor correlates with functional improvement. *Movement Disorders*, Article mds.70619. [https://doi.org/10.1002/mds.70619](https://doi.org/10.1002/mds.70619){.pub-doi}
 - Eikens, H., **Welzel, J.**, Hansen, C., Maetzler, W., & Schmidt, G. (2026). Towards a model-based digital twin for gait analysis in Parkinson-related assessment. *Current Directions in Biomedical Engineering*, *12*(1), 119–122. [https://doi.org/10.1515/cdbme-2026-0131](https://doi.org/10.1515/cdbme-2026-0131){.pub-doi}
 - Papin, L. J., **Welzel, J.**, Koschate‐Storm, J., Zieschang, T., Witt, K., & Debener, S. (2026). Treadmill or overground? Cognitive–Motor interference effects in healthy older individuals. *European Journal of Neuroscience*, *64*(8), Article e70724. [https://doi.org/10.1111/ejn.70724](https://doi.org/10.1111/ejn.70724){.pub-doi}
 - Contreras-Altamirano, M., Klapprott, M., Jacobsen, N., Maanen, P., **Welzel, J.**, & Debener, S. (2026). A portable solution for simultaneous human movement and mobile EEG acquisition: readiness potential for basketball free-throw shooting. *Experimental Brain Research*, *244*(8), Article 153. [https://doi.org/10.1007/s00221-026-07342-6](https://doi.org/10.1007/s00221-026-07342-6){.pub-doi}
